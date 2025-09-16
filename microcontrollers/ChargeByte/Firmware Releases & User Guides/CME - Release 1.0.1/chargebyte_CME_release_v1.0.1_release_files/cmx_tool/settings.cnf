@@ -1,0 +1,8 @@
+module=Charge Module E
+interface=CAN
+device=PCAN
+channel=PCAN_USBBUS1
+bitrate=500000
+uart_port=no COM port detected
+uart_baudrate=115200
+module_id=0

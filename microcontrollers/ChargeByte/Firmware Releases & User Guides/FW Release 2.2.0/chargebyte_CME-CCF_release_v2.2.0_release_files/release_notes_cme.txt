@@ -1,0 +1,317 @@
+Product Name: Charge Module E
+
+dbc Version: 1.18.0 : Details can be found in release_notes_dbc.txt
+UDS service tool Version: 2.3.0
+hlc_core Version: 0.5.0
+slac_core Version: 0.1.1
+SW  Version: 2.2.0
+	Date: 12. Jun 2025
+
+	Features:
+		* CAN/UART signal EVCCID sends received EVCCID of the EV
+		* Send the latest EVErrorCode via CAN/UART in error scenario
+		* Automatically control the PP circuit config pin for CCF, based on the selected charging mode and PP detection
+		* Provide up to 8k from RAM for recording PCAP trace in every charging cycle
+		* Added EVSEDateTimeNow as PCAP time stamp
+		* Transmit SessionID via CAN/UART
+		* SLACInfo message is additionally sent cyclically every 100 ms for CAN (UART was already implemented) interface during INIT phase, in addition to event-based sending
+		* EVCCID and EVMacAdress messages are additionally sent cyclically every 100 ms for CAN/UART interface during INIT and AUTH phase, in addition to event-based sending
+		* Added use cases to the 'AC Fallback' mechanism to support AC LL charging when the EV does not support fallback from AC HL to AC LL charging
+		
+	Bug fixes:
+		* Validating charging profile issue for DIN and ISO-2 DC is fixed
+		* Generate random SessionID also for ISO15118-2 DC charging
+		* Send response code FAILED in the event of a faulty insulation measurement
+		* CAN/UART signal EVMacAddress sends MAC address of the EV instead of EVCCID
+		* CME does not go to Error-State when going to unplugged for AC LL
+		* Closed small UART communication gap at the end of charging
+		* Send again error code as warning when EVSEProcessing ongoing timer expires
+		* CME does not send optional values via V2G, if SNA or out of range
+		* Detect TCP disconnection and send it out immediately via CAN/UART
+
+dbc Version: 1.16.0 : Details can be found in release_notes_dbc.txt
+UDS service tool Version: 2.1.0
+hlc_core Version: 0.3.0
+slac_core Version: 0.1.1
+SW  Version: 2.1.0
+	Date: 20. February 2025
+
+	Features:
+		* Implemented "AC Fallback" mechanism
+		* Implemented selection of EVSESupportedEnergyMode for AC HL charging via CAN/UART
+		* Implenented PP calibration
+		
+	Bug fixes:
+		* Disabled PIB write functionality
+		* Fixed incorrect handling of PMax in ChargingProfile (Power Delivery Request) for DIN/ISO
+		* Fixed handling for 'SNA' for EVSEProcessing values, by sending "Ongoing" instead of "Finished"
+		* Fixed incorrect handling for CP detection timeout for session stop, acc. DIN70121-[V2G-DC-556]
+		* Fixed incorrect behavior for PSD traffic generation using UDS service tool
+		* Added sending of the state value 'SessionStop' via CAN signal 'StateMachineState'
+		* Fixed the incorrect handling of the state machine state value 'StopCharge' for DC charging (ISO-2 and DIN)
+
+dbc Version: 1.13.0 : Details can be found in release_notes_dbc.txt
+UDS service tool Version: 2.0.0
+hlc_core Version: 0.1.1
+slac_core Version: 0.1.1
+SW  Version: 2.0.0
+	Date: 02. December 2024
+
+	Features:
+		* Included hlc_core and slac_core
+		* Implemented ISO15118-2 AC high level charging
+		* Using UDS service tool instead of cmx tool
+		* Charging mode could be selected by UDS service tool
+		* SLAC Re-Init mechanism could be enabled/disabled by UDS service tool
+		* Implemented PSD traffic generation triggered by customer using UDS service tool
+		* Implemented CP measuring such that parameters for cycle time and history length could be adjusted in UDS service tool
+		* ChargeInfo message is sent based on events, triggered either by a change in CP state or state machine state
+		* SLACInfo message is additionally sent cyclically every 100 ms for the UART interface during the INIT phase, in addition to event-based sending
+		
+	Bug fixes:
+		* Fixed incorrect handling of SASScheduleList. Module always send it regardless of EVSEProcessing
+		* Fixed duration parameter for DIN conformance tests, DIN requires at least 24 hour duration
+		* Fixed sending invalid length of EVSE ID during session setup response
+		* Fixed incorrect handling of ChargingProfile in DIN70121 charging.
+
+dbc Version: 1.11.0  : Details can be found in release_notes_dbc.txt
+CMx Version: 0.13.10 : Details can be found in release_notes_cmx-tool.txt
+SW  Version: 1.1.0
+	Date: 10. January 2024
+
+	Features:
+		* Improved watchdog behavior
+		* Implemented PP circuit DC type 1
+		* Implemented "By Customer" functionality for CP and PP
+		* Implemented reentry mechanism according to ISO15118-3
+		* Implemented PP detection for AC type 2
+		* Implemented restart charging sequence mechanism
+		* Implemented more debug messages via CAN/UART (internal to chargebyte)
+
+	Bug fixes:
+		* Fixed incorrect handling of CP detection in welding detection
+		* Fixed undefined status after power on if no CAN messages are available
+		* Fixed the issue with SECC communication setup performance timeout
+		* Fixed the issue that the firmware version not directly sent after boot-up
+		* Fixed the issue that TCP server is not opened fast enough
+		* Fixed the wrong start of attenuation average timer
+		* Fixed incorrect handling of stop charge behavior for ISO in charge parameter discovery
+		* Sending the wrong bootloader version via CAN directly after booting has been fixed
+
+
+SW  Version: 1.0.1
+dbc Version: 1.8.0
+CMx Version: 0.13.3
+	Date: 29. August 2023
+
+	Bug fixes:
+		* Activate pull-down resistor correctly on Bootstrap pin
+		* Activate pull-down resistor correctly on GPIO6 bootloader backdoor entry pin
+
+
+SW  Version: 1.0.0
+dbc Version: 1.8.0
+CMx Version: 0.13.3
+	Date: 12. June 2023
+
+	Bug fixes:
+		* CME sends the respective response message with a response code as "failed sequence error" in case of incorrect sequence V2G request received
+		* CME always abort charging after receiving EmergencyShutdown during init states (SAP, SDP and SLAC)
+
+		
+SW  Version: 0.11.0
+dbc Version: 1.8.0
+CMx Version: 0.13.2
+	Date: 5. May 2023
+
+	Features:
+		* GPIO7 and GPIO6 are removed as customer GPIOs from CMx tool configuration and CME application
+		* Starting from CME version 0.11.0, CME is now linked to bootloader version 12. Firmware updates will only be possible after upgrading to bootloader V12
+		* Storing the production data in the flash was implemented
+		* Migration of stored production data from EEPROM to flash was implemented to make the firmware compatible with older CME modules
+		* Activate pull down resistor to GPIO6 since it is now used for bootloader Backdoor entry
+
+	Bug fixes:
+		* Update the baptism data production timestamp name to order code
+		* Code hang in set qca parameters fixed by introducing a timeout
+
+
+SW  Version: 0.10.0
+dbc Version: 1.7.0
+CMx Version: 0.12.0
+	Date: 29. March 2023
+
+	Features:
+		* Boot strap implemented on CME module for configuration of CME as UART/CAN module
+		* Reading of the production data from eeprom using UDS read by identifier
+
+	Bug fixes:
+		* Control pilot states C and D are ignored if in init state
+
+
+SW  Version: 0.9.0
+dbc Version: 1.7.0
+CMx Version: 0.11.1
+	Date: 27. February 2023
+
+	Features:
+		* Watchdog logs can be read out with the associated CMx tool
+		* Supporting the CMx tool with multiple modules on the same CAN interface
+		* Added EVSE_CustomerNotReady(0xC) value for EVSEStatusCode signal to keep PWM 100% when plugged
+		* Sending error code as a warning to customer when the V2G_SECC_Ongoing_Performance timeout occurred in ISO
+		* Sending error code as a warning to customer when the T_conn_max_comm timeout occurred in DIN/ISO
+		
+	Bug fixes:
+		* Charging is aborted if State B is detected during charging phase, even no V2G message is received
+		* Charging is aborted, if TCP connection is closed during charging process
+
+SW  Version: 0.8.0
+dbc Version: 1.6.1
+CMx Version: 0.10.0
+	Date: 19. December 2022
+
+	Features:
+		* Sending Bootloader version over CAN (Bootloader version should be >= 0.11.0)
+		
+	Bug fixes:
+		* Restarting UART RX after being idle too long to prevent UART RX failing
+		* Supporting WaitingForCustomerInteraction in ISO for EVSEProcessing_CA, EVSEProcessing_CPD and EVSEProcessing_CC
+		* Corrected EVSE_SNA_ErrorCodes category from V2G to CAN in DIN and ISO
+		* Corrected SNA value for EVTimeToFullSoC
+		* Added validity checks for EVSEIsolationStatus signal
+		* Fixed SAP response for Tesla SAP request
+		* Sending SLAC_MATCH.CNF only if EV destination address is equal to EVSE source address
+		* Supporting also CP state D (ventilation), not only CP state C for charging
+
+
+SW  Version: 0.7.0
+dbc Version: 1.4.0
+CMx Version: 0.6.0
+	Date: 5. September 2022
+
+	Features:
+		* Current QCA7K configuration could be read by host controller and printed out via RTT log 
+		* AC basic charging stack implemented, customer can manipulate PWM via CAN/UART interface, binary at the moment supported by request
+		
+	Bug fixes:
+		* UART alive counter set on UART
+		* No more QCA7K reset inside switch2 ISR
+		* CME do not send error code when CME set SNA value
+		* The CAN bit rate could get updated from the CMx tool
+
+		
+SW  Version: 0.6.0
+dbc Version: 1.3.0
+CMx Version: 0.6.0
+	Date: 08. August 2022
+
+	Features:
+		* Implemented CME module reset via UART
+		* Supporting multiple CMEs on single CAN bus
+
+	Bug fixes:
+		* CME do not abort charging in case of ongoing timeout
+		* Sending EVSEID in ISO current demand response
+		* Setting all unused signals to 0. To make sure encode or decode failures
+		* Wrong SchemaID selection bug fixed
+
+
+SW  Version: 0.5.0
+dbc Version: 1.3.0
+CMx Version: 0.5.0
+	Date: 27. June 2022
+
+	Features:
+		* Implemented V2G communication sequence errors handling.
+		* Improved V2G communication error response handling.
+		* Implemented encapsulated UART CAN messages (CAN over UART). Feature still in preview stage.
+
+
+SW  Version: 0.4.0
+dbc Version: 1.3.0
+CMx Version: 0.5.0
+	Date: 15. June 2022
+
+	Features:
+		* CME stop charge if customer set evse_status code to malfunction
+		* Implemented PCAP filtering feature
+		* Improvement of voltage level reading
+		* Increase CAN watchdog timeout
+		* Customer can read HW and GPIO configuration using CMX tool
+		* QCA7k driver improvement
+		
+	Bug fixes:
+		* Write Pib file using CMX tool is not failing anymore
+		* Fix of EEPROM write/read hardfault error by synchronizing this mutual exclusion
+		* CME should stop charging using EVSENotification in ISO15118
+
+		
+SW  Version: 0.3.0
+dbc Version: 1.2.0
+	Date: 7. March 2022
+
+	Features:
+		* Customer is able to initiate a Emergency Shutdown according to standard, implemented in DIN and ISO stacks upon receiving EVSEDC_Status signal with "EVSEStatusCode == EVSE_EmergencyShutdown"
+		* CME sends git hash commit via CAN message SoftwareInfo 
+		* Customer can signal EVSE availability or not, by setting the EVSEDC_Status signal with "EVSEStatusCode == EVSE_NotReady". CME will go to maintenance state and generate 0% PWM, -12V (CP = State F)
+		  When SECC should set the signal back to EVSE_Ready, CME will generate back 100% (CP=State A). Now it is ready for being plugged and start charging cycle.
+		
+	Bug fix:
+		* Added default ScheduleTupleID for ISO15118-EIM charging
+
+	
+SW  Version: 0.2.0
+dbc Version: 1.2.0
+	Date: 1. March 2022
+
+	Features:
+		* Customer can configure CAN baudrate via UDS tool
+		* TT_EVSE_SLAC_INIT implemented
+		* In case of error occured after PLC connection started, log will be stored in EEPROM 
+		and can be read via our UDS tool and converted to .pcap file
+		* Customer can read/write qca7k pib file via uds tool
+		* Customer can do hw configuration via uds service
+		* Implemented Communication Setup timer for DIN/ISO stacks
+		* Implemented counter for mnbc sound and atten profile set to 0 after SLAC_PARAM:REQ
+		* Implemented sequence timeout for din/iso stacks
+		* Implemented cable check and precharge timeouts for din/iso stacks
+		* Improved CP Monitoring and Display
+		* Improved SDP request checks and error handling
+		* UART driver implemented
+		* Bootloader support UART beside CAN, so that customer can update firmware via CAN or UART 
+		* Implemented resending of attn.char.ind
+		* Customer can set evseid via uds tool
+		* Set pwm to 0% when qca7k not ready within 3s
+		* Send slac values (link status / measured attenuation) via CAN on event-based 
+		* Migrate into optimized qca7k driver to solve mainly timing issues 
+		
+	Bug fixes:
+		* During Startup of CME CAN signals are set to SNA instead 0
+		* Service disocvery responseCodeType bug is fixed for ISO
+		* Fixed SAP request problem that fails with NotSupportedProtocol
+	
+	
+SW  Version: 0.1.0
+dbc Version: 0.0.2
+	Date: 19. Oct 2021
+
+	Features:
+		* BSP implemented for ControlPilot and generate PWM 
+		* Watchdog timer implemented to recover CME if unexpected error/glitch occurred
+		* SLAC implemented according to DIN/ISO standard
+		* SDP Server implemented DIN/ISO standard
+		* SAP implemented according to DIN/ISO standard
+		* Sesssion setup and service discovery response handling implemented according to DIN/ISO standard
+		* Authorization response implemented according to DIN/ISO standard
+		* PreCharge & Isolation phase implemented according to DIN/ISO standard
+		* Welding Detection implemented according to DIN/ISO standard
+		* Charging phase (power delivery and current demand) implemented according to DIN/ISO standard 
+		* Session stop response handling implemented according to DIN/ISO standard and charging cycle is possible
+		* UDS stack ported into CME architecture 
+  
+	Bug fix:
+		* Bug Fix for restarting charging cycle failed with encode error
+
+	Known Issues:
+		* CME gets rebooted by watchdog timer if received CAN traffic is too high ( cycle time should be 100ms )
+		* SLAC sometimes fails

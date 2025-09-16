@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ECU protocol="UDS">
+ <NEGATIVE_RESPONSE_CODES>
+ </NEGATIVE_RESPONSE_CODES>
+ <INSTANCE id="UDS_SESSION_PROGRAMMING">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="10" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="diagnosticSessionType" bitPos="15" bitLen="8" type="none" unit="" value="02" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="50" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="diagnosticSessionType" bitPos="15" bitLen="8" type="none" unit="" value="02" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="sessionParameterRecord" bitPos="23" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_SESSION_EXTENDED_DIAGNOSTIC">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="10" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="diagnosticSessionType" bitPos="15" bitLen="8" type="none" unit="" value="03" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="50" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="diagnosticSessionType" bitPos="15" bitLen="8" type="none" unit="" value="03" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="sessionParameterRecord" bitPos="23" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_SESSION_DEFAULT">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="10" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="diagnosticSessionType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="50" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="diagnosticSessionType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="sessionParameterRecord" bitPos="23" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_ECU_RESET_TO_BOOTLOADER">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="11" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="resetType" bitPos="15" bitLen="8" type="none" unit="" value="60" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="51" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="resetType" bitPos="15" bitLen="8" type="none" unit="" value="60" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="powerDownTime" bitPos="23" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_ECU_RESET_HARD">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="11" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="resetType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="51" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="resetType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="powerDownTime" bitPos="23" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_ECU_RESET_SOFT">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="11" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="resetType" bitPos="15" bitLen="8" type="none" unit="" value="03" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="51" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="resetType" bitPos="15" bitLen="8" type="none" unit="" value="03" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="powerDownTime" bitPos="23" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__READ_PIB_FILE_FROM_MEMORY_STATUS">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 12" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 12" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__READ_PIB_FILE_FROM_MEMORY_ADDRESS">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 13" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 13" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__READ_SLAC_ATTEN_RX_CORRECTION">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 18" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 18" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__READ_VOLTAGE_THRESHOLD_DATA">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 36" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 36" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__READ_CALIBRATION_DATA">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 37" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 37" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__READ_PCAP_FILTER_CONFIG">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 34" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 34" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__READ_PCAP_FILTER_RECORDED">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 35" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 35" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__READ_GPIO_CONFIG">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 38" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 38" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__READ_HW_CONFIG">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 39" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 39" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__READ_QCA_CONFIG">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 3C" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 3C" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__READ_WATCHDOG_LOG">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 16" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 16" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__PRODUCTION_TIMESTAMP">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="02 01" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="02 01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__CHARGEBYTE_SERIAL_NUMBER">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="02 03" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="02 03" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__MAC_ADDRESS_QCA">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="02 09" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="02 09" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_READ_BY_ID__MAC_ADDRESS_HOST">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="22" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="02 08" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="62" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="02 08" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Data" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_SECURITY_ACCESS_REQUEST_SEED">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="27" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="securityAccessType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="67" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="securityAccessType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="CCL_GeneratedSeed" bitPos="16" bitLen="128" type="none" unit="" value="00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" semantics="" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_SECURITY_ACCESS_SEND_KEY">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="27" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="securityAccessType" bitPos="15" bitLen="8" type="none" unit="" value="02" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="CCL_CalculatedKey" bitPos="16" bitLen="128" type="none" unit="" value="00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="67" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="securityAccessType" bitPos="15" bitLen="8" type="none" unit="" value="02" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__SET_READ_PIB_FILE_FROM_MEMORY_REQUEST">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 11" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataRecord" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 11" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__SET_WRITE_PIB_FILE_TO_MEMORY_REQUEST">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 14" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataRecord" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 14" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_CAN_BITRATE_CONFIG">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 05" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="BITRATE" bitPos="24" bitLen="8" type="unsigned" unit="" value="00" semantics="" convId="UDS_WRITE_BY_ID__WRITE_CAN_BITRATE_CONFIG_RQ_BITRATE_ValueTable"/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 05" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_CAN_FRAMETYPE_CONFIG">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 06" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="FRAMETYPE" bitPos="24" bitLen="8" type="unsigned" unit="" value="00" semantics="" convId="UDS_WRITE_BY_ID__WRITE_CAN_FRAMETYPE_CONFIG_RQ_FRAMETYPE_ValueTable"/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 06" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_CAN_ENABLE_DISABLE">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 0E" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="CAN_ENABLE_DISABLE" bitPos="24" bitLen="8" type="unsigned" unit="" value="00" semantics="" convId="UDS_WRITE_BY_ID__WRITE_CAN_ENABLE_DISABLE_RQ_CAN_ENABLE_DISABLE_ValueTable"/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 0E" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_GPIO2">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 08" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="GPIO_2_CONFIG" bitPos="24" bitLen="8" type="unsigned" unit="" value="00" semantics="" convId="UDS_WRITE_BY_ID__WRITE_GPIO2_RQ_GPIO_2_CONFIG_ValueTable"/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 08" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_GPIO3">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 09" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="GPIO_3_CONFIG" bitPos="24" bitLen="8" type="unsigned" unit="" value="00" semantics="" convId="UDS_WRITE_BY_ID__WRITE_GPIO3_RQ_GPIO_3_CONFIG_ValueTable"/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 09" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_GPIO4">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 0A" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="GPIO_4_CONFIG" bitPos="24" bitLen="8" type="unsigned" unit="" value="00" semantics="" convId="UDS_WRITE_BY_ID__WRITE_GPIO4_RQ_GPIO_4_CONFIG_ValueTable"/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 0A" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_GPIO5">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 0B" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="GPIO_5_CONFIG" bitPos="24" bitLen="8" type="unsigned" unit="" value="00" semantics="" convId="UDS_WRITE_BY_ID__WRITE_GPIO5_RQ_GPIO_5_CONFIG_ValueTable"/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 0B" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_GPIO6">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 0C" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="GPIO_6_CONFIG" bitPos="24" bitLen="8" type="unsigned" unit="" value="00" semantics="" convId="UDS_WRITE_BY_ID__WRITE_GPIO6_RQ_GPIO_6_CONFIG_ValueTable"/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 0C" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_GPIO7">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 0D" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="GPIO_7_CONFIG" bitPos="24" bitLen="8" type="unsigned" unit="" value="00" semantics="" convId="UDS_WRITE_BY_ID__WRITE_GPIO7_RQ_GPIO_7_CONFIG_ValueTable"/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 0D" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_SLAC_ATTEN_RX_CORRECTION">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 18" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="SLAC_ATTEN_RX_CORRECTION" bitPos="24" bitLen="8" type="unsigned" unit="" value="00" semantics="" convId="UDS_WRITE_BY_ID__WRITE_SLAC_ATTEN_RX_CORRECTION_RQ_SLAC_ATTEN_RX_CORRECTION_ValueTable"/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 18" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_EVSE_ID">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 19" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="EVSE_ID" bitPos="24" bitLen="8" type="asc" unit="" value="00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 19" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_A_HIGH">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 20" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="STATE_A_HIGH_THRESHOLD" bitPos="24" bitLen="16" type="unsigned" unit="" value="00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 20" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_A_LOW">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 21" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="STATE_A_LOW_THRESHOLD" bitPos="24" bitLen="16" type="unsigned" unit="" value="00 00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 21" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_B_HIGH">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 22" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="STATE_B_HIGH_THRESHOLD" bitPos="24" bitLen="16" type="unsigned" unit="" value="00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 22" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_B_LOW">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 23" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="STATE_B_LOW_THRESHOLD" bitPos="24" bitLen="16" type="unsigned" unit="" value="00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 23" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_C_HIGH">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 24" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="STATE_C_HIGH_THRESHOLD" bitPos="24" bitLen="16" type="unsigned" unit="" value="00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 24" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_C_LOW">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 25" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="STATE_C_LOW_THRESHOLD" bitPos="24" bitLen="16" type="unsigned" unit="" value="00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 25" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_D_HIGH">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 26" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="STATE_D_HIGH_THRESHOLD" bitPos="31" bitLen="16" type="none" unit="" value="00 00" semantics="MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 26" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_D_LOW">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 27" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="STATE_D_LOW_THRESHOLD" bitPos="24" bitLen="16" type="unsigned" unit="" value="00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 27" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_E_HIGH">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 28" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="STATE_E_HIGH_THRESHOLD" bitPos="24" bitLen="16" type="unsigned" unit="" value="00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 28" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_E_LOW">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 29" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="STATE_E_LOW_THRESHOLD" bitPos="31" bitLen="16" type="unsigned" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 29" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_F_HIGH">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 2A" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="STATE_F_HIGH_THRESHOLD" bitPos="24" bitLen="16" type="signed" unit="" value="00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 2A" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_F_LOW">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 2B" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="STATE_F_LOW_THRESHOLD" bitPos="24" bitLen="16" type="signed" unit="" value="00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 2B" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_CP_OPEN_V">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 2C" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="CP_OPEN_CIRCUIT_VOLTAGE_mV" bitPos="24" bitLen="16" type="unsigned" unit="" value="00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 2C" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_CP_SHORT_V">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 2D" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="CP_SHORT_CIRCUIT_VOLTAGE_mV" bitPos="24" bitLen="16" type="unsigned" unit="" value="00" semantics="" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 2D" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_FILTER_CONFIG_HP">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 30" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataRecord" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 30" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_FILTER_CONFIG_ICMP">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 31" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataRecord" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 31" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_FILTER_CONFIG_UDP_V2G">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 32" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataRecord" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 32" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_FILTER_CONFIG_TCP_V2G">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 33" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataRecord" bitPos="31" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 33" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_CME_ID">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 3B" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="CME_ID" bitPos="24" bitLen="8" type="unsigned" unit="" value="00" semantics="" convId="UDS_WRITE_BY_ID__WRITE_CME_ID_RQ_CME_ID_ValueTable"/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 3B" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_WRITE_BY_ID__WRITE_CHARGING_MODE">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="2E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 3D" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="CHARGING_MODE" bitPos="24" bitLen="8" type="unsigned" unit="" value="00" semantics="" convId="UDS_WRITE_BY_ID__WRITE_CHARGING_MODE_RQ_CHARGING_MODE_ValueTable"/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="6E" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataIdentifier" bitPos="15" bitLen="16" type="none" unit="" value="00 3D" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_ROUTINE_CONTROL_COMPARE_CHECKSUM">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="31" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineControlType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Routine_Identfier" bitPos="23" bitLen="16" type="none" unit="" value="02 02" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Checksum" bitPos="39" bitLen="32" type="unsigned" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="71" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineControlType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Routine_Identfier" bitPos="23" bitLen="16" type="none" unit="" value="02 02" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineStatusRecord" bitPos="39" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_ROUTINE_CONTROL_ERASE_MEMORY_START">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="31" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineControlType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Routine_Identfier" bitPos="23" bitLen="16" type="none" unit="" value="FF 00" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="71" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineControlType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Routine_Identfier" bitPos="23" bitLen="16" type="none" unit="" value="FF 00" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineStatusRecord" bitPos="39" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_ROUTINE_CONTROL_CHECK_PROG_DEPENDENCY">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="31" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineControlType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Routine_Identfier" bitPos="23" bitLen="16" type="none" unit="" value="FF 01" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="71" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineControlType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Routine_Identfier" bitPos="23" bitLen="16" type="none" unit="" value="FF 01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineStatusRecord" bitPos="39" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_ROUTINE_CONTROL_COMPARE_CHECKSUM_CRC32">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="31" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineControlType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Routine_Identfier" bitPos="23" bitLen="16" type="none" unit="" value="02 03" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Checksum" bitPos="39" bitLen="32" type="unsigned" unit="" value="00 00 00 00" semantics="MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="71" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineControlType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Routine_Identfier" bitPos="23" bitLen="16" type="none" unit="" value="02 03" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineStatusRecord" bitPos="39" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_ROUTINE_CONTROL_ERASE_MEMORY_RESULTS">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="31" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineControlType" bitPos="15" bitLen="8" type="none" unit="" value="03" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Routine_Identfier" bitPos="23" bitLen="16" type="none" unit="" value="FF 00" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="71" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineControlType" bitPos="15" bitLen="8" type="none" unit="" value="03" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Routine_Identfier" bitPos="23" bitLen="16" type="none" unit="" value="FF 00" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Status" bitPos="39" bitLen="8" type="unsigned" unit="" value="0" semantics="MOTOROLA" convId=""/>
+   <PARAMETER id="Total" bitPos="47" bitLen="32" type="unsigned" unit="" value="0" semantics="MOTOROLA" convId=""/>
+   <PARAMETER id="Current" bitPos="79" bitLen="32" type="unsigned" unit="" value="0" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_ROUTINE_CONTROL_ERASE_MEMORY_STOP">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="31" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineControlType" bitPos="15" bitLen="8" type="none" unit="" value="02" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Routine_Identfier" bitPos="23" bitLen="16" type="none" unit="" value="FF 00" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="71" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineControlType" bitPos="15" bitLen="8" type="none" unit="" value="02" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="Routine_Identfier" bitPos="23" bitLen="16" type="none" unit="" value="FF 00" semantics="XID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="routineStatusRecord" bitPos="39" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_REQUEST_DOWNLOAD">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="34" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dataFormatIdentifier" bitPos="15" bitLen="8" type="unsigned" unit="" value="0" semantics="MOTOROLA" convId=""/>
+   <PARAMETER id="addressAndLengthFormatIdentifier" bitPos="23" bitLen="8" type="unsigned" unit="" value="0" semantics="MOTOROLA" convId=""/>
+   <PARAMETER id="memoryAddress" bitPos="31" bitLen="32" type="unsigned" unit="" value="00" semantics="MOTOROLA" convId=""/>
+   <PARAMETER id="memorySize" bitPos="63" bitLen="32" type="unsigned" unit="" value="0" semantics="MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="74" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="lengthFormatIdentifier" bitPos="15" bitLen="8" type="unsigned" unit="" value="0" semantics="MOTOROLA" convId=""/>
+   <PARAMETER id="maxNumberOfBlockLength" bitPos="23" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_SERVICE_TRANSFER_DATA">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="36" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="blockSequenceCounter" bitPos="15" bitLen="8" type="unsigned" unit="" value="0" semantics="MOTOROLA" convId=""/>
+   <PARAMETER id="transferRequestParameterRecord" bitPos="23" bitLen="1536" type="none" unit="" value="00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" semantics="MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="76" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="blockSequenceCounter" bitPos="15" bitLen="8" type="unsigned" unit="" value="0" semantics="MOTOROLA" convId=""/>
+   <PARAMETER id="transferResponseParameterRecord" bitPos="23" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_SERVICE_REQUEST_TRANSFER_EXIT">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="37" semantics="SID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="77" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="transferResponseParameterRecord" bitPos="15" bitLen="8" type="none" unit="" value="00" semantics="MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_CONTROL_DTC_SETTING_ON">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="85" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dtcSettingType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="C5" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dtcSettingType" bitPos="15" bitLen="8" type="none" unit="" value="01" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <INSTANCE id="UDS_CONTROL_DTC_SETTING_OFF">
+  <REQUEST>
+   <PARAMETER id="SID_RQ" bitPos="7" bitLen="8" type="none" unit="" value="85" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dtcSettingType" bitPos="15" bitLen="8" type="none" unit="" value="02" semantics="XID CONST MOTOROLA" convId=""/>
+  </REQUEST>
+  <RESPONSE>
+   <PARAMETER id="SID_PR" bitPos="7" bitLen="8" type="none" unit="" value="C5" semantics="SID CONST MOTOROLA" convId=""/>
+   <PARAMETER id="dtcSettingType" bitPos="15" bitLen="8" type="none" unit="" value="02" semantics="XID CONST MOTOROLA" convId=""/>
+  </RESPONSE>
+ </INSTANCE>
+ <CONVERSION id="UDS_WRITE_BY_ID__WRITE_CAN_BITRATE_CONFIG_RQ_BITRATE_ValueTable" factor="1.0000000000000000" offset="0.0000000000000000">
+  <MAP val="00" text="500 kBits/s" />
+  <MAP val="01" text="125 kBit/s" />
+  <MAP val="02" text="250 kBit/s" />
+  <MAP val="03" text="1 MBit/s" />
+ </CONVERSION>
+ <CONVERSION id="UDS_WRITE_BY_ID__WRITE_CAN_FRAMETYPE_CONFIG_RQ_FRAMETYPE_ValueTable" factor="1.0000000000000000" offset="0.0000000000000000">
+  <MAP val="00" text="Extended ID" />
+  <MAP val="01" text="Standard ID" />
+ </CONVERSION>
+ <CONVERSION id="UDS_WRITE_BY_ID__WRITE_CAN_ENABLE_DISABLE_RQ_CAN_ENABLE_DISABLE_ValueTable" factor="1.0000000000000000" offset="0.0000000000000000">
+  <MAP val="00" text="NONE" />
+  <MAP val="01" text="CONFIG BY SPI CS" />
+ </CONVERSION>
+ <CONVERSION id="UDS_WRITE_BY_ID__WRITE_GPIO2_RQ_GPIO_2_CONFIG_ValueTable" factor="1.0000000000000000" offset="0.0000000000000000">
+  <MAP val="00" text="GPIO" />
+  <MAP val="01" text="ADC" />
+ </CONVERSION>
+ <CONVERSION id="UDS_WRITE_BY_ID__WRITE_GPIO3_RQ_GPIO_3_CONFIG_ValueTable" factor="1.0000000000000000" offset="0.0000000000000000">
+  <MAP val="00" text="GPIO" />
+ </CONVERSION>
+ <CONVERSION id="UDS_WRITE_BY_ID__WRITE_GPIO4_RQ_GPIO_4_CONFIG_ValueTable" factor="1.0000000000000000" offset="0.0000000000000000">
+  <MAP val="00" text="GPIO" />
+  <MAP val="02" text="Boot_LED" />
+ </CONVERSION>
+ <CONVERSION id="UDS_WRITE_BY_ID__WRITE_GPIO5_RQ_GPIO_5_CONFIG_ValueTable" factor="1.0000000000000000" offset="0.0000000000000000">
+  <MAP val="00" text="GPIO" />
+ </CONVERSION>
+ <CONVERSION id="UDS_WRITE_BY_ID__WRITE_GPIO6_RQ_GPIO_6_CONFIG_ValueTable" factor="1.0000000000000000" offset="0.0000000000000000">
+  <MAP val="00" text="GPIO" />
+ </CONVERSION>
+ <CONVERSION id="UDS_WRITE_BY_ID__WRITE_GPIO7_RQ_GPIO_7_CONFIG_ValueTable" factor="1.0000000000000000" offset="0.0000000000000000">
+  <MAP val="00" text="ADC" />
+ </CONVERSION>
+ <CONVERSION id="UDS_WRITE_BY_ID__WRITE_SLAC_ATTEN_RX_CORRECTION_RQ_SLAC_ATTEN_RX_CORRECTION_ValueTable" factor="1.0000000000000000" offset="0.0000000000000000">
+  <MAP val="00" text="SLAC ATTEN RX CORRECTION Value is 0" />
+  <MAP val="03" text="SLAC ATTEN RX CORRECTION Value is 3" />
+  <MAP val="06" text="SLAC ATTEN RX CORRECTION Value is 6" />
+  <MAP val="09" text="SLAC ATTEN RX CORRECTION Value is 9" />
+  <MAP val="0C" text="SLAC ATTEN RX CORRECTION Value is 12" />
+  <MAP val="0F" text="SLAC ATTEN RX CORRECTION Value is 15" />
+  <MAP val="12" text="SLAC ATTEN RX CORRECTION Value is 18" />
+  <MAP val="15" text="SLAC ATTEN RX CORRECTION Value is 21" />
+ </CONVERSION>
+ <CONVERSION id="UDS_WRITE_BY_ID__WRITE_CME_ID_RQ_CME_ID_ValueTable" factor="1.0000000000000000" offset="0.0000000000000000">
+  <MAP val="00" text="CME_ID is 0" />
+  <MAP val="01" text="CME_ID is 1" />
+  <MAP val="02" text="CME_ID is 2" />
+  <MAP val="03" text="CME_ID is 3" />
+ </CONVERSION>
+ <CONVERSION id="UDS_WRITE_BY_ID__WRITE_CHARGING_MODE_RQ_CHARGING_MODE_ValueTable" factor="1.0000000000000000" offset="0.0000000000000000">
+  <MAP val="00" text="DC" />
+  <MAP val="01" text="AC" />
+ </CONVERSION>
+</ECU>

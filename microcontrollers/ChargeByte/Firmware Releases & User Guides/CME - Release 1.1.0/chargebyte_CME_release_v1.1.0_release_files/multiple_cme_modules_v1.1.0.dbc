@@ -1,0 +1,2028 @@
+VERSION "1.11.0"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: SECC CME
+
+
+BO_ 2147483909 DebugInfo: 8 CME
+ SG_ V2GStatusISO : 48|6@1+ (1,0) [0|63] ""  SECC
+ SG_ ControlPilotVoltage : 32|14@1+ (1,0) [0|16382] "mV"  SECC
+ SG_ SLACStatus : 28|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ProximityPilotVoltage : 16|12@1+ (1,0) [0|4094] "mV"  SECC
+ SG_ V2GStatusDIN : 8|6@1+ (1,0) [0|63] ""  SECC
+ SG_ HLCStatus : 4|4@1+ (1,0) [0|15] ""  SECC
+ SG_ PilotStatesStatus : 0|4@1+ (1,0) [0|15] ""  SECC
+
+BO_ 2147484423 EVSEACChargeControl: 8 SECC
+ SG_ EVSECurrentLimit : 0|10@1+ (1,0) [0|1023] "A"  CME
+
+BO_ 2147483908 SLACInfo: 8 CME
+ SG_ QcaSwVersionPatch : 32|8@1+ (1,0) [0|255] ""  SECC
+ SG_ QcaSwVersionMinor : 24|8@1+ (1,0) [0|255] ""  SECC
+ SG_ QcaSwVersionMajor : 16|8@1+ (1,0) [0|255] ""  SECC
+ SG_ MeasuredAttenuation : 8|8@1+ (0.5,0) [0|100] "dB"  SECC
+ SG_ QcaSwEnum : 4|4@1+ (1,0) [0|15] ""  SECC
+ SG_ QcaSlacConfig : 2|2@1+ (1,0) [0|3] ""  SECC
+ SG_ SLACLinkStatus : 0|2@1+ (1,0) [0|3] ""  SECC
+
+BO_ 2147483907 HardwareStatus: 8 CME
+ SG_ GPIO5Status : 6|2@1+ (1,0) [0|3] ""  SECC
+ SG_ GPIO4Status : 4|2@1+ (1,0) [0|3] ""  SECC
+ SG_ GPIO3Status : 2|2@1+ (1,0) [0|3] ""  SECC
+ SG_ GPIO2Status : 0|2@1+ (1,0) [0|3] ""  SECC
+
+BO_ 2147484422 HardwareConfig: 8 SECC
+ SG_ ConfigGPIO5 : 6|2@1+ (1,0) [0|3] ""  CME
+ SG_ ConfigGPIO4 : 4|2@1+ (1,0) [0|3] ""  CME
+ SG_ ConfigGPIO3 : 2|2@1+ (1,0) [0|3] ""  CME
+ SG_ ConfigGPIO2 : 0|2@1+ (1,0) [0|3] ""  CME
+
+BO_ 2147484164 EVMacAddress: 8 CME
+ SG_ EVMacAddress : 0|48@1+ (1,0) [0|281474976710655] ""  SECC
+
+BO_ 2147484421 EVSEDateTime: 8 SECC
+ SG_ EVSEDateTimeNow : 0|64@1+ (1,0) [0|1.84467440737096e+19] "s"  CME
+
+BO_ 2147484420 EVSEID: 8 SECC
+ SG_ EVSEID : 0|64@1+ (1,0) [0|1.84467440737096e+19] ""  CME
+
+BO_ 2147484163 EVDCEnergyLimits: 8 CME
+ SG_ EVEnergyRequest : 16|16@1+ (100,0) [0|3276700] "Wh"  SECC
+ SG_ EVEnergyCapacity : 0|16@1+ (100,0) [0|3276700] "Wh"  SECC
+
+BO_ 2148073472 BootConfig: 8 CME
+ SG_ BootloaderVersion : 0|8@1+ (1,0) [0|254] ""  SECC
+
+BO_ 2147483906 ErrorCodes: 8 CME
+ SG_ ErrorCode3 : 56|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface3 : 55|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity3 : 53|2@1- (1,0) [0|3] ""  SECC
+ SG_ Category3 : 48|5@1+ (1,0) [0|31] ""  SECC
+ SG_ ErrorCode2 : 40|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface2 : 39|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity2 : 37|2@1+ (1,0) [0|3] ""  SECC
+ SG_ Category2 : 32|5@1+ (1,0) [0|31] ""  SECC
+ SG_ ErrorCode1 : 24|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface1 : 23|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity1 : 21|2@1+ (1,0) [0|3] ""  SECC
+ SG_ Category1 : 16|5@1+ (1,0) [0|31] ""  SECC
+ SG_ ErrorCode0 : 8|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface0 : 7|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity0 : 5|2@1+ (1,0) [0|3] ""  SECC
+ SG_ Category0 : 0|5@1+ (1,0) [0|31] ""  SECC
+
+BO_ 2147483904 ChargeInfo: 8 CME
+ SG_ DiodePresence : 30|2@1+ (1,0) [0|3] ""  SECC
+ SG_ TCPStatus : 28|2@1+ (1,0) [0|3] ""  SECC
+ SG_ AliveCounter : 24|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ControlPilotState : 20|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ActualChargeProtocol : 16|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ProximityPinState : 12|4@1+ (1,0) [0|15] ""  SECC
+ SG_ StateMachineState : 8|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ControlPilotDutyCycle : 0|7@1+ (1,0) [0|100] "%"  SECC
+
+BO_ 2147484419 EVSEPlugStatus: 8 SECC
+ SG_ EVSEProximityPinState : 12|4@1+ (1,0) [0|15] ""  CME
+ SG_ EVSEControlPilotState : 8|4@1+ (1,0) [0|15] ""  CME
+ SG_ EVSEControlPilotDutyCycle : 0|7@1+ (1,0) [0|100] "%"  CME
+
+BO_ 2147484418 EVSEDCStatus: 8 SECC
+ SG_ EVSEProcessingCC : 52|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEProcessingCPD : 50|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEProcessingCA : 48|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEPowerLimitAchieved : 46|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSECurrentLimitAchieved : 44|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEStatusCode : 40|4@1+ (1,0) [0|15] ""  CME
+ SG_ EVSEVoltageLimitAchieved : 36|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEFreeService : 35|1@1+ (1,0) [0|1] ""  CME
+ SG_ EVSEIsolationStatus : 32|3@1+ (1,0) [0|7] ""  CME
+ SG_ EVSEPresentVoltage : 16|16@1+ (0.1,0) [0|6500] "V"  CME
+ SG_ EVSEPresentCurrent : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  CME
+
+BO_ 2147484417 EVSEDCRegulationLimits: 8 SECC
+ SG_ EVSECurrentRegulationTolerance : 40|8@1+ (0.2,0) [0|50] "A"  CME
+ SG_ EVSEPeakCurrentRipple : 32|8@1+ (0.2,0) [0|50] "A"  CME
+ SG_ EVSEMinVoltage : 16|16@1+ (0.1,0) [0|6500] "V"  CME
+ SG_ EVSEMinCurrent : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  CME
+
+BO_ 2147484416 EVSEDCMaxLimits: 8 SECC
+ SG_ EVSEEnergyToBeDelivered : 48|16@1+ (100,0) [0|3276700] "Wh"  CME
+ SG_ EVSEMaxPower : 32|16@1+ (100,0) [0|3276700] "W"  CME
+ SG_ EVSEMaxVoltage : 16|16@1+ (0.1,0) [0|6500] "V"  CME
+ SG_ EVSEMaxCurrent : 0|16@1+ (0.1,0) [0|6500] "A"  CME
+
+BO_ 2147484162 EVStatusDisplay: 8 CME
+ SG_ EVTimeToFullSoC : 40|18@1+ (1,0) [0|262142] "s"  SECC
+ SG_ EVReady : 38|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVTimeToBulkSoC : 20|18@1+ (1,0) [0|262142] "s"  SECC
+ SG_ EVRESSConditioning : 18|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVCabinConditioning : 16|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVErrorCode : 12|4@1+ (1,0) [0|15] ""  SECC
+ SG_ EVBulkChargingComplete : 10|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVChargingComplete : 8|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVSoC : 0|8@1+ (0.5,0) [0|100] ""  SECC
+
+BO_ 2147484161 EVDCChargeTargets: 8 CME
+ SG_ EVPreChargeVoltage : 32|16@1+ (0.1,0) [0|6500] "V"  SECC
+ SG_ EVTargetVoltage : 16|16@1+ (0.1,0) [0|6500] "V"  SECC
+ SG_ EVTargetCurrent : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  SECC
+
+BO_ 2147484160 EVDCMaxLimits: 8 CME
+ SG_ EVBulkSoC : 56|8@1+ (0.5,0) [0|100] "%"  SECC
+ SG_ EVFullSoC : 48|8@1+ (0.5,0) [0|100] "%"  SECC
+ SG_ EVMaxVoltage : 32|16@1+ (0.1,0) [0|6500] "V"  SECC
+ SG_ EVMaxPower : 16|16@1+ (100,0) [0|3276700] "W"  SECC
+ SG_ EVMaxCurrent : 0|16@1+ (0.1,0) [0|6500] "A"  SECC
+
+BO_ 2147483905 SoftwareInfo: 8 CME
+ SG_ SoftwareVersionHash : 32|32@1+ (1,0) [0|4294967295] ""  SECC
+ SG_ SoftwareVersionConfig : 24|8@1+ (1,0) [0|255] ""  SECC
+ SG_ SoftwareVersionPatch : 16|8@1+ (1,0) [0|255] ""  SECC
+ SG_ SoftwareVersionMinor : 8|8@1+ (1,0) [0|255] ""  SECC
+ SG_ SoftwareVersionMajor : 0|8@1+ (1,0) [0|255] ""  SECC
+
+BO_ 2147488005 DebugInfo_1: 8 CME
+ SG_ V2GStatusISO_1 : 48|6@1+ (1,0) [0|63] ""  SECC
+ SG_ ControlPilotVoltage_1 : 32|14@1+ (1,0) [0|16382] "mV"  SECC
+ SG_ SLACStatus_1 : 28|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ProximityPilotVoltage_1 : 16|12@1+ (1,0) [0|4094] "mV"  SECC
+ SG_ V2GStatusDIN_1 : 8|6@1+ (1,0) [0|63] ""  SECC
+ SG_ HLCStatus_1 : 4|4@1+ (1,0) [0|15] ""  SECC
+ SG_ PilotStatesStatus_1 : 0|4@1+ (1,0) [0|15] ""  SECC
+
+BO_ 2147492101 DebugInfo_2: 8 CME
+ SG_ V2GStatusISO_2 : 48|6@1+ (1,0) [0|63] ""  SECC
+ SG_ ControlPilotVoltage_2 : 32|14@1+ (1,0) [0|16382] "mV"  SECC
+ SG_ SLACStatus_2 : 28|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ProximityPilotVoltage_2 : 16|12@1+ (1,0) [0|4094] "mV"  SECC
+ SG_ V2GStatusDIN_2 : 8|6@1+ (1,0) [0|63] ""  SECC
+ SG_ HLCStatus_2 : 4|4@1+ (1,0) [0|15] ""  SECC
+ SG_ PilotStatesStatus_2 : 0|4@1+ (1,0) [0|15] ""  SECC
+
+BO_ 2147496197 DebugInfo_3: 8 CME
+ SG_ V2GStatusISO_3 : 48|6@1+ (1,0) [0|63] ""  SECC
+ SG_ ControlPilotVoltage_3 : 32|14@1+ (1,0) [0|16382] "mV"  SECC
+ SG_ SLACStatus_3 : 28|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ProximityPilotVoltage_3 : 16|12@1+ (1,0) [0|4094] "mV"  SECC
+ SG_ V2GStatusDIN_3 : 8|6@1+ (1,0) [0|63] ""  SECC
+ SG_ HLCStatus_3 : 4|4@1+ (1,0) [0|15] ""  SECC
+ SG_ PilotStatesStatus_3 : 0|4@1+ (1,0) [0|15] ""  SECC
+
+BO_ 2147488519 EVSEACChargeControl_1: 8 SECC
+ SG_ EVSECurrentLimit_1 : 0|10@1+ (1,0) [0|1023] "A"  CME
+
+BO_ 2147492615 EVSEACChargeControl_2: 8 SECC
+ SG_ EVSECurrentLimit_2 : 0|10@1+ (1,0) [0|1023] "A"  CME
+
+BO_ 2147496711 EVSEACChargeControl_3: 8 SECC
+ SG_ EVSECurrentLimit_3 : 0|10@1+ (1,0) [0|1023] "A"  CME
+
+BO_ 2147488004 SLACInfo_1: 8 CME
+ SG_ QcaSwVersionPatch_1 : 32|8@1+ (1,0) [0|255] ""  SECC
+ SG_ QcaSwVersionMinor_1 : 24|8@1+ (1,0) [0|255] ""  SECC
+ SG_ QcaSwVersionMajor_1 : 16|8@1+ (1,0) [0|255] ""  SECC
+ SG_ MeasuredAttenuation_1 : 8|8@1+ (0.5,0) [0|100] "dB"  SECC
+ SG_ QcaSwEnum_1 : 4|4@1+ (1,0) [0|15] ""  SECC
+ SG_ QcaSlacConfig_1 : 2|2@1+ (1,0) [0|3] ""  SECC
+ SG_ SLACLinkStatus_1 : 0|2@1+ (1,0) [0|3] ""  SECC
+
+BO_ 2147492100 SLACInfo_2: 8 CME
+ SG_ QcaSwVersionPatch_2 : 32|8@1+ (1,0) [0|255] ""  SECC
+ SG_ QcaSwVersionMinor_2 : 24|8@1+ (1,0) [0|255] ""  SECC
+ SG_ QcaSwVersionMajor_2 : 16|8@1+ (1,0) [0|255] ""  SECC
+ SG_ MeasuredAttenuation_2 : 8|8@1+ (0.5,0) [0|100] "dB"  SECC
+ SG_ QcaSwEnum_2 : 4|4@1+ (1,0) [0|15] ""  SECC
+ SG_ QcaSlacConfig_2 : 2|2@1+ (1,0) [0|3] ""  SECC
+ SG_ SLACLinkStatus_2 : 0|2@1+ (1,0) [0|3] ""  SECC
+
+BO_ 2147496196 SLACInfo_3: 8 CME
+ SG_ QcaSwVersionPatch_3 : 32|8@1+ (1,0) [0|255] ""  SECC
+ SG_ QcaSwVersionMinor_3 : 24|8@1+ (1,0) [0|255] ""  SECC
+ SG_ QcaSwVersionMajor_3 : 16|8@1+ (1,0) [0|255] ""  SECC
+ SG_ MeasuredAttenuation_3 : 8|8@1+ (0.5,0) [0|100] "dB"  SECC
+ SG_ QcaSwEnum_3 : 4|4@1+ (1,0) [0|15] ""  SECC
+ SG_ QcaSlacConfig_3 : 2|2@1+ (1,0) [0|3] ""  SECC
+ SG_ SLACLinkStatus_3 : 0|2@1+ (1,0) [0|3] ""  SECC
+
+BO_ 2147488003 HardwareStatus_1: 8 CME
+ SG_ GPIO5Status_1 : 6|2@1+ (1,0) [0|3] ""  SECC
+ SG_ GPIO4Status_1 : 4|2@1+ (1,0) [0|3] ""  SECC
+ SG_ GPIO3Status_1 : 2|2@1+ (1,0) [0|3] ""  SECC
+ SG_ GPIO2Status_1 : 0|2@1+ (1,0) [0|3] ""  SECC
+
+BO_ 2147492099 HardwareStatus_2: 8 CME
+ SG_ GPIO5Status_2 : 6|2@1+ (1,0) [0|3] ""  SECC
+ SG_ GPIO4Status_2 : 4|2@1+ (1,0) [0|3] ""  SECC
+ SG_ GPIO3Status_2 : 2|2@1+ (1,0) [0|3] ""  SECC
+ SG_ GPIO2Status_2 : 0|2@1+ (1,0) [0|3] ""  SECC
+
+BO_ 2147496195 HardwareStatus_3: 8 CME
+ SG_ GPIO5Status_3 : 6|2@1+ (1,0) [0|3] ""  SECC
+ SG_ GPIO4Status_3 : 4|2@1+ (1,0) [0|3] ""  SECC
+ SG_ GPIO3Status_3 : 2|2@1+ (1,0) [0|3] ""  SECC
+ SG_ GPIO2Status_3 : 0|2@1+ (1,0) [0|3] ""  SECC
+
+BO_ 2147488518 HardwareConfig_1: 8 SECC
+ SG_ ConfigGPIO5_1 : 6|2@1+ (1,0) [0|3] ""  CME
+ SG_ ConfigGPIO4_1 : 4|2@1+ (1,0) [0|3] ""  CME
+ SG_ ConfigGPIO3_1 : 2|2@1+ (1,0) [0|3] ""  CME
+ SG_ ConfigGPIO2_1 : 0|2@1+ (1,0) [0|3] ""  CME
+
+BO_ 2147492614 HardwareConfig_2: 8 SECC
+ SG_ ConfigGPIO5_2 : 6|2@1+ (1,0) [0|3] ""  CME
+ SG_ ConfigGPIO4_2 : 4|2@1+ (1,0) [0|3] ""  CME
+ SG_ ConfigGPIO3_2 : 2|2@1+ (1,0) [0|3] ""  CME
+ SG_ ConfigGPIO2_2 : 0|2@1+ (1,0) [0|3] ""  CME
+
+BO_ 2147496710 HardwareConfig_3: 8 SECC
+ SG_ ConfigGPIO5_3 : 6|2@1+ (1,0) [0|3] ""  CME
+ SG_ ConfigGPIO4_3 : 4|2@1+ (1,0) [0|3] ""  CME
+ SG_ ConfigGPIO3_3 : 2|2@1+ (1,0) [0|3] ""  CME
+ SG_ ConfigGPIO2_3 : 0|2@1+ (1,0) [0|3] ""  CME
+
+BO_ 2147488260 EVMacAddress_1: 8 CME
+ SG_ EVMacAddress_1 : 0|48@1+ (1,0) [0|281474976710655] ""  SECC
+
+BO_ 2147492356 EVMacAddress_2: 8 CME
+ SG_ EVMacAddress_2 : 0|48@1+ (1,0) [0|281474976710655] ""  SECC
+
+BO_ 2147496452 EVMacAddress_3: 8 CME
+ SG_ EVMacAddress_3 : 0|48@1+ (1,0) [0|281474976710655] ""  SECC
+
+BO_ 2147488517 EVSEDateTime_1: 8 SECC
+ SG_ EVSEDateTimeNow_1 : 0|64@1+ (1,0) [0|1.84467440737096e+19] "s"  CME
+
+BO_ 2147492613 EVSEDateTime_2: 8 SECC
+ SG_ EVSEDateTimeNow_2 : 0|64@1+ (1,0) [0|1.84467440737096e+19] "s"  CME
+
+BO_ 2147496709 EVSEDateTime_3: 8 SECC
+ SG_ EVSEDateTimeNow_3 : 0|64@1+ (1,0) [0|1.84467440737096e+19] "s"  CME
+
+BO_ 2147488516 EVSEID_1: 8 SECC
+ SG_ EVSEID_1 : 0|64@1+ (1,0) [0|1.84467440737096e+19] ""  CME
+
+BO_ 2147492612 EVSEID_2: 8 SECC
+ SG_ EVSEID_2 : 0|64@1+ (1,0) [0|1.84467440737096e+19] ""  CME
+
+BO_ 2147496708 EVSEID_3: 8 SECC
+ SG_ EVSEID_3 : 0|64@1+ (1,0) [0|1.84467440737096e+19] ""  CME
+
+BO_ 2147488259 EVDCEnergyLimits_1: 8 CME
+ SG_ EVEnergyRequest_1 : 16|16@1+ (100,0) [0|3276700] "Wh"  SECC
+ SG_ EVEnergyCapacity_1 : 0|16@1+ (100,0) [0|3276700] "Wh"  SECC
+
+BO_ 2147492355 EVDCEnergyLimits_2: 8 CME
+ SG_ EVEnergyRequest_2 : 16|16@1+ (100,0) [0|3276700] "Wh"  SECC
+ SG_ EVEnergyCapacity_2 : 0|16@1+ (100,0) [0|3276700] "Wh"  SECC
+
+BO_ 2147496451 EVDCEnergyLimits_3: 8 CME
+ SG_ EVEnergyRequest_3 : 16|16@1+ (100,0) [0|3276700] "Wh"  SECC
+ SG_ EVEnergyCapacity_3 : 0|16@1+ (100,0) [0|3276700] "Wh"  SECC
+
+BO_ 2148077568 BootConfig_1: 8 CME
+ SG_ BootloaderVersion_1 : 0|8@1+ (1,0) [0|254] ""  SECC
+
+BO_ 2148081664 BootConfig_2: 8 CME
+ SG_ BootloaderVersion_2 : 0|8@1+ (1,0) [0|254] ""  SECC
+
+BO_ 2148085760 BootConfig_3: 8 CME
+ SG_ BootloaderVersion_3 : 0|8@1+ (1,0) [0|254] ""  SECC
+
+BO_ 2147488002 ErrorCodes_1: 8 CME
+ SG_ ErrorCode3_1 : 56|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface3_1 : 55|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity3_1 : 53|2@1- (1,0) [0|3] ""  SECC
+ SG_ Category3_1 : 48|5@1+ (1,0) [0|31] ""  SECC
+ SG_ ErrorCode2_1 : 40|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface2_1 : 39|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity2_1 : 37|2@1+ (1,0) [0|3] ""  SECC
+ SG_ Category2_1 : 32|5@1+ (1,0) [0|31] ""  SECC
+ SG_ ErrorCode1_1 : 24|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface1_1 : 23|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity1_1 : 21|2@1+ (1,0) [0|3] ""  SECC
+ SG_ Category1_1 : 16|5@1+ (1,0) [0|31] ""  SECC
+ SG_ ErrorCode0_1 : 8|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface0_1 : 7|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity0_1 : 5|2@1+ (1,0) [0|3] ""  SECC
+ SG_ Category0_1 : 0|5@1+ (1,0) [0|31] ""  SECC
+
+BO_ 2147492098 ErrorCodes_2: 8 CME
+ SG_ ErrorCode3_2 : 56|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface3_2 : 55|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity3_2 : 53|2@1- (1,0) [0|3] ""  SECC
+ SG_ Category3_2 : 48|5@1+ (1,0) [0|31] ""  SECC
+ SG_ ErrorCode2_2 : 40|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface2_2 : 39|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity2_2 : 37|2@1+ (1,0) [0|3] ""  SECC
+ SG_ Category2_2 : 32|5@1+ (1,0) [0|31] ""  SECC
+ SG_ ErrorCode1_2 : 24|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface1_2 : 23|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity1_2 : 21|2@1+ (1,0) [0|3] ""  SECC
+ SG_ Category1_2 : 16|5@1+ (1,0) [0|31] ""  SECC
+ SG_ ErrorCode0_2 : 8|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface0_2 : 7|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity0_2 : 5|2@1+ (1,0) [0|3] ""  SECC
+ SG_ Category0_2 : 0|5@1+ (1,0) [0|31] ""  SECC
+
+BO_ 2147496194 ErrorCodes_3: 8 CME
+ SG_ ErrorCode3_3 : 56|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface3_3 : 55|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity3_3 : 53|2@1- (1,0) [0|3] ""  SECC
+ SG_ Category3_3 : 48|5@1+ (1,0) [0|31] ""  SECC
+ SG_ ErrorCode2_3 : 40|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface2_3 : 39|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity2_3 : 37|2@1+ (1,0) [0|3] ""  SECC
+ SG_ Category2_3 : 32|5@1+ (1,0) [0|31] ""  SECC
+ SG_ ErrorCode1_3 : 24|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface1_3 : 23|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity1_3 : 21|2@1+ (1,0) [0|3] ""  SECC
+ SG_ Category1_3 : 16|5@1+ (1,0) [0|31] ""  SECC
+ SG_ ErrorCode0_3 : 8|8@1+ (1,0) [0|255] ""  SECC
+ SG_ Interface0_3 : 7|1@1+ (1,0) [0|1] ""  SECC
+ SG_ Severity0_3 : 5|2@1+ (1,0) [0|3] ""  SECC
+ SG_ Category0_3 : 0|5@1+ (1,0) [0|31] ""  SECC
+
+BO_ 2147488000 ChargeInfo_1: 8 CME
+ SG_ DiodePresence_1 : 30|2@1+ (1,0) [0|3] ""  SECC
+ SG_ TCPStatus_1 : 28|2@1+ (1,0) [0|3] ""  SECC
+ SG_ AliveCounter_1 : 24|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ControlPilotState_1 : 20|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ActualChargeProtocol_1 : 16|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ProximityPinState_1 : 12|4@1+ (1,0) [0|15] ""  SECC
+ SG_ StateMachineState_1 : 8|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ControlPilotDutyCycle_1 : 0|7@1+ (1,0) [0|100] "%"  SECC
+
+BO_ 2147492096 ChargeInfo_2: 8 CME
+ SG_ DiodePresence_2 : 30|2@1+ (1,0) [0|3] ""  SECC
+ SG_ TCPStatus_2 : 28|2@1+ (1,0) [0|3] ""  SECC
+ SG_ AliveCounter_2 : 24|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ControlPilotState_2 : 20|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ActualChargeProtocol_2 : 16|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ProximityPinState_2 : 12|4@1+ (1,0) [0|15] ""  SECC
+ SG_ StateMachineState_2 : 8|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ControlPilotDutyCycle_2 : 0|7@1+ (1,0) [0|100] "%"  SECC
+
+BO_ 2147496192 ChargeInfo_3: 8 CME
+ SG_ DiodePresence_3 : 30|2@1+ (1,0) [0|3] ""  SECC
+ SG_ TCPStatus_3 : 28|2@1+ (1,0) [0|3] ""  SECC
+ SG_ AliveCounter_3 : 24|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ControlPilotState_3 : 20|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ActualChargeProtocol_3 : 16|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ProximityPinState_3 : 12|4@1+ (1,0) [0|15] ""  SECC
+ SG_ StateMachineState_3 : 8|4@1+ (1,0) [0|15] ""  SECC
+ SG_ ControlPilotDutyCycle_3 : 0|7@1+ (1,0) [0|100] "%"  SECC
+
+BO_ 2147488515 EVSEPlugStatus_1: 8 SECC
+ SG_ EVSEProximityPinState_1 : 12|4@1+ (1,0) [0|15] ""  CME
+ SG_ EVSEControlPilotState_1 : 8|4@1+ (1,0) [0|15] ""  CME
+ SG_ EVSEControlPilotDutyCycle_1 : 0|7@1+ (1,0) [0|100] "%"  CME
+
+BO_ 2147492611 EVSEPlugStatus_2: 8 SECC
+ SG_ EVSEProximityPinState_2 : 12|4@1+ (1,0) [0|15] ""  CME
+ SG_ EVSEControlPilotState_2 : 8|4@1+ (1,0) [0|15] ""  CME
+ SG_ EVSEControlPilotDutyCycle_2 : 0|7@1+ (1,0) [0|100] "%"  CME
+
+BO_ 2147496707 EVSEPlugStatus_3: 8 SECC
+ SG_ EVSEProximityPinState_3 : 12|4@1+ (1,0) [0|15] ""  CME
+ SG_ EVSEControlPilotState_3 : 8|4@1+ (1,0) [0|15] ""  CME
+ SG_ EVSEControlPilotDutyCycle_3 : 0|7@1+ (1,0) [0|100] "%"  CME
+
+BO_ 2147488514 EVSEDCStatus_1: 8 SECC
+ SG_ EVSEProcessingCC_1 : 52|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEProcessingCPD_1 : 50|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEProcessingCA_1 : 48|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEPowerLimitAchieved_1 : 46|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSECurrentLimitAchieved_1 : 44|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEStatusCode_1 : 40|4@1+ (1,0) [0|15] ""  CME
+ SG_ EVSEVoltageLimitAchieved_1 : 36|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEFreeService_1 : 35|1@1+ (1,0) [0|1] ""  CME
+ SG_ EVSEIsolationStatus_1 : 32|3@1+ (1,0) [0|7] ""  CME
+ SG_ EVSEPresentVoltage_1 : 16|16@1+ (0.1,0) [0|6500] "V"  CME
+ SG_ EVSEPresentCurrent_1 : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  CME
+
+BO_ 2147492610 EVSEDCStatus_2: 8 SECC
+ SG_ EVSEProcessingCC_2 : 52|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEProcessingCPD_2 : 50|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEProcessingCA_2 : 48|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEPowerLimitAchieved_2 : 46|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSECurrentLimitAchieved_2 : 44|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEStatusCode_2 : 40|4@1+ (1,0) [0|15] ""  CME
+ SG_ EVSEVoltageLimitAchieved_2 : 36|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEFreeService_2 : 35|1@1+ (1,0) [0|1] ""  CME
+ SG_ EVSEIsolationStatus_2 : 32|3@1+ (1,0) [0|7] ""  CME
+ SG_ EVSEPresentVoltage_2 : 16|16@1+ (0.1,0) [0|6500] "V"  CME
+ SG_ EVSEPresentCurrent_2 : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  CME
+
+BO_ 2147496706 EVSEDCStatus_3: 8 SECC
+ SG_ EVSEProcessingCC_3 : 52|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEProcessingCPD_3 : 50|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEProcessingCA_3 : 48|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEPowerLimitAchieved_3 : 46|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSECurrentLimitAchieved_3 : 44|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEStatusCode_3 : 40|4@1+ (1,0) [0|15] ""  CME
+ SG_ EVSEVoltageLimitAchieved_3 : 36|2@1+ (1,0) [0|3] ""  CME
+ SG_ EVSEFreeService_3 : 35|1@1+ (1,0) [0|1] ""  CME
+ SG_ EVSEIsolationStatus_3 : 32|3@1+ (1,0) [0|7] ""  CME
+ SG_ EVSEPresentVoltage_3 : 16|16@1+ (0.1,0) [0|6500] "V"  CME
+ SG_ EVSEPresentCurrent_3 : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  CME
+
+BO_ 2147488513 EVSEDCRegulationLimits_1: 8 SECC
+ SG_ EVSECurrentRegulationTolerance_1 : 40|8@1+ (0.2,0) [0|50] "A"  CME
+ SG_ EVSEPeakCurrentRipple_1 : 32|8@1+ (0.2,0) [0|50] "A"  CME
+ SG_ EVSEMinVoltage_1 : 16|16@1+ (0.1,0) [0|6500] "V"  CME
+ SG_ EVSEMinCurrent_1 : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  CME
+
+BO_ 2147492609 EVSEDCRegulationLimits_2: 8 SECC
+ SG_ EVSECurrentRegulationTolerance_2 : 40|8@1+ (0.2,0) [0|50] "A"  CME
+ SG_ EVSEPeakCurrentRipple_2 : 32|8@1+ (0.2,0) [0|50] "A"  CME
+ SG_ EVSEMinVoltage_2 : 16|16@1+ (0.1,0) [0|6500] "V"  CME
+ SG_ EVSEMinCurrent_2 : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  CME
+
+BO_ 2147496705 EVSEDCRegulationLimits_3: 8 SECC
+ SG_ EVSECurrentRegulationTolerance_3 : 40|8@1+ (0.2,0) [0|50] "A"  CME
+ SG_ EVSEPeakCurrentRipple_3 : 32|8@1+ (0.2,0) [0|50] "A"  CME
+ SG_ EVSEMinVoltage_3 : 16|16@1+ (0.1,0) [0|6500] "V"  CME
+ SG_ EVSEMinCurrent_3 : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  CME
+
+BO_ 2147488512 EVSEDCMaxLimits_1: 8 SECC
+ SG_ EVSEEnergyToBeDelivered_1 : 48|16@1+ (100,0) [0|3276700] "Wh"  CME
+ SG_ EVSEMaxPower_1 : 32|16@1+ (100,0) [0|3276700] "W"  CME
+ SG_ EVSEMaxVoltage_1 : 16|16@1+ (0.1,0) [0|6500] "V"  CME
+ SG_ EVSEMaxCurrent_1 : 0|16@1+ (0.1,0) [0|6500] "A"  CME
+
+BO_ 2147492608 EVSEDCMaxLimits_2: 8 SECC
+ SG_ EVSEEnergyToBeDelivered_2 : 48|16@1+ (100,0) [0|3276700] "Wh"  CME
+ SG_ EVSEMaxPower_2 : 32|16@1+ (100,0) [0|3276700] "W"  CME
+ SG_ EVSEMaxVoltage_2 : 16|16@1+ (0.1,0) [0|6500] "V"  CME
+ SG_ EVSEMaxCurrent_2 : 0|16@1+ (0.1,0) [0|6500] "A"  CME
+
+BO_ 2147496704 EVSEDCMaxLimits_3: 8 SECC
+ SG_ EVSEEnergyToBeDelivered_3 : 48|16@1+ (100,0) [0|3276700] "Wh"  CME
+ SG_ EVSEMaxPower_3 : 32|16@1+ (100,0) [0|3276700] "W"  CME
+ SG_ EVSEMaxVoltage_3 : 16|16@1+ (0.1,0) [0|6500] "V"  CME
+ SG_ EVSEMaxCurrent_3 : 0|16@1+ (0.1,0) [0|6500] "A"  CME
+
+BO_ 2147488258 EVStatusDisplay_1: 8 CME
+ SG_ EVTimeToFullSoC_1 : 40|18@1+ (1,0) [0|262142] "s"  SECC
+ SG_ EVReady_1 : 38|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVTimeToBulkSoC_1 : 20|18@1+ (1,0) [0|262142] "s"  SECC
+ SG_ EVRESSConditioning_1 : 18|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVCabinConditioning_1 : 16|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVErrorCode_1 : 12|4@1+ (1,0) [0|15] ""  SECC
+ SG_ EVBulkChargingComplete_1 : 10|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVChargingComplete_1 : 8|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVSoC_1 : 0|8@1+ (0.5,0) [0|100] ""  SECC
+
+BO_ 2147492354 EVStatusDisplay_2: 8 CME
+ SG_ EVTimeToFullSoC_2 : 40|18@1+ (1,0) [0|262142] "s"  SECC
+ SG_ EVReady_2 : 38|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVTimeToBulkSoC_2 : 20|18@1+ (1,0) [0|262142] "s"  SECC
+ SG_ EVRESSConditioning_2 : 18|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVCabinConditioning_2 : 16|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVErrorCode_2 : 12|4@1+ (1,0) [0|15] ""  SECC
+ SG_ EVBulkChargingComplete_2 : 10|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVChargingComplete_2 : 8|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVSoC_2 : 0|8@1+ (0.5,0) [0|100] ""  SECC
+
+BO_ 2147496450 EVStatusDisplay_3: 8 CME
+ SG_ EVTimeToFullSoC_3 : 40|18@1+ (1,0) [0|262142] "s"  SECC
+ SG_ EVReady_3 : 38|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVTimeToBulkSoC_3 : 20|18@1+ (1,0) [0|262142] "s"  SECC
+ SG_ EVRESSConditioning_3 : 18|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVCabinConditioning_3 : 16|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVErrorCode_3 : 12|4@1+ (1,0) [0|15] ""  SECC
+ SG_ EVBulkChargingComplete_3 : 10|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVChargingComplete_3 : 8|2@1+ (1,0) [0|3] ""  SECC
+ SG_ EVSoC_3 : 0|8@1+ (0.5,0) [0|100] ""  SECC
+
+BO_ 2147488257 EVDCChargeTargets_1: 8 CME
+ SG_ EVPreChargeVoltage_1 : 32|16@1+ (0.1,0) [0|6500] "V"  SECC
+ SG_ EVTargetVoltage_1 : 16|16@1+ (0.1,0) [0|6500] "V"  SECC
+ SG_ EVTargetCurrent_1 : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  SECC
+
+BO_ 2147492353 EVDCChargeTargets_2: 8 CME
+ SG_ EVPreChargeVoltage_2 : 32|16@1+ (0.1,0) [0|6500] "V"  SECC
+ SG_ EVTargetVoltage_2 : 16|16@1+ (0.1,0) [0|6500] "V"  SECC
+ SG_ EVTargetCurrent_2 : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  SECC
+
+BO_ 2147496449 EVDCChargeTargets_3: 8 CME
+ SG_ EVPreChargeVoltage_3 : 32|16@1+ (0.1,0) [0|6500] "V"  SECC
+ SG_ EVTargetVoltage_3 : 16|16@1+ (0.1,0) [0|6500] "V"  SECC
+ SG_ EVTargetCurrent_3 : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  SECC
+
+BO_ 2147488256 EVDCMaxLimits_1: 8 CME
+ SG_ EVBulkSoC_1 : 56|8@1+ (0.5,0) [0|100] "%"  SECC
+ SG_ EVFullSoC_1 : 48|8@1+ (0.5,0) [0|100] "%"  SECC
+ SG_ EVMaxVoltage_1 : 32|16@1+ (0.1,0) [0|6500] "V"  SECC
+ SG_ EVMaxPower_1 : 16|16@1+ (100,0) [0|3276700] "W"  SECC
+ SG_ EVMaxCurrent_1 : 0|16@1+ (0.1,0) [0|6500] "A"  SECC
+
+BO_ 2147492352 EVDCMaxLimits_2: 8 CME
+ SG_ EVBulkSoC_2 : 56|8@1+ (0.5,0) [0|100] "%"  SECC
+ SG_ EVFullSoC_2 : 48|8@1+ (0.5,0) [0|100] "%"  SECC
+ SG_ EVMaxVoltage_2 : 32|16@1+ (0.1,0) [0|6500] "V"  SECC
+ SG_ EVMaxPower_2 : 16|16@1+ (100,0) [0|3276700] "W"  SECC
+ SG_ EVMaxCurrent_2 : 0|16@1+ (0.1,0) [0|6500] "A"  SECC
+
+BO_ 2147496448 EVDCMaxLimits_3: 8 CME
+ SG_ EVBulkSoC_3 : 56|8@1+ (0.5,0) [0|100] "%"  SECC
+ SG_ EVFullSoC_3 : 48|8@1+ (0.5,0) [0|100] "%"  SECC
+ SG_ EVMaxVoltage_3 : 32|16@1+ (0.1,0) [0|6500] "V"  SECC
+ SG_ EVMaxPower_3 : 16|16@1+ (100,0) [0|3276700] "W"  SECC
+ SG_ EVMaxCurrent_3 : 0|16@1+ (0.1,0) [0|6500] "A"  SECC
+
+BO_ 2147488001 SoftwareInfo_1: 8 CME
+ SG_ SoftwareVersionHash_1 : 32|32@1+ (1,0) [0|4294967295] ""  SECC
+ SG_ SoftwareVersionConfig_1 : 24|8@1+ (1,0) [0|255] ""  SECC
+ SG_ SoftwareVersionPatch_1 : 16|8@1+ (1,0) [0|255] ""  SECC
+ SG_ SoftwareVersionMinor_1 : 8|8@1+ (1,0) [0|255] ""  SECC
+ SG_ SoftwareVersionMajor_1 : 0|8@1+ (1,0) [0|255] ""  SECC
+
+BO_ 2147492097 SoftwareInfo_2: 8 CME
+ SG_ SoftwareVersionHash_2 : 32|32@1+ (1,0) [0|4294967295] ""  SECC
+ SG_ SoftwareVersionConfig_2 : 24|8@1+ (1,0) [0|255] ""  SECC
+ SG_ SoftwareVersionPatch_2 : 16|8@1+ (1,0) [0|255] ""  SECC
+ SG_ SoftwareVersionMinor_2 : 8|8@1+ (1,0) [0|255] ""  SECC
+ SG_ SoftwareVersionMajor_2 : 0|8@1+ (1,0) [0|255] ""  SECC
+
+BO_ 2147496193 SoftwareInfo_3: 8 CME
+ SG_ SoftwareVersionHash_3 : 32|32@1+ (1,0) [0|4294967295] ""  SECC
+ SG_ SoftwareVersionConfig_3 : 24|8@1+ (1,0) [0|255] ""  SECC
+ SG_ SoftwareVersionPatch_3 : 16|8@1+ (1,0) [0|255] ""  SECC
+ SG_ SoftwareVersionMinor_3 : 8|8@1+ (1,0) [0|255] ""  SECC
+ SG_ SoftwareVersionMajor_3 : 0|8@1+ (1,0) [0|255] ""  SECC
+
+
+
+
+CM_ BO_ 2147483909 "Debug info gives information about the internal state machines states";
+CM_ SG_ 2147483909 V2GStatusISO "It provides the current state of ISO V2G state machine";
+CM_ SG_ 2147483909 ControlPilotVoltage "It provides the control pilot voltage";
+CM_ SG_ 2147483909 SLACStatus "It provides the current status of SLAC process";
+CM_ SG_ 2147483909 ProximityPilotVoltage "It provides the ADC proximity pilot voltage. ";
+CM_ SG_ 2147483909 V2GStatusDIN "It provides the current state of DIN V2G state machine";
+CM_ SG_ 2147483909 HLCStatus "It provides information about the current state of HLC";
+CM_ SG_ 2147483909 PilotStatesStatus "It provides information about current state of pilot state machine";
+CM_ BO_ 2147484423 "Controls the AC stack";
+CM_ SG_ 2147484423 EVSECurrentLimit "It defines the maximum current strength from the duty cycle of CP.";
+CM_ BO_ 2147483908 "Contains signals related to the SLAC process.";
+CM_ SG_ 2147483908 QcaSwVersionPatch "Qca Sw version patch";
+CM_ SG_ 2147483908 QcaSwVersionMinor "Qca Sw version minor";
+CM_ SG_ 2147483908 QcaSwVersionMajor "Qca Sw version major";
+CM_ SG_ 2147483908 MeasuredAttenuation "The measured attenuation value during the SLAC process. This value will be directly transmitted to the EV for attenuation classification.";
+CM_ SG_ 2147483908 QcaSwEnum "Qca enum indicate which software version it belongs to";
+CM_ SG_ 2147483908 QcaSlacConfig "Qca SLAC configuration
+";
+CM_ SG_ 2147483908 SLACLinkStatus "Indicates the status of the SLAC process.";
+CM_ BO_ 2147483907 "Contains all signals related to the status of the customer configured GPIO pins.";
+CM_ SG_ 2147483907 GPIO5Status "GPIO 5 status value if configured.";
+CM_ SG_ 2147483907 GPIO4Status "GPIO 4 status value if configured.";
+CM_ SG_ 2147483907 GPIO3Status "GPIO 3 status value if configured.";
+CM_ SG_ 2147483907 GPIO2Status "GPIO 2 status value if configured.";
+CM_ BO_ 2147484422 "Contains all signals related to the customer configuration of the GPIO pins.";
+CM_ SG_ 2147484422 ConfigGPIO5 "Configuration of GPIO 5";
+CM_ SG_ 2147484422 ConfigGPIO4 "Configuration of GPIO 4";
+CM_ SG_ 2147484422 ConfigGPIO3 "Configuration of GPIO 3";
+CM_ SG_ 2147484422 ConfigGPIO2 "Configuration of GPIO 2";
+CM_ BO_ 2147484164 "Contains the EV's MAC Address.";
+CM_ SG_ 2147484164 EVMacAddress "Is the MAC address of the vehicle's PLC interface.";
+CM_ BO_ 2147484421 "Contains the EVSE's current timestamp.";
+CM_ SG_ 2147484421 EVSEDateTimeNow "Is the current time stamp of the charger as a Unix Time Stamp (i.e. the number of seconds since 1st January 1970).
+Optional Signal";
+CM_ BO_ 2147484420 "This message shall contain the EVSE's chosen ID that it transmits to the vehicle.";
+CM_ SG_ 2147484420 EVSEID "This signal shall contain the EVSE's chosen ID that it transmits to the vehicle.";
+CM_ BO_ 2147484163 "Contains information regarding the EV's Energy Capacity.";
+CM_ SG_ 2147484163 EVEnergyRequest "Is the amount of energy the EV requests from the EVSE.
+Optional signal.";
+CM_ SG_ 2147484163 EVEnergyCapacity "Is the maximum energy capacity supported by the EV.
+Optional signal.";
+CM_ BO_ 2148073472 "Bootloader related signals.";
+CM_ SG_ 2148073472 BootloaderVersion "Version of the Bootloader.";
+CM_ BO_ 2147483906 "Contains the internal Error Codes and history of the CME.";
+CM_ SG_ 2147483906 ErrorCode3 "Error code level 3.";
+CM_ SG_ 2147483906 Interface3 "Error code level 3 interface.";
+CM_ SG_ 2147483906 Severity3 "Error code level 3 severity.";
+CM_ SG_ 2147483906 Category3 "Error category of the ErrorCode3";
+CM_ SG_ 2147483906 ErrorCode2 "Error code level 2.";
+CM_ SG_ 2147483906 Interface2 "Error code level 2 interface.";
+CM_ SG_ 2147483906 Severity2 "Error code level 2 severity.";
+CM_ SG_ 2147483906 Category2 "Error category of the ErrorCode2";
+CM_ SG_ 2147483906 ErrorCode1 "Error code level 1.";
+CM_ SG_ 2147483906 Interface1 "Error code level 1 interface.";
+CM_ SG_ 2147483906 Severity1 "Error code level 1 severity.";
+CM_ SG_ 2147483906 Category1 "Error category of the ErrorCode1";
+CM_ SG_ 2147483906 ErrorCode0 "Error code level 0. The present error code.";
+CM_ SG_ 2147483906 Interface0 "Error code level 0 interface. The present error code's interface.";
+CM_ SG_ 2147483906 Severity0 "Error code level 0 severity. The current error code's severity.";
+CM_ SG_ 2147483906 Category0 "Error category of the ErrorCode0";
+CM_ BO_ 2147483904 "Contains information regarding the current state of operation of the CME and, if active, the current charging cycle.";
+CM_ SG_ 2147483904 DiodePresence "Whether an EV's diode is detected in the CP circuit.";
+CM_ SG_ 2147483904 TCPStatus "Indicates whether a TCP or TLS connection is established between EV and EVSE.";
+CM_ SG_ 2147483904 AliveCounter "Continuous counter to show that the module's CAN communication is still functioning.";
+CM_ SG_ 2147483904 ControlPilotState "Control Pilot State.";
+CM_ SG_ 2147483904 ActualChargeProtocol "The charge protocol used for the current connection.";
+CM_ SG_ 2147483904 ProximityPinState "Indicates the type of cable connected via the proximity pin resistor coding.";
+CM_ SG_ 2147483904 StateMachineState "Actual state of the charging session";
+CM_ SG_ 2147483904 ControlPilotDutyCycle "Control Pilot Duty Cycle.";
+CM_ BO_ 2147484419 "Contains CP and PP information from the EVSE's own generation and detection logic.";
+CM_ SG_ 2147484419 EVSEProximityPinState "Indicates the type of cable connected via the proximity pin resistor coding.";
+CM_ SG_ 2147484419 EVSEControlPilotState "Indicates the detected CP state.";
+CM_ SG_ 2147484419 EVSEControlPilotDutyCycle "Indicates the charger's currently set positive duty cycle on the Control Pilot line.";
+CM_ BO_ 2147484418 "Contains the signals needed to control the DC charging cycle.";
+CM_ SG_ 2147484418 EVSEProcessingCC "Informs the EV if the current message sequence must be repeated until the charger has finished some tasks.";
+CM_ SG_ 2147484418 EVSEProcessingCPD "Informs the EV if the current message sequence must be repeated until the charger has finished some tasks.";
+CM_ SG_ 2147484418 EVSEProcessingCA "Informs the EV if the current message sequence must be repeated until the charger has finished some tasks.";
+CM_ SG_ 2147484418 EVSEPowerLimitAchieved "Indicates if the EVSE has reached its power limit.";
+CM_ SG_ 2147484418 EVSECurrentLimitAchieved "Indicates if the EVSE has reached its current limit.";
+CM_ SG_ 2147484418 EVSEStatusCode "Actual status of the EVSE.";
+CM_ SG_ 2147484418 EVSEVoltageLimitAchieved "Indicates if the EVSE has reached its voltage limit.";
+CM_ SG_ 2147484418 EVSEFreeService "This signal can be used to offer a service without payment. Is set to true if the service is free, otherwise the negotiated payment method is used to perform the billing process.";
+CM_ SG_ 2147484418 EVSEIsolationStatus "Is the EVSE's actual isolation status. Value No_IMD is only valid for ISO charging.
+Optional signal.
+";
+CM_ SG_ 2147484418 EVSEPresentVoltage "Is the present output voltage of the EVSE.";
+CM_ SG_ 2147484418 EVSEPresentCurrent "Is the present output current of the EVSE.";
+CM_ BO_ 2147484417 "Contains information regarding the EVSE's power regulation circuit limitations.";
+CM_ SG_ 2147484417 EVSECurrentRegulationTolerance "Is the maximum magnitude of the current regulation tolerance of the EVSE.
+Optional signal.";
+CM_ SG_ 2147484417 EVSEPeakCurrentRipple "Is the Peak-to-peak magnitude of the current ripple of the EVSE.";
+CM_ SG_ 2147484417 EVSEMinVoltage "Is the minimum voltage the EVSE can deliver.";
+CM_ SG_ 2147484417 EVSEMinCurrent "Is the minimum current the EVSE can deliver.";
+CM_ BO_ 2147484416 "Contains information regarding the EVSE's power module limits.";
+CM_ SG_ 2147484416 EVSEEnergyToBeDelivered "Is the amount of energy the EVSE can deliver.
+Optional signal.";
+CM_ SG_ 2147484416 EVSEMaxPower "This value indicates the maximum power the vehicle can request.
+Optional signal.";
+CM_ SG_ 2147484416 EVSEMaxVoltage "This value indicates the maximum voltage the vehicle can request.
+Optional signal.";
+CM_ SG_ 2147484416 EVSEMaxCurrent "Is the maximum current the EVSE can deliver.
+Optional signal.";
+CM_ BO_ 2147484162 "Only Values to be displayed at the Charging Station by Charging Station";
+CM_ SG_ 2147484162 EVTimeToFullSoC "Vehicle's estimated time until full charge is complete.
+Optional signal.";
+CM_ SG_ 2147484162 EVReady "Indication that the vehicle is ready (TRUE) for the further charging process. It is a display parameter and shall not affect the charging process.";
+CM_ SG_ 2147484162 EVTimeToBulkSoC "Vehicle's estimated time until bulk charge is complete.
+Optional signal.";
+CM_ SG_ 2147484162 EVRESSConditioning "Vehicle RESS Conditioning, The vehicle is using energy from the DC charger to condition the RESS to a target temperature.
+Optional signal for DIN70121.";
+CM_ SG_ 2147484162 EVCabinConditioning "Vehicle Cabin Conditioning, When True the EV is using energy from the EVSE to heat or cool the passenger compartment.
+Optional signal for DIN70121.";
+CM_ SG_ 2147484162 EVErrorCode "Indicates the EV's error code. The enumeration refers to the ISO15118 standard.";
+CM_ SG_ 2147484162 EVBulkChargingComplete "If it is set to true, the EV indicates that bulk charge is complete.
+Optional signal.";
+CM_ SG_ 2147484162 EVChargingComplete "If it is set to true, the EV indicates that it is full charged.";
+CM_ SG_ 2147484162 EVSoC "The actual SoC of the vehicle for display at the charging station.";
+CM_ BO_ 2147484161 "Contains the EV's actual charge targets.";
+CM_ SG_ 2147484161 EVPreChargeVoltage "Is the vehicles requested pre-charge voltage.";
+CM_ SG_ 2147484161 EVTargetVoltage "Vehicle's Target Voltage during Charging.";
+CM_ SG_ 2147484161 EVTargetCurrent "Vehicle's requested charging current.";
+CM_ BO_ 2147484160 "Contains information relayed of the EV's charging limits.";
+CM_ SG_ 2147484160 EVBulkSoC "Is the state of charge at which the EV's battery is bulk charged and the EV intends to end the fast charge process.
+Optional signal.";
+CM_ SG_ 2147484160 EVFullSoC "Is the EV battery's SoC which should be displayed as fully charged.
+Optional signal.";
+CM_ SG_ 2147484160 EVMaxVoltage "Is the maximum voltage of the EV's battery.
+Optional signal.";
+CM_ SG_ 2147484160 EVMaxPower "Is the maximum power of the vehicle's battery.
+Optional signal.";
+CM_ SG_ 2147484160 EVMaxCurrent "Is the maximum current of the vehicle's battery.
+Optional signal.";
+CM_ BO_ 2147483905 "Contains Current Software Version Information.";
+CM_ SG_ 2147483905 SoftwareVersionHash "The GIT hash of the currently running firmware.";
+CM_ SG_ 2147483905 SoftwareVersionConfig "Software Config Number";
+CM_ SG_ 2147483905 SoftwareVersionPatch "Software Patch Version Number";
+CM_ SG_ 2147483905 SoftwareVersionMinor "Software Minor Version Number";
+CM_ SG_ 2147483905 SoftwareVersionMajor "Software Major Version Number";
+CM_ BO_ 2147488005 "Debug info gives information about the internal state machines states";
+CM_ SG_ 2147488005 V2GStatusISO_1 "It provides the current state of ISO V2G state machine";
+CM_ SG_ 2147488005 ControlPilotVoltage_1 "It provides the control pilot voltage";
+CM_ SG_ 2147488005 SLACStatus_1 "It provides the current status of SLAC process";
+CM_ SG_ 2147488005 ProximityPilotVoltage_1 "It provides the ADC proximity pilot voltage. ";
+CM_ SG_ 2147488005 V2GStatusDIN_1 "It provides the current state of DIN V2G state machine";
+CM_ SG_ 2147488005 HLCStatus_1 "It provides information about the current state of HLC";
+CM_ SG_ 2147488005 PilotStatesStatus_1 "It provides information about current state of pilot state machine";
+CM_ BO_ 2147492101 "Debug info gives information about the internal state machines states";
+CM_ SG_ 2147492101 V2GStatusISO_2 "It provides the current state of ISO V2G state machine";
+CM_ SG_ 2147492101 ControlPilotVoltage_2 "It provides the control pilot voltage";
+CM_ SG_ 2147492101 SLACStatus_2 "It provides the current status of SLAC process";
+CM_ SG_ 2147492101 ProximityPilotVoltage_2 "It provides the ADC proximity pilot voltage. ";
+CM_ SG_ 2147492101 V2GStatusDIN_2 "It provides the current state of DIN V2G state machine";
+CM_ SG_ 2147492101 HLCStatus_2 "It provides information about the current state of HLC";
+CM_ SG_ 2147492101 PilotStatesStatus_2 "It provides information about current state of pilot state machine";
+CM_ BO_ 2147496197 "Debug info gives information about the internal state machines states";
+CM_ SG_ 2147496197 V2GStatusISO_3 "It provides the current state of ISO V2G state machine";
+CM_ SG_ 2147496197 ControlPilotVoltage_3 "It provides the control pilot voltage";
+CM_ SG_ 2147496197 SLACStatus_3 "It provides the current status of SLAC process";
+CM_ SG_ 2147496197 ProximityPilotVoltage_3 "It provides the ADC proximity pilot voltage. ";
+CM_ SG_ 2147496197 V2GStatusDIN_3 "It provides the current state of DIN V2G state machine";
+CM_ SG_ 2147496197 HLCStatus_3 "It provides information about the current state of HLC";
+CM_ SG_ 2147496197 PilotStatesStatus_3 "It provides information about current state of pilot state machine";
+CM_ BO_ 2147488519 "Controls the AC stack";
+CM_ SG_ 2147488519 EVSECurrentLimit_1 "It defines the maximum current strength from the duty cycle of CP.";
+CM_ BO_ 2147492615 "Controls the AC stack";
+CM_ SG_ 2147492615 EVSECurrentLimit_2 "It defines the maximum current strength from the duty cycle of CP.";
+CM_ BO_ 2147496711 "Controls the AC stack";
+CM_ SG_ 2147496711 EVSECurrentLimit_3 "It defines the maximum current strength from the duty cycle of CP.";
+CM_ BO_ 2147488004 "Contains signals related to the SLAC process.";
+CM_ SG_ 2147488004 QcaSwVersionPatch_1 "Qca Sw version patch";
+CM_ SG_ 2147488004 QcaSwVersionMinor_1 "Qca Sw version minor";
+CM_ SG_ 2147488004 QcaSwVersionMajor_1 "Qca Sw version major";
+CM_ SG_ 2147488004 MeasuredAttenuation_1 "The measured attenuation value during the SLAC process. This value will be directly transmitted to the EV for attenuation classification.";
+CM_ SG_ 2147488004 QcaSwEnum_1 "Qca enum indicate which software version it belongs to";
+CM_ SG_ 2147488004 QcaSlacConfig_1 "Qca SLAC configuration
+";
+CM_ SG_ 2147488004 SLACLinkStatus_1 "Indicates the status of the SLAC process.";
+CM_ BO_ 2147492100 "Contains signals related to the SLAC process.";
+CM_ SG_ 2147492100 QcaSwVersionPatch_2 "Qca Sw version patch";
+CM_ SG_ 2147492100 QcaSwVersionMinor_2 "Qca Sw version minor";
+CM_ SG_ 2147492100 QcaSwVersionMajor_2 "Qca Sw version major";
+CM_ SG_ 2147492100 MeasuredAttenuation_2 "The measured attenuation value during the SLAC process. This value will be directly transmitted to the EV for attenuation classification.";
+CM_ SG_ 2147492100 QcaSwEnum_2 "Qca enum indicate which software version it belongs to";
+CM_ SG_ 2147492100 QcaSlacConfig_2 "Qca SLAC configuration
+";
+CM_ SG_ 2147492100 SLACLinkStatus_2 "Indicates the status of the SLAC process.";
+CM_ BO_ 2147496196 "Contains signals related to the SLAC process.";
+CM_ SG_ 2147496196 QcaSwVersionPatch_3 "Qca Sw version patch";
+CM_ SG_ 2147496196 QcaSwVersionMinor_3 "Qca Sw version minor";
+CM_ SG_ 2147496196 QcaSwVersionMajor_3 "Qca Sw version major";
+CM_ SG_ 2147496196 MeasuredAttenuation_3 "The measured attenuation value during the SLAC process. This value will be directly transmitted to the EV for attenuation classification.";
+CM_ SG_ 2147496196 QcaSwEnum_3 "Qca enum indicate which software version it belongs to";
+CM_ SG_ 2147496196 QcaSlacConfig_3 "Qca SLAC configuration
+";
+CM_ SG_ 2147496196 SLACLinkStatus_3 "Indicates the status of the SLAC process.";
+CM_ BO_ 2147488003 "Contains all signals related to the status of the customer configured GPIO pins.";
+CM_ SG_ 2147488003 GPIO5Status_1 "GPIO 5 status value if configured.";
+CM_ SG_ 2147488003 GPIO4Status_1 "GPIO 4 status value if configured.";
+CM_ SG_ 2147488003 GPIO3Status_1 "GPIO 3 status value if configured.";
+CM_ SG_ 2147488003 GPIO2Status_1 "GPIO 2 status value if configured.";
+CM_ BO_ 2147492099 "Contains all signals related to the status of the customer configured GPIO pins.";
+CM_ SG_ 2147492099 GPIO5Status_2 "GPIO 5 status value if configured.";
+CM_ SG_ 2147492099 GPIO4Status_2 "GPIO 4 status value if configured.";
+CM_ SG_ 2147492099 GPIO3Status_2 "GPIO 3 status value if configured.";
+CM_ SG_ 2147492099 GPIO2Status_2 "GPIO 2 status value if configured.";
+CM_ BO_ 2147496195 "Contains all signals related to the status of the customer configured GPIO pins.";
+CM_ SG_ 2147496195 GPIO5Status_3 "GPIO 5 status value if configured.";
+CM_ SG_ 2147496195 GPIO4Status_3 "GPIO 4 status value if configured.";
+CM_ SG_ 2147496195 GPIO3Status_3 "GPIO 3 status value if configured.";
+CM_ SG_ 2147496195 GPIO2Status_3 "GPIO 2 status value if configured.";
+CM_ BO_ 2147488518 "Contains all signals related to the customer configuration of the GPIO pins.";
+CM_ SG_ 2147488518 ConfigGPIO5_1 "Configuration of GPIO 5";
+CM_ SG_ 2147488518 ConfigGPIO4_1 "Configuration of GPIO 4";
+CM_ SG_ 2147488518 ConfigGPIO3_1 "Configuration of GPIO 3";
+CM_ SG_ 2147488518 ConfigGPIO2_1 "Configuration of GPIO 2";
+CM_ BO_ 2147492614 "Contains all signals related to the customer configuration of the GPIO pins.";
+CM_ SG_ 2147492614 ConfigGPIO5_2 "Configuration of GPIO 5";
+CM_ SG_ 2147492614 ConfigGPIO4_2 "Configuration of GPIO 4";
+CM_ SG_ 2147492614 ConfigGPIO3_2 "Configuration of GPIO 3";
+CM_ SG_ 2147492614 ConfigGPIO2_2 "Configuration of GPIO 2";
+CM_ BO_ 2147496710 "Contains all signals related to the customer configuration of the GPIO pins.";
+CM_ SG_ 2147496710 ConfigGPIO5_3 "Configuration of GPIO 5";
+CM_ SG_ 2147496710 ConfigGPIO4_3 "Configuration of GPIO 4";
+CM_ SG_ 2147496710 ConfigGPIO3_3 "Configuration of GPIO 3";
+CM_ SG_ 2147496710 ConfigGPIO2_3 "Configuration of GPIO 2";
+CM_ BO_ 2147488260 "Contains the EV's MAC Address.";
+CM_ SG_ 2147488260 EVMacAddress_1 "Is the MAC address of the vehicle's PLC interface.";
+CM_ BO_ 2147492356 "Contains the EV's MAC Address.";
+CM_ SG_ 2147492356 EVMacAddress_2 "Is the MAC address of the vehicle's PLC interface.";
+CM_ BO_ 2147496452 "Contains the EV's MAC Address.";
+CM_ SG_ 2147496452 EVMacAddress_3 "Is the MAC address of the vehicle's PLC interface.";
+CM_ BO_ 2147488517 "Contains the EVSE's current timestamp.";
+CM_ SG_ 2147488517 EVSEDateTimeNow_1 "Is the current time stamp of the charger as a Unix Time Stamp (i.e. the number of seconds since 1st January 1970).
+Optional Signal";
+CM_ BO_ 2147492613 "Contains the EVSE's current timestamp.";
+CM_ SG_ 2147492613 EVSEDateTimeNow_2 "Is the current time stamp of the charger as a Unix Time Stamp (i.e. the number of seconds since 1st January 1970).
+Optional Signal";
+CM_ BO_ 2147496709 "Contains the EVSE's current timestamp.";
+CM_ SG_ 2147496709 EVSEDateTimeNow_3 "Is the current time stamp of the charger as a Unix Time Stamp (i.e. the number of seconds since 1st January 1970).
+Optional Signal";
+CM_ BO_ 2147488516 "This message shall contain the EVSE's chosen ID that it transmits to the vehicle.";
+CM_ SG_ 2147488516 EVSEID_1 "This signal shall contain the EVSE's chosen ID that it transmits to the vehicle.";
+CM_ BO_ 2147492612 "This message shall contain the EVSE's chosen ID that it transmits to the vehicle.";
+CM_ SG_ 2147492612 EVSEID_2 "This signal shall contain the EVSE's chosen ID that it transmits to the vehicle.";
+CM_ BO_ 2147496708 "This message shall contain the EVSE's chosen ID that it transmits to the vehicle.";
+CM_ SG_ 2147496708 EVSEID_3 "This signal shall contain the EVSE's chosen ID that it transmits to the vehicle.";
+CM_ BO_ 2147488259 "Contains information regarding the EV's Energy Capacity.";
+CM_ SG_ 2147488259 EVEnergyRequest_1 "Is the amount of energy the EV requests from the EVSE.
+Optional signal.";
+CM_ SG_ 2147488259 EVEnergyCapacity_1 "Is the maximum energy capacity supported by the EV.
+Optional signal.";
+CM_ BO_ 2147492355 "Contains information regarding the EV's Energy Capacity.";
+CM_ SG_ 2147492355 EVEnergyRequest_2 "Is the amount of energy the EV requests from the EVSE.
+Optional signal.";
+CM_ SG_ 2147492355 EVEnergyCapacity_2 "Is the maximum energy capacity supported by the EV.
+Optional signal.";
+CM_ BO_ 2147496451 "Contains information regarding the EV's Energy Capacity.";
+CM_ SG_ 2147496451 EVEnergyRequest_3 "Is the amount of energy the EV requests from the EVSE.
+Optional signal.";
+CM_ SG_ 2147496451 EVEnergyCapacity_3 "Is the maximum energy capacity supported by the EV.
+Optional signal.";
+CM_ BO_ 2148077568 "Bootloader related signals.";
+CM_ SG_ 2148077568 BootloaderVersion_1 "Version of the Bootloader.";
+CM_ BO_ 2148081664 "Bootloader related signals.";
+CM_ SG_ 2148081664 BootloaderVersion_2 "Version of the Bootloader.";
+CM_ BO_ 2148085760 "Bootloader related signals.";
+CM_ SG_ 2148085760 BootloaderVersion_3 "Version of the Bootloader.";
+CM_ BO_ 2147488002 "Contains the internal Error Codes and history of the CME.";
+CM_ SG_ 2147488002 ErrorCode3_1 "Error code level 3.";
+CM_ SG_ 2147488002 Interface3_1 "Error code level 3 interface.";
+CM_ SG_ 2147488002 Severity3_1 "Error code level 3 severity.";
+CM_ SG_ 2147488002 Category3_1 "Error category of the ErrorCode3";
+CM_ SG_ 2147488002 ErrorCode2_1 "Error code level 2.";
+CM_ SG_ 2147488002 Interface2_1 "Error code level 2 interface.";
+CM_ SG_ 2147488002 Severity2_1 "Error code level 2 severity.";
+CM_ SG_ 2147488002 Category2_1 "Error category of the ErrorCode2";
+CM_ SG_ 2147488002 ErrorCode1_1 "Error code level 1.";
+CM_ SG_ 2147488002 Interface1_1 "Error code level 1 interface.";
+CM_ SG_ 2147488002 Severity1_1 "Error code level 1 severity.";
+CM_ SG_ 2147488002 Category1_1 "Error category of the ErrorCode1";
+CM_ SG_ 2147488002 ErrorCode0_1 "Error code level 0. The present error code.";
+CM_ SG_ 2147488002 Interface0_1 "Error code level 0 interface. The present error code's interface.";
+CM_ SG_ 2147488002 Severity0_1 "Error code level 0 severity. The current error code's severity.";
+CM_ SG_ 2147488002 Category0_1 "Error category of the ErrorCode0";
+CM_ BO_ 2147492098 "Contains the internal Error Codes and history of the CME.";
+CM_ SG_ 2147492098 ErrorCode3_2 "Error code level 3.";
+CM_ SG_ 2147492098 Interface3_2 "Error code level 3 interface.";
+CM_ SG_ 2147492098 Severity3_2 "Error code level 3 severity.";
+CM_ SG_ 2147492098 Category3_2 "Error category of the ErrorCode3";
+CM_ SG_ 2147492098 ErrorCode2_2 "Error code level 2.";
+CM_ SG_ 2147492098 Interface2_2 "Error code level 2 interface.";
+CM_ SG_ 2147492098 Severity2_2 "Error code level 2 severity.";
+CM_ SG_ 2147492098 Category2_2 "Error category of the ErrorCode2";
+CM_ SG_ 2147492098 ErrorCode1_2 "Error code level 1.";
+CM_ SG_ 2147492098 Interface1_2 "Error code level 1 interface.";
+CM_ SG_ 2147492098 Severity1_2 "Error code level 1 severity.";
+CM_ SG_ 2147492098 Category1_2 "Error category of the ErrorCode1";
+CM_ SG_ 2147492098 ErrorCode0_2 "Error code level 0. The present error code.";
+CM_ SG_ 2147492098 Interface0_2 "Error code level 0 interface. The present error code's interface.";
+CM_ SG_ 2147492098 Severity0_2 "Error code level 0 severity. The current error code's severity.";
+CM_ SG_ 2147492098 Category0_2 "Error category of the ErrorCode0";
+CM_ BO_ 2147496194 "Contains the internal Error Codes and history of the CME.";
+CM_ SG_ 2147496194 ErrorCode3_3 "Error code level 3.";
+CM_ SG_ 2147496194 Interface3_3 "Error code level 3 interface.";
+CM_ SG_ 2147496194 Severity3_3 "Error code level 3 severity.";
+CM_ SG_ 2147496194 Category3_3 "Error category of the ErrorCode3";
+CM_ SG_ 2147496194 ErrorCode2_3 "Error code level 2.";
+CM_ SG_ 2147496194 Interface2_3 "Error code level 2 interface.";
+CM_ SG_ 2147496194 Severity2_3 "Error code level 2 severity.";
+CM_ SG_ 2147496194 Category2_3 "Error category of the ErrorCode2";
+CM_ SG_ 2147496194 ErrorCode1_3 "Error code level 1.";
+CM_ SG_ 2147496194 Interface1_3 "Error code level 1 interface.";
+CM_ SG_ 2147496194 Severity1_3 "Error code level 1 severity.";
+CM_ SG_ 2147496194 Category1_3 "Error category of the ErrorCode1";
+CM_ SG_ 2147496194 ErrorCode0_3 "Error code level 0. The present error code.";
+CM_ SG_ 2147496194 Interface0_3 "Error code level 0 interface. The present error code's interface.";
+CM_ SG_ 2147496194 Severity0_3 "Error code level 0 severity. The current error code's severity.";
+CM_ SG_ 2147496194 Category0_3 "Error category of the ErrorCode0";
+CM_ BO_ 2147488000 "Contains information regarding the current state of operation of the CME and, if active, the current charging cycle.";
+CM_ SG_ 2147488000 DiodePresence_1 "Whether an EV's diode is detected in the CP circuit.";
+CM_ SG_ 2147488000 TCPStatus_1 "Indicates whether a TCP or TLS connection is established between EV and EVSE.";
+CM_ SG_ 2147488000 AliveCounter_1 "Continuous counter to show that the module's CAN communication is still functioning.";
+CM_ SG_ 2147488000 ControlPilotState_1 "Control Pilot State.";
+CM_ SG_ 2147488000 ActualChargeProtocol_1 "The charge protocol used for the current connection.";
+CM_ SG_ 2147488000 ProximityPinState_1 "Indicates the type of cable connected via the proximity pin resistor coding.";
+CM_ SG_ 2147488000 StateMachineState_1 "Actual state of the charging session";
+CM_ SG_ 2147488000 ControlPilotDutyCycle_1 "Control Pilot Duty Cycle.";
+CM_ BO_ 2147492096 "Contains information regarding the current state of operation of the CME and, if active, the current charging cycle.";
+CM_ SG_ 2147492096 DiodePresence_2 "Whether an EV's diode is detected in the CP circuit.";
+CM_ SG_ 2147492096 TCPStatus_2 "Indicates whether a TCP or TLS connection is established between EV and EVSE.";
+CM_ SG_ 2147492096 AliveCounter_2 "Continuous counter to show that the module's CAN communication is still functioning.";
+CM_ SG_ 2147492096 ControlPilotState_2 "Control Pilot State.";
+CM_ SG_ 2147492096 ActualChargeProtocol_2 "The charge protocol used for the current connection.";
+CM_ SG_ 2147492096 ProximityPinState_2 "Indicates the type of cable connected via the proximity pin resistor coding.";
+CM_ SG_ 2147492096 StateMachineState_2 "Actual state of the charging session";
+CM_ SG_ 2147492096 ControlPilotDutyCycle_2 "Control Pilot Duty Cycle.";
+CM_ BO_ 2147496192 "Contains information regarding the current state of operation of the CME and, if active, the current charging cycle.";
+CM_ SG_ 2147496192 DiodePresence_3 "Whether an EV's diode is detected in the CP circuit.";
+CM_ SG_ 2147496192 TCPStatus_3 "Indicates whether a TCP or TLS connection is established between EV and EVSE.";
+CM_ SG_ 2147496192 AliveCounter_3 "Continuous counter to show that the module's CAN communication is still functioning.";
+CM_ SG_ 2147496192 ControlPilotState_3 "Control Pilot State.";
+CM_ SG_ 2147496192 ActualChargeProtocol_3 "The charge protocol used for the current connection.";
+CM_ SG_ 2147496192 ProximityPinState_3 "Indicates the type of cable connected via the proximity pin resistor coding.";
+CM_ SG_ 2147496192 StateMachineState_3 "Actual state of the charging session";
+CM_ SG_ 2147496192 ControlPilotDutyCycle_3 "Control Pilot Duty Cycle.";
+CM_ BO_ 2147488515 "Contains CP and PP information from the EVSE's own generation and detection logic.";
+CM_ SG_ 2147488515 EVSEProximityPinState_1 "Indicates the type of cable connected via the proximity pin resistor coding.";
+CM_ SG_ 2147488515 EVSEControlPilotState_1 "Indicates the detected CP state.";
+CM_ SG_ 2147488515 EVSEControlPilotDutyCycle_1 "Indicates the charger's currently set positive duty cycle on the Control Pilot line.";
+CM_ BO_ 2147492611 "Contains CP and PP information from the EVSE's own generation and detection logic.";
+CM_ SG_ 2147492611 EVSEProximityPinState_2 "Indicates the type of cable connected via the proximity pin resistor coding.";
+CM_ SG_ 2147492611 EVSEControlPilotState_2 "Indicates the detected CP state.";
+CM_ SG_ 2147492611 EVSEControlPilotDutyCycle_2 "Indicates the charger's currently set positive duty cycle on the Control Pilot line.";
+CM_ BO_ 2147496707 "Contains CP and PP information from the EVSE's own generation and detection logic.";
+CM_ SG_ 2147496707 EVSEProximityPinState_3 "Indicates the type of cable connected via the proximity pin resistor coding.";
+CM_ SG_ 2147496707 EVSEControlPilotState_3 "Indicates the detected CP state.";
+CM_ SG_ 2147496707 EVSEControlPilotDutyCycle_3 "Indicates the charger's currently set positive duty cycle on the Control Pilot line.";
+CM_ BO_ 2147488514 "Contains the signals needed to control the DC charging cycle.";
+CM_ SG_ 2147488514 EVSEProcessingCC_1 "Informs the EV if the current message sequence must be repeated until the charger has finished some tasks.";
+CM_ SG_ 2147488514 EVSEProcessingCPD_1 "Informs the EV if the current message sequence must be repeated until the charger has finished some tasks.";
+CM_ SG_ 2147488514 EVSEProcessingCA_1 "Informs the EV if the current message sequence must be repeated until the charger has finished some tasks.";
+CM_ SG_ 2147488514 EVSEPowerLimitAchieved_1 "Indicates if the EVSE has reached its power limit.";
+CM_ SG_ 2147488514 EVSECurrentLimitAchieved_1 "Indicates if the EVSE has reached its current limit.";
+CM_ SG_ 2147488514 EVSEStatusCode_1 "Actual status of the EVSE.";
+CM_ SG_ 2147488514 EVSEVoltageLimitAchieved_1 "Indicates if the EVSE has reached its voltage limit.";
+CM_ SG_ 2147488514 EVSEFreeService_1 "This signal can be used to offer a service without payment. Is set to true if the service is free, otherwise the negotiated payment method is used to perform the billing process.";
+CM_ SG_ 2147488514 EVSEIsolationStatus_1 "Is the EVSE's actual isolation status. Value No_IMD is only valid for ISO charging.
+Optional signal.
+";
+CM_ SG_ 2147488514 EVSEPresentVoltage_1 "Is the present output voltage of the EVSE.";
+CM_ SG_ 2147488514 EVSEPresentCurrent_1 "Is the present output current of the EVSE.";
+CM_ BO_ 2147492610 "Contains the signals needed to control the DC charging cycle.";
+CM_ SG_ 2147492610 EVSEProcessingCC_2 "Informs the EV if the current message sequence must be repeated until the charger has finished some tasks.";
+CM_ SG_ 2147492610 EVSEProcessingCPD_2 "Informs the EV if the current message sequence must be repeated until the charger has finished some tasks.";
+CM_ SG_ 2147492610 EVSEProcessingCA_2 "Informs the EV if the current message sequence must be repeated until the charger has finished some tasks.";
+CM_ SG_ 2147492610 EVSEPowerLimitAchieved_2 "Indicates if the EVSE has reached its power limit.";
+CM_ SG_ 2147492610 EVSECurrentLimitAchieved_2 "Indicates if the EVSE has reached its current limit.";
+CM_ SG_ 2147492610 EVSEStatusCode_2 "Actual status of the EVSE.";
+CM_ SG_ 2147492610 EVSEVoltageLimitAchieved_2 "Indicates if the EVSE has reached its voltage limit.";
+CM_ SG_ 2147492610 EVSEFreeService_2 "This signal can be used to offer a service without payment. Is set to true if the service is free, otherwise the negotiated payment method is used to perform the billing process.";
+CM_ SG_ 2147492610 EVSEIsolationStatus_2 "Is the EVSE's actual isolation status. Value No_IMD is only valid for ISO charging.
+Optional signal.
+";
+CM_ SG_ 2147492610 EVSEPresentVoltage_2 "Is the present output voltage of the EVSE.";
+CM_ SG_ 2147492610 EVSEPresentCurrent_2 "Is the present output current of the EVSE.";
+CM_ BO_ 2147496706 "Contains the signals needed to control the DC charging cycle.";
+CM_ SG_ 2147496706 EVSEProcessingCC_3 "Informs the EV if the current message sequence must be repeated until the charger has finished some tasks.";
+CM_ SG_ 2147496706 EVSEProcessingCPD_3 "Informs the EV if the current message sequence must be repeated until the charger has finished some tasks.";
+CM_ SG_ 2147496706 EVSEProcessingCA_3 "Informs the EV if the current message sequence must be repeated until the charger has finished some tasks.";
+CM_ SG_ 2147496706 EVSEPowerLimitAchieved_3 "Indicates if the EVSE has reached its power limit.";
+CM_ SG_ 2147496706 EVSECurrentLimitAchieved_3 "Indicates if the EVSE has reached its current limit.";
+CM_ SG_ 2147496706 EVSEStatusCode_3 "Actual status of the EVSE.";
+CM_ SG_ 2147496706 EVSEVoltageLimitAchieved_3 "Indicates if the EVSE has reached its voltage limit.";
+CM_ SG_ 2147496706 EVSEFreeService_3 "This signal can be used to offer a service without payment. Is set to true if the service is free, otherwise the negotiated payment method is used to perform the billing process.";
+CM_ SG_ 2147496706 EVSEIsolationStatus_3 "Is the EVSE's actual isolation status. Value No_IMD is only valid for ISO charging.
+Optional signal.
+";
+CM_ SG_ 2147496706 EVSEPresentVoltage_3 "Is the present output voltage of the EVSE.";
+CM_ SG_ 2147496706 EVSEPresentCurrent_3 "Is the present output current of the EVSE.";
+CM_ BO_ 2147488513 "Contains information regarding the EVSE's power regulation circuit limitations.";
+CM_ SG_ 2147488513 EVSECurrentRegulationTolerance_1 "Is the maximum magnitude of the current regulation tolerance of the EVSE.
+Optional signal.";
+CM_ SG_ 2147488513 EVSEPeakCurrentRipple_1 "Is the Peak-to-peak magnitude of the current ripple of the EVSE.";
+CM_ SG_ 2147488513 EVSEMinVoltage_1 "Is the minimum voltage the EVSE can deliver.";
+CM_ SG_ 2147488513 EVSEMinCurrent_1 "Is the minimum current the EVSE can deliver.";
+CM_ BO_ 2147492609 "Contains information regarding the EVSE's power regulation circuit limitations.";
+CM_ SG_ 2147492609 EVSECurrentRegulationTolerance_2 "Is the maximum magnitude of the current regulation tolerance of the EVSE.
+Optional signal.";
+CM_ SG_ 2147492609 EVSEPeakCurrentRipple_2 "Is the Peak-to-peak magnitude of the current ripple of the EVSE.";
+CM_ SG_ 2147492609 EVSEMinVoltage_2 "Is the minimum voltage the EVSE can deliver.";
+CM_ SG_ 2147492609 EVSEMinCurrent_2 "Is the minimum current the EVSE can deliver.";
+CM_ BO_ 2147496705 "Contains information regarding the EVSE's power regulation circuit limitations.";
+CM_ SG_ 2147496705 EVSECurrentRegulationTolerance_3 "Is the maximum magnitude of the current regulation tolerance of the EVSE.
+Optional signal.";
+CM_ SG_ 2147496705 EVSEPeakCurrentRipple_3 "Is the Peak-to-peak magnitude of the current ripple of the EVSE.";
+CM_ SG_ 2147496705 EVSEMinVoltage_3 "Is the minimum voltage the EVSE can deliver.";
+CM_ SG_ 2147496705 EVSEMinCurrent_3 "Is the minimum current the EVSE can deliver.";
+CM_ BO_ 2147488512 "Contains information regarding the EVSE's power module limits.";
+CM_ SG_ 2147488512 EVSEEnergyToBeDelivered_1 "Is the amount of energy the EVSE can deliver.
+Optional signal.";
+CM_ SG_ 2147488512 EVSEMaxPower_1 "This value indicates the maximum power the vehicle can request.
+Optional signal.";
+CM_ SG_ 2147488512 EVSEMaxVoltage_1 "This value indicates the maximum voltage the vehicle can request.
+Optional signal.";
+CM_ SG_ 2147488512 EVSEMaxCurrent_1 "Is the maximum current the EVSE can deliver.
+Optional signal.";
+CM_ BO_ 2147492608 "Contains information regarding the EVSE's power module limits.";
+CM_ SG_ 2147492608 EVSEEnergyToBeDelivered_2 "Is the amount of energy the EVSE can deliver.
+Optional signal.";
+CM_ SG_ 2147492608 EVSEMaxPower_2 "This value indicates the maximum power the vehicle can request.
+Optional signal.";
+CM_ SG_ 2147492608 EVSEMaxVoltage_2 "This value indicates the maximum voltage the vehicle can request.
+Optional signal.";
+CM_ SG_ 2147492608 EVSEMaxCurrent_2 "Is the maximum current the EVSE can deliver.
+Optional signal.";
+CM_ BO_ 2147496704 "Contains information regarding the EVSE's power module limits.";
+CM_ SG_ 2147496704 EVSEEnergyToBeDelivered_3 "Is the amount of energy the EVSE can deliver.
+Optional signal.";
+CM_ SG_ 2147496704 EVSEMaxPower_3 "This value indicates the maximum power the vehicle can request.
+Optional signal.";
+CM_ SG_ 2147496704 EVSEMaxVoltage_3 "This value indicates the maximum voltage the vehicle can request.
+Optional signal.";
+CM_ SG_ 2147496704 EVSEMaxCurrent_3 "Is the maximum current the EVSE can deliver.
+Optional signal.";
+CM_ BO_ 2147488258 "Only Values to be displayed at the Charging Station by Charging Station";
+CM_ SG_ 2147488258 EVTimeToFullSoC_1 "Vehicle's estimated time until full charge is complete.
+Optional signal.";
+CM_ SG_ 2147488258 EVReady_1 "Indication that the vehicle is ready (TRUE) for the further charging process. It is a display parameter and shall not affect the charging process.";
+CM_ SG_ 2147488258 EVTimeToBulkSoC_1 "Vehicle's estimated time until bulk charge is complete.
+Optional signal.";
+CM_ SG_ 2147488258 EVRESSConditioning_1 "Vehicle RESS Conditioning, The vehicle is using energy from the DC charger to condition the RESS to a target temperature.
+Optional signal for DIN70121.";
+CM_ SG_ 2147488258 EVCabinConditioning_1 "Vehicle Cabin Conditioning, When True the EV is using energy from the EVSE to heat or cool the passenger compartment.
+Optional signal for DIN70121.";
+CM_ SG_ 2147488258 EVErrorCode_1 "Indicates the EV's error code. The enumeration refers to the ISO15118 standard.";
+CM_ SG_ 2147488258 EVBulkChargingComplete_1 "If it is set to true, the EV indicates that bulk charge is complete.
+Optional signal.";
+CM_ SG_ 2147488258 EVChargingComplete_1 "If it is set to true, the EV indicates that it is full charged.";
+CM_ SG_ 2147488258 EVSoC_1 "The actual SoC of the vehicle for display at the charging station.";
+CM_ BO_ 2147492354 "Only Values to be displayed at the Charging Station by Charging Station";
+CM_ SG_ 2147492354 EVTimeToFullSoC_2 "Vehicle's estimated time until full charge is complete.
+Optional signal.";
+CM_ SG_ 2147492354 EVReady_2 "Indication that the vehicle is ready (TRUE) for the further charging process. It is a display parameter and shall not affect the charging process.";
+CM_ SG_ 2147492354 EVTimeToBulkSoC_2 "Vehicle's estimated time until bulk charge is complete.
+Optional signal.";
+CM_ SG_ 2147492354 EVRESSConditioning_2 "Vehicle RESS Conditioning, The vehicle is using energy from the DC charger to condition the RESS to a target temperature.
+Optional signal for DIN70121.";
+CM_ SG_ 2147492354 EVCabinConditioning_2 "Vehicle Cabin Conditioning, When True the EV is using energy from the EVSE to heat or cool the passenger compartment.
+Optional signal for DIN70121.";
+CM_ SG_ 2147492354 EVErrorCode_2 "Indicates the EV's error code. The enumeration refers to the ISO15118 standard.";
+CM_ SG_ 2147492354 EVBulkChargingComplete_2 "If it is set to true, the EV indicates that bulk charge is complete.
+Optional signal.";
+CM_ SG_ 2147492354 EVChargingComplete_2 "If it is set to true, the EV indicates that it is full charged.";
+CM_ SG_ 2147492354 EVSoC_2 "The actual SoC of the vehicle for display at the charging station.";
+CM_ BO_ 2147496450 "Only Values to be displayed at the Charging Station by Charging Station";
+CM_ SG_ 2147496450 EVTimeToFullSoC_3 "Vehicle's estimated time until full charge is complete.
+Optional signal.";
+CM_ SG_ 2147496450 EVReady_3 "Indication that the vehicle is ready (TRUE) for the further charging process. It is a display parameter and shall not affect the charging process.";
+CM_ SG_ 2147496450 EVTimeToBulkSoC_3 "Vehicle's estimated time until bulk charge is complete.
+Optional signal.";
+CM_ SG_ 2147496450 EVRESSConditioning_3 "Vehicle RESS Conditioning, The vehicle is using energy from the DC charger to condition the RESS to a target temperature.
+Optional signal for DIN70121.";
+CM_ SG_ 2147496450 EVCabinConditioning_3 "Vehicle Cabin Conditioning, When True the EV is using energy from the EVSE to heat or cool the passenger compartment.
+Optional signal for DIN70121.";
+CM_ SG_ 2147496450 EVErrorCode_3 "Indicates the EV's error code. The enumeration refers to the ISO15118 standard.";
+CM_ SG_ 2147496450 EVBulkChargingComplete_3 "If it is set to true, the EV indicates that bulk charge is complete.
+Optional signal.";
+CM_ SG_ 2147496450 EVChargingComplete_3 "If it is set to true, the EV indicates that it is full charged.";
+CM_ SG_ 2147496450 EVSoC_3 "The actual SoC of the vehicle for display at the charging station.";
+CM_ BO_ 2147488257 "Contains the EV's actual charge targets.";
+CM_ SG_ 2147488257 EVPreChargeVoltage_1 "Is the vehicles requested pre-charge voltage.";
+CM_ SG_ 2147488257 EVTargetVoltage_1 "Vehicle's Target Voltage during Charging.";
+CM_ SG_ 2147488257 EVTargetCurrent_1 "Vehicle's requested charging current.";
+CM_ BO_ 2147492353 "Contains the EV's actual charge targets.";
+CM_ SG_ 2147492353 EVPreChargeVoltage_2 "Is the vehicles requested pre-charge voltage.";
+CM_ SG_ 2147492353 EVTargetVoltage_2 "Vehicle's Target Voltage during Charging.";
+CM_ SG_ 2147492353 EVTargetCurrent_2 "Vehicle's requested charging current.";
+CM_ BO_ 2147496449 "Contains the EV's actual charge targets.";
+CM_ SG_ 2147496449 EVPreChargeVoltage_3 "Is the vehicles requested pre-charge voltage.";
+CM_ SG_ 2147496449 EVTargetVoltage_3 "Vehicle's Target Voltage during Charging.";
+CM_ SG_ 2147496449 EVTargetCurrent_3 "Vehicle's requested charging current.";
+CM_ BO_ 2147488256 "Contains information relayed of the EV's charging limits.";
+CM_ SG_ 2147488256 EVBulkSoC_1 "Is the state of charge at which the EV's battery is bulk charged and the EV intends to end the fast charge process.
+Optional signal.";
+CM_ SG_ 2147488256 EVFullSoC_1 "Is the EV battery's SoC which should be displayed as fully charged.
+Optional signal.";
+CM_ SG_ 2147488256 EVMaxVoltage_1 "Is the maximum voltage of the EV's battery.
+Optional signal.";
+CM_ SG_ 2147488256 EVMaxPower_1 "Is the maximum power of the vehicle's battery.
+Optional signal.";
+CM_ SG_ 2147488256 EVMaxCurrent_1 "Is the maximum current of the vehicle's battery.
+Optional signal.";
+CM_ BO_ 2147492352 "Contains information relayed of the EV's charging limits.";
+CM_ SG_ 2147492352 EVBulkSoC_2 "Is the state of charge at which the EV's battery is bulk charged and the EV intends to end the fast charge process.
+Optional signal.";
+CM_ SG_ 2147492352 EVFullSoC_2 "Is the EV battery's SoC which should be displayed as fully charged.
+Optional signal.";
+CM_ SG_ 2147492352 EVMaxVoltage_2 "Is the maximum voltage of the EV's battery.
+Optional signal.";
+CM_ SG_ 2147492352 EVMaxPower_2 "Is the maximum power of the vehicle's battery.
+Optional signal.";
+CM_ SG_ 2147492352 EVMaxCurrent_2 "Is the maximum current of the vehicle's battery.
+Optional signal.";
+CM_ BO_ 2147496448 "Contains information relayed of the EV's charging limits.";
+CM_ SG_ 2147496448 EVBulkSoC_3 "Is the state of charge at which the EV's battery is bulk charged and the EV intends to end the fast charge process.
+Optional signal.";
+CM_ SG_ 2147496448 EVFullSoC_3 "Is the EV battery's SoC which should be displayed as fully charged.
+Optional signal.";
+CM_ SG_ 2147496448 EVMaxVoltage_3 "Is the maximum voltage of the EV's battery.
+Optional signal.";
+CM_ SG_ 2147496448 EVMaxPower_3 "Is the maximum power of the vehicle's battery.
+Optional signal.";
+CM_ SG_ 2147496448 EVMaxCurrent_3 "Is the maximum current of the vehicle's battery.
+Optional signal.";
+CM_ BO_ 2147488001 "Contains Current Software Version Information.";
+CM_ SG_ 2147488001 SoftwareVersionHash_1 "The GIT hash of the currently running firmware.";
+CM_ SG_ 2147488001 SoftwareVersionConfig_1 "Software Config Number";
+CM_ SG_ 2147488001 SoftwareVersionPatch_1 "Software Patch Version Number";
+CM_ SG_ 2147488001 SoftwareVersionMinor_1 "Software Minor Version Number";
+CM_ SG_ 2147488001 SoftwareVersionMajor_1 "Software Major Version Number";
+CM_ BO_ 2147492097 "Contains Current Software Version Information.";
+CM_ SG_ 2147492097 SoftwareVersionHash_2 "The GIT hash of the currently running firmware.";
+CM_ SG_ 2147492097 SoftwareVersionConfig_2 "Software Config Number";
+CM_ SG_ 2147492097 SoftwareVersionPatch_2 "Software Patch Version Number";
+CM_ SG_ 2147492097 SoftwareVersionMinor_2 "Software Minor Version Number";
+CM_ SG_ 2147492097 SoftwareVersionMajor_2 "Software Major Version Number";
+CM_ BO_ 2147496193 "Contains Current Software Version Information.";
+CM_ SG_ 2147496193 SoftwareVersionHash_3 "The GIT hash of the currently running firmware.";
+CM_ SG_ 2147496193 SoftwareVersionConfig_3 "Software Config Number";
+CM_ SG_ 2147496193 SoftwareVersionPatch_3 "Software Patch Version Number";
+CM_ SG_ 2147496193 SoftwareVersionMinor_3 "Software Minor Version Number";
+CM_ SG_ 2147496193 SoftwareVersionMajor_3 "Software Major Version Number";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Event-driven","On request","dummy";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 10000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 262142;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 65535;
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_ "BusType" "CAN";
+BA_ "DBName" "ISC_CME";
+BA_ "VFrameFormat" BO_ 2147483909 1;
+BA_ "GenMsgCycleTime" BO_ 2147483909 100;
+BA_ "GenSigStartValue" SG_ 2147483909 V2GStatusISO 63;
+BA_ "GenSigStartValue" SG_ 2147483909 ControlPilotVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147483909 SLACStatus 15;
+BA_ "GenSigStartValue" SG_ 2147483909 ProximityPilotVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147483909 V2GStatusDIN 63;
+BA_ "GenSigStartValue" SG_ 2147483909 HLCStatus 15;
+BA_ "GenSigStartValue" SG_ 2147483909 PilotStatesStatus 15;
+BA_ "VFrameFormat" BO_ 2147484423 1;
+BA_ "GenMsgCycleTime" BO_ 2147484423 100;
+BA_ "GenSigStartValue" SG_ 2147484423 EVSECurrentLimit 0;
+BA_ "VFrameFormat" BO_ 2147483908 1;
+BA_ "GenMsgSendType" BO_ 2147483908 1;
+BA_ "GenSigStartValue" SG_ 2147483908 QcaSwVersionPatch 0;
+BA_ "GenSigStartValue" SG_ 2147483908 QcaSwVersionMinor 0;
+BA_ "GenSigStartValue" SG_ 2147483908 QcaSwVersionMajor 0;
+BA_ "GenSigStartValue" SG_ 2147483908 MeasuredAttenuation 0;
+BA_ "GenSigStartValue" SG_ 2147483908 QcaSwEnum 0;
+BA_ "GenSigStartValue" SG_ 2147483908 QcaSlacConfig 0;
+BA_ "GenSigStartValue" SG_ 2147483908 SLACLinkStatus 3;
+BA_ "VFrameFormat" BO_ 2147483907 1;
+BA_ "GenMsgCycleTime" BO_ 2147483907 100;
+BA_ "GenSigStartValue" SG_ 2147483907 GPIO5Status 0;
+BA_ "GenSigStartValue" SG_ 2147483907 GPIO4Status 0;
+BA_ "GenSigStartValue" SG_ 2147483907 GPIO3Status 0;
+BA_ "GenSigStartValue" SG_ 2147483907 GPIO2Status 0;
+BA_ "VFrameFormat" BO_ 2147484422 1;
+BA_ "GenMsgCycleTime" BO_ 2147484422 100;
+BA_ "GenSigStartValue" SG_ 2147484422 ConfigGPIO5 0;
+BA_ "GenSigStartValue" SG_ 2147484422 ConfigGPIO4 0;
+BA_ "GenSigStartValue" SG_ 2147484422 ConfigGPIO3 0;
+BA_ "GenSigStartValue" SG_ 2147484422 ConfigGPIO2 0;
+BA_ "VFrameFormat" BO_ 2147484164 1;
+BA_ "GenSigStartValue" SG_ 2147484164 EVMacAddress 0;
+BA_ "GenMsgCycleTime" BO_ 2147484421 100;
+BA_ "VFrameFormat" BO_ 2147484421 1;
+BA_ "GenSigStartValue" SG_ 2147484421 EVSEDateTimeNow 0;
+BA_ "GenMsgCycleTime" BO_ 2147484420 100;
+BA_ "VFrameFormat" BO_ 2147484420 1;
+BA_ "GenSigStartValue" SG_ 2147484420 EVSEID 0;
+BA_ "GenMsgCycleTime" BO_ 2147484163 100;
+BA_ "VFrameFormat" BO_ 2147484163 1;
+BA_ "GenSigStartValue" SG_ 2147484163 EVEnergyRequest 0;
+BA_ "GenSigStartValue" SG_ 2147484163 EVEnergyCapacity 0;
+BA_ "GenMsgCycleTime" BO_ 2148073472 1000;
+BA_ "VFrameFormat" BO_ 2148073472 1;
+BA_ "GenSigStartValue" SG_ 2148073472 BootloaderVersion 0;
+BA_ "GenMsgCycleTime" BO_ 2147483906 1000;
+BA_ "VFrameFormat" BO_ 2147483906 1;
+BA_ "GenSigStartValue" SG_ 2147483906 ErrorCode3 0;
+BA_ "GenSigStartValue" SG_ 2147483906 Interface3 0;
+BA_ "GenSigStartValue" SG_ 2147483906 Severity3 0;
+BA_ "GenSigStartValue" SG_ 2147483906 Category3 0;
+BA_ "GenSigStartValue" SG_ 2147483906 ErrorCode2 0;
+BA_ "GenSigStartValue" SG_ 2147483906 Interface2 0;
+BA_ "GenSigStartValue" SG_ 2147483906 Severity2 0;
+BA_ "GenSigStartValue" SG_ 2147483906 Category2 0;
+BA_ "GenSigStartValue" SG_ 2147483906 ErrorCode1 0;
+BA_ "GenSigStartValue" SG_ 2147483906 Interface1 0;
+BA_ "GenSigStartValue" SG_ 2147483906 Severity1 0;
+BA_ "GenSigStartValue" SG_ 2147483906 Category1 0;
+BA_ "GenSigStartValue" SG_ 2147483906 ErrorCode0 0;
+BA_ "GenSigStartValue" SG_ 2147483906 Interface0 0;
+BA_ "GenSigStartValue" SG_ 2147483906 Severity0 0;
+BA_ "GenSigStartValue" SG_ 2147483906 Category0 0;
+BA_ "VFrameFormat" BO_ 2147483904 1;
+BA_ "GenMsgCycleTime" BO_ 2147483904 100;
+BA_ "GenSigStartValue" SG_ 2147483904 DiodePresence 3;
+BA_ "GenSigStartValue" SG_ 2147483904 TCPStatus 3;
+BA_ "GenSigStartValue" SG_ 2147483904 AliveCounter 15;
+BA_ "GenSigStartValue" SG_ 2147483904 ControlPilotState 15;
+BA_ "GenSigStartValue" SG_ 2147483904 ActualChargeProtocol 15;
+BA_ "GenSigStartValue" SG_ 2147483904 ProximityPinState 15;
+BA_ "GenSigStartValue" SG_ 2147483904 StateMachineState 15;
+BA_ "GenSigStartValue" SG_ 2147483904 ControlPilotDutyCycle 0;
+BA_ "GenMsgCycleTime" BO_ 2147484419 100;
+BA_ "VFrameFormat" BO_ 2147484419 1;
+BA_ "GenSigStartValue" SG_ 2147484419 EVSEProximityPinState 15;
+BA_ "GenSigStartValue" SG_ 2147484419 EVSEControlPilotState 15;
+BA_ "GenSigStartValue" SG_ 2147484419 EVSEControlPilotDutyCycle 0;
+BA_ "GenMsgCycleTime" BO_ 2147484418 100;
+BA_ "VFrameFormat" BO_ 2147484418 1;
+BA_ "GenSigStartValue" SG_ 2147484418 EVSEProcessingCC 3;
+BA_ "GenSigStartValue" SG_ 2147484418 EVSEProcessingCPD 3;
+BA_ "GenSigStartValue" SG_ 2147484418 EVSEProcessingCA 3;
+BA_ "GenSigStartValue" SG_ 2147484418 EVSEPowerLimitAchieved 3;
+BA_ "GenSigStartValue" SG_ 2147484418 EVSECurrentLimitAchieved 3;
+BA_ "GenSigStartValue" SG_ 2147484418 EVSEStatusCode 15;
+BA_ "GenSigStartValue" SG_ 2147484418 EVSEVoltageLimitAchieved 3;
+BA_ "GenSigStartValue" SG_ 2147484418 EVSEFreeService 0;
+BA_ "GenSigStartValue" SG_ 2147484418 EVSEIsolationStatus 7;
+BA_ "GenSigStartValue" SG_ 2147484418 EVSEPresentVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147484418 EVSEPresentCurrent 32500;
+BA_ "GenMsgCycleTime" BO_ 2147484417 100;
+BA_ "VFrameFormat" BO_ 2147484417 1;
+BA_ "GenSigStartValue" SG_ 2147484417 EVSECurrentRegulationTolerance 0;
+BA_ "GenSigStartValue" SG_ 2147484417 EVSEPeakCurrentRipple 0;
+BA_ "GenSigStartValue" SG_ 2147484417 EVSEMinVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147484417 EVSEMinCurrent 32500;
+BA_ "GenMsgCycleTime" BO_ 2147484416 100;
+BA_ "VFrameFormat" BO_ 2147484416 1;
+BA_ "GenSigStartValue" SG_ 2147484416 EVSEEnergyToBeDelivered 0;
+BA_ "GenSigStartValue" SG_ 2147484416 EVSEMaxPower 0;
+BA_ "GenSigStartValue" SG_ 2147484416 EVSEMaxVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147484416 EVSEMaxCurrent 0;
+BA_ "GenMsgCycleTime" BO_ 2147484162 100;
+BA_ "VFrameFormat" BO_ 2147484162 1;
+BA_ "GenSigStartValue" SG_ 2147484162 EVTimeToFullSoC 0;
+BA_ "GenSigStartValue" SG_ 2147484162 EVReady 3;
+BA_ "GenSigStartValue" SG_ 2147484162 EVTimeToBulkSoC 0;
+BA_ "GenSigStartValue" SG_ 2147484162 EVRESSConditioning 3;
+BA_ "GenSigStartValue" SG_ 2147484162 EVCabinConditioning 3;
+BA_ "GenSigStartValue" SG_ 2147484162 EVErrorCode 15;
+BA_ "GenSigStartValue" SG_ 2147484162 EVBulkChargingComplete 3;
+BA_ "GenSigStartValue" SG_ 2147484162 EVChargingComplete 3;
+BA_ "GenSigStartValue" SG_ 2147484162 EVSoC 0;
+BA_ "GenMsgCycleTime" BO_ 2147484161 100;
+BA_ "VFrameFormat" BO_ 2147484161 1;
+BA_ "GenSigStartValue" SG_ 2147484161 EVPreChargeVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147484161 EVTargetVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147484161 EVTargetCurrent 32500;
+BA_ "GenMsgCycleTime" BO_ 2147484160 100;
+BA_ "VFrameFormat" BO_ 2147484160 1;
+BA_ "GenSigStartValue" SG_ 2147484160 EVBulkSoC 0;
+BA_ "GenSigStartValue" SG_ 2147484160 EVFullSoC 0;
+BA_ "GenSigStartValue" SG_ 2147484160 EVMaxVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147484160 EVMaxPower 0;
+BA_ "GenSigStartValue" SG_ 2147484160 EVMaxCurrent 0;
+BA_ "GenMsgCycleTime" BO_ 2147483905 10000;
+BA_ "VFrameFormat" BO_ 2147483905 1;
+BA_ "GenSigStartValue" SG_ 2147483905 SoftwareVersionHash 0;
+BA_ "GenSigStartValue" SG_ 2147483905 SoftwareVersionConfig 0;
+BA_ "GenSigStartValue" SG_ 2147483905 SoftwareVersionPatch 0;
+BA_ "GenSigStartValue" SG_ 2147483905 SoftwareVersionMinor 0;
+BA_ "GenSigStartValue" SG_ 2147483905 SoftwareVersionMajor 0;
+BA_ "VFrameFormat" BO_ 2147488005 1;
+BA_ "GenMsgCycleTime" BO_ 2147488005 100;
+BA_ "GenSigStartValue" SG_ 2147488005 V2GStatusISO_1 63;
+BA_ "GenSigStartValue" SG_ 2147488005 ControlPilotVoltage_1 0;
+BA_ "GenSigStartValue" SG_ 2147488005 SLACStatus_1 15;
+BA_ "GenSigStartValue" SG_ 2147488005 ProximityPilotVoltage_1 0;
+BA_ "GenSigStartValue" SG_ 2147488005 V2GStatusDIN_1 63;
+BA_ "GenSigStartValue" SG_ 2147488005 HLCStatus_1 15;
+BA_ "GenSigStartValue" SG_ 2147488005 PilotStatesStatus_1 15;
+BA_ "VFrameFormat" BO_ 2147492101 1;
+BA_ "GenMsgCycleTime" BO_ 2147492101 100;
+BA_ "GenSigStartValue" SG_ 2147492101 V2GStatusISO_2 63;
+BA_ "GenSigStartValue" SG_ 2147492101 ControlPilotVoltage_2 0;
+BA_ "GenSigStartValue" SG_ 2147492101 SLACStatus_2 15;
+BA_ "GenSigStartValue" SG_ 2147492101 ProximityPilotVoltage_2 0;
+BA_ "GenSigStartValue" SG_ 2147492101 V2GStatusDIN_2 63;
+BA_ "GenSigStartValue" SG_ 2147492101 HLCStatus_2 15;
+BA_ "GenSigStartValue" SG_ 2147492101 PilotStatesStatus_2 15;
+BA_ "VFrameFormat" BO_ 2147496197 1;
+BA_ "GenMsgCycleTime" BO_ 2147496197 100;
+BA_ "GenSigStartValue" SG_ 2147496197 V2GStatusISO_3 63;
+BA_ "GenSigStartValue" SG_ 2147496197 ControlPilotVoltage_3 0;
+BA_ "GenSigStartValue" SG_ 2147496197 SLACStatus_3 15;
+BA_ "GenSigStartValue" SG_ 2147496197 ProximityPilotVoltage_3 0;
+BA_ "GenSigStartValue" SG_ 2147496197 V2GStatusDIN_3 63;
+BA_ "GenSigStartValue" SG_ 2147496197 HLCStatus_3 15;
+BA_ "GenSigStartValue" SG_ 2147496197 PilotStatesStatus_3 15;
+BA_ "VFrameFormat" BO_ 2147488519 1;
+BA_ "GenMsgCycleTime" BO_ 2147488519 100;
+BA_ "GenSigStartValue" SG_ 2147488519 EVSECurrentLimit_1 0;
+BA_ "VFrameFormat" BO_ 2147492615 1;
+BA_ "GenMsgCycleTime" BO_ 2147492615 100;
+BA_ "GenSigStartValue" SG_ 2147492615 EVSECurrentLimit_2 0;
+BA_ "VFrameFormat" BO_ 2147496711 1;
+BA_ "GenMsgCycleTime" BO_ 2147496711 100;
+BA_ "GenSigStartValue" SG_ 2147496711 EVSECurrentLimit_3 0;
+BA_ "VFrameFormat" BO_ 2147488004 1;
+BA_ "GenMsgSendType" BO_ 2147488004 1;
+BA_ "GenSigStartValue" SG_ 2147488004 QcaSwVersionPatch_1 0;
+BA_ "GenSigStartValue" SG_ 2147488004 QcaSwVersionMinor_1 0;
+BA_ "GenSigStartValue" SG_ 2147488004 QcaSwVersionMajor_1 0;
+BA_ "GenSigStartValue" SG_ 2147488004 MeasuredAttenuation_1 0;
+BA_ "GenSigStartValue" SG_ 2147488004 QcaSwEnum_1 0;
+BA_ "GenSigStartValue" SG_ 2147488004 QcaSlacConfig_1 0;
+BA_ "GenSigStartValue" SG_ 2147488004 SLACLinkStatus_1 3;
+BA_ "VFrameFormat" BO_ 2147492100 1;
+BA_ "GenMsgSendType" BO_ 2147492100 1;
+BA_ "GenSigStartValue" SG_ 2147492100 QcaSwVersionPatch_2 0;
+BA_ "GenSigStartValue" SG_ 2147492100 QcaSwVersionMinor_2 0;
+BA_ "GenSigStartValue" SG_ 2147492100 QcaSwVersionMajor_2 0;
+BA_ "GenSigStartValue" SG_ 2147492100 MeasuredAttenuation_2 0;
+BA_ "GenSigStartValue" SG_ 2147492100 QcaSwEnum_2 0;
+BA_ "GenSigStartValue" SG_ 2147492100 QcaSlacConfig_2 0;
+BA_ "GenSigStartValue" SG_ 2147492100 SLACLinkStatus_2 3;
+BA_ "VFrameFormat" BO_ 2147496196 1;
+BA_ "GenMsgSendType" BO_ 2147496196 1;
+BA_ "GenSigStartValue" SG_ 2147496196 QcaSwVersionPatch_3 0;
+BA_ "GenSigStartValue" SG_ 2147496196 QcaSwVersionMinor_3 0;
+BA_ "GenSigStartValue" SG_ 2147496196 QcaSwVersionMajor_3 0;
+BA_ "GenSigStartValue" SG_ 2147496196 MeasuredAttenuation_3 0;
+BA_ "GenSigStartValue" SG_ 2147496196 QcaSwEnum_3 0;
+BA_ "GenSigStartValue" SG_ 2147496196 QcaSlacConfig_3 0;
+BA_ "GenSigStartValue" SG_ 2147496196 SLACLinkStatus_3 3;
+BA_ "VFrameFormat" BO_ 2147488003 1;
+BA_ "GenMsgCycleTime" BO_ 2147488003 100;
+BA_ "GenSigStartValue" SG_ 2147488003 GPIO5Status_1 0;
+BA_ "GenSigStartValue" SG_ 2147488003 GPIO4Status_1 0;
+BA_ "GenSigStartValue" SG_ 2147488003 GPIO3Status_1 0;
+BA_ "GenSigStartValue" SG_ 2147488003 GPIO2Status_1 0;
+BA_ "VFrameFormat" BO_ 2147492099 1;
+BA_ "GenMsgCycleTime" BO_ 2147492099 100;
+BA_ "GenSigStartValue" SG_ 2147492099 GPIO5Status_2 0;
+BA_ "GenSigStartValue" SG_ 2147492099 GPIO4Status_2 0;
+BA_ "GenSigStartValue" SG_ 2147492099 GPIO3Status_2 0;
+BA_ "GenSigStartValue" SG_ 2147492099 GPIO2Status_2 0;
+BA_ "VFrameFormat" BO_ 2147496195 1;
+BA_ "GenMsgCycleTime" BO_ 2147496195 100;
+BA_ "GenSigStartValue" SG_ 2147496195 GPIO5Status_3 0;
+BA_ "GenSigStartValue" SG_ 2147496195 GPIO4Status_3 0;
+BA_ "GenSigStartValue" SG_ 2147496195 GPIO3Status_3 0;
+BA_ "GenSigStartValue" SG_ 2147496195 GPIO2Status_3 0;
+BA_ "VFrameFormat" BO_ 2147488518 1;
+BA_ "GenMsgCycleTime" BO_ 2147488518 100;
+BA_ "GenSigStartValue" SG_ 2147488518 ConfigGPIO5_1 0;
+BA_ "GenSigStartValue" SG_ 2147488518 ConfigGPIO4_1 0;
+BA_ "GenSigStartValue" SG_ 2147488518 ConfigGPIO3_1 0;
+BA_ "GenSigStartValue" SG_ 2147488518 ConfigGPIO2_1 0;
+BA_ "VFrameFormat" BO_ 2147492614 1;
+BA_ "GenMsgCycleTime" BO_ 2147492614 100;
+BA_ "GenSigStartValue" SG_ 2147492614 ConfigGPIO5_2 0;
+BA_ "GenSigStartValue" SG_ 2147492614 ConfigGPIO4_2 0;
+BA_ "GenSigStartValue" SG_ 2147492614 ConfigGPIO3_2 0;
+BA_ "GenSigStartValue" SG_ 2147492614 ConfigGPIO2_2 0;
+BA_ "VFrameFormat" BO_ 2147496710 1;
+BA_ "GenMsgCycleTime" BO_ 2147496710 100;
+BA_ "GenSigStartValue" SG_ 2147496710 ConfigGPIO5_3 0;
+BA_ "GenSigStartValue" SG_ 2147496710 ConfigGPIO4_3 0;
+BA_ "GenSigStartValue" SG_ 2147496710 ConfigGPIO3_3 0;
+BA_ "GenSigStartValue" SG_ 2147496710 ConfigGPIO2_3 0;
+BA_ "VFrameFormat" BO_ 2147488260 1;
+BA_ "GenSigStartValue" SG_ 2147488260 EVMacAddress_1 0;
+BA_ "VFrameFormat" BO_ 2147492356 1;
+BA_ "GenSigStartValue" SG_ 2147492356 EVMacAddress_2 0;
+BA_ "VFrameFormat" BO_ 2147496452 1;
+BA_ "GenSigStartValue" SG_ 2147496452 EVMacAddress_3 0;
+BA_ "GenMsgCycleTime" BO_ 2147488517 100;
+BA_ "VFrameFormat" BO_ 2147488517 1;
+BA_ "GenSigStartValue" SG_ 2147488517 EVSEDateTimeNow_1 0;
+BA_ "GenMsgCycleTime" BO_ 2147492613 100;
+BA_ "VFrameFormat" BO_ 2147492613 1;
+BA_ "GenSigStartValue" SG_ 2147492613 EVSEDateTimeNow_2 0;
+BA_ "GenMsgCycleTime" BO_ 2147496709 100;
+BA_ "VFrameFormat" BO_ 2147496709 1;
+BA_ "GenSigStartValue" SG_ 2147496709 EVSEDateTimeNow_3 0;
+BA_ "GenMsgCycleTime" BO_ 2147488516 100;
+BA_ "VFrameFormat" BO_ 2147488516 1;
+BA_ "GenSigStartValue" SG_ 2147488516 EVSEID_1 0;
+BA_ "GenMsgCycleTime" BO_ 2147492612 100;
+BA_ "VFrameFormat" BO_ 2147492612 1;
+BA_ "GenSigStartValue" SG_ 2147492612 EVSEID_2 0;
+BA_ "GenMsgCycleTime" BO_ 2147496708 100;
+BA_ "VFrameFormat" BO_ 2147496708 1;
+BA_ "GenSigStartValue" SG_ 2147496708 EVSEID_3 0;
+BA_ "GenMsgCycleTime" BO_ 2147488259 100;
+BA_ "VFrameFormat" BO_ 2147488259 1;
+BA_ "GenSigStartValue" SG_ 2147488259 EVEnergyRequest_1 0;
+BA_ "GenSigStartValue" SG_ 2147488259 EVEnergyCapacity_1 0;
+BA_ "GenMsgCycleTime" BO_ 2147492355 100;
+BA_ "VFrameFormat" BO_ 2147492355 1;
+BA_ "GenSigStartValue" SG_ 2147492355 EVEnergyRequest_2 0;
+BA_ "GenSigStartValue" SG_ 2147492355 EVEnergyCapacity_2 0;
+BA_ "GenMsgCycleTime" BO_ 2147496451 100;
+BA_ "VFrameFormat" BO_ 2147496451 1;
+BA_ "GenSigStartValue" SG_ 2147496451 EVEnergyRequest_3 0;
+BA_ "GenSigStartValue" SG_ 2147496451 EVEnergyCapacity_3 0;
+BA_ "GenMsgCycleTime" BO_ 2148077568 1000;
+BA_ "VFrameFormat" BO_ 2148077568 1;
+BA_ "GenSigStartValue" SG_ 2148077568 BootloaderVersion_1 0;
+BA_ "GenMsgCycleTime" BO_ 2148081664 1000;
+BA_ "VFrameFormat" BO_ 2148081664 1;
+BA_ "GenSigStartValue" SG_ 2148081664 BootloaderVersion_2 0;
+BA_ "GenMsgCycleTime" BO_ 2148085760 1000;
+BA_ "VFrameFormat" BO_ 2148085760 1;
+BA_ "GenSigStartValue" SG_ 2148085760 BootloaderVersion_3 0;
+BA_ "GenMsgCycleTime" BO_ 2147488002 1000;
+BA_ "VFrameFormat" BO_ 2147488002 1;
+BA_ "GenSigStartValue" SG_ 2147488002 ErrorCode3_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 Interface3_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 Severity3_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 Category3_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 ErrorCode2_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 Interface2_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 Severity2_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 Category2_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 ErrorCode1_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 Interface1_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 Severity1_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 Category1_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 ErrorCode0_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 Interface0_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 Severity0_1 0;
+BA_ "GenSigStartValue" SG_ 2147488002 Category0_1 0;
+BA_ "GenMsgCycleTime" BO_ 2147492098 1000;
+BA_ "VFrameFormat" BO_ 2147492098 1;
+BA_ "GenSigStartValue" SG_ 2147492098 ErrorCode3_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 Interface3_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 Severity3_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 Category3_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 ErrorCode2_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 Interface2_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 Severity2_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 Category2_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 ErrorCode1_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 Interface1_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 Severity1_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 Category1_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 ErrorCode0_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 Interface0_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 Severity0_2 0;
+BA_ "GenSigStartValue" SG_ 2147492098 Category0_2 0;
+BA_ "GenMsgCycleTime" BO_ 2147496194 1000;
+BA_ "VFrameFormat" BO_ 2147496194 1;
+BA_ "GenSigStartValue" SG_ 2147496194 ErrorCode3_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 Interface3_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 Severity3_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 Category3_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 ErrorCode2_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 Interface2_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 Severity2_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 Category2_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 ErrorCode1_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 Interface1_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 Severity1_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 Category1_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 ErrorCode0_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 Interface0_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 Severity0_3 0;
+BA_ "GenSigStartValue" SG_ 2147496194 Category0_3 0;
+BA_ "VFrameFormat" BO_ 2147488000 1;
+BA_ "GenMsgCycleTime" BO_ 2147488000 100;
+BA_ "GenSigStartValue" SG_ 2147488000 DiodePresence_1 3;
+BA_ "GenSigStartValue" SG_ 2147488000 TCPStatus_1 3;
+BA_ "GenSigStartValue" SG_ 2147488000 AliveCounter_1 15;
+BA_ "GenSigStartValue" SG_ 2147488000 ControlPilotState_1 15;
+BA_ "GenSigStartValue" SG_ 2147488000 ActualChargeProtocol_1 15;
+BA_ "GenSigStartValue" SG_ 2147488000 ProximityPinState_1 15;
+BA_ "GenSigStartValue" SG_ 2147488000 StateMachineState_1 15;
+BA_ "GenSigStartValue" SG_ 2147488000 ControlPilotDutyCycle_1 0;
+BA_ "VFrameFormat" BO_ 2147492096 1;
+BA_ "GenMsgCycleTime" BO_ 2147492096 100;
+BA_ "GenSigStartValue" SG_ 2147492096 DiodePresence_2 3;
+BA_ "GenSigStartValue" SG_ 2147492096 TCPStatus_2 3;
+BA_ "GenSigStartValue" SG_ 2147492096 AliveCounter_2 15;
+BA_ "GenSigStartValue" SG_ 2147492096 ControlPilotState_2 15;
+BA_ "GenSigStartValue" SG_ 2147492096 ActualChargeProtocol_2 15;
+BA_ "GenSigStartValue" SG_ 2147492096 ProximityPinState_2 15;
+BA_ "GenSigStartValue" SG_ 2147492096 StateMachineState_2 15;
+BA_ "GenSigStartValue" SG_ 2147492096 ControlPilotDutyCycle_2 0;
+BA_ "VFrameFormat" BO_ 2147496192 1;
+BA_ "GenMsgCycleTime" BO_ 2147496192 100;
+BA_ "GenSigStartValue" SG_ 2147496192 DiodePresence_3 3;
+BA_ "GenSigStartValue" SG_ 2147496192 TCPStatus_3 3;
+BA_ "GenSigStartValue" SG_ 2147496192 AliveCounter_3 15;
+BA_ "GenSigStartValue" SG_ 2147496192 ControlPilotState_3 15;
+BA_ "GenSigStartValue" SG_ 2147496192 ActualChargeProtocol_3 15;
+BA_ "GenSigStartValue" SG_ 2147496192 ProximityPinState_3 15;
+BA_ "GenSigStartValue" SG_ 2147496192 StateMachineState_3 15;
+BA_ "GenSigStartValue" SG_ 2147496192 ControlPilotDutyCycle_3 0;
+BA_ "GenMsgCycleTime" BO_ 2147488515 100;
+BA_ "VFrameFormat" BO_ 2147488515 1;
+BA_ "GenSigStartValue" SG_ 2147488515 EVSEProximityPinState_1 15;
+BA_ "GenSigStartValue" SG_ 2147488515 EVSEControlPilotState_1 15;
+BA_ "GenSigStartValue" SG_ 2147488515 EVSEControlPilotDutyCycle_1 0;
+BA_ "GenMsgCycleTime" BO_ 2147492611 100;
+BA_ "VFrameFormat" BO_ 2147492611 1;
+BA_ "GenSigStartValue" SG_ 2147492611 EVSEProximityPinState_2 15;
+BA_ "GenSigStartValue" SG_ 2147492611 EVSEControlPilotState_2 15;
+BA_ "GenSigStartValue" SG_ 2147492611 EVSEControlPilotDutyCycle_2 0;
+BA_ "GenMsgCycleTime" BO_ 2147496707 100;
+BA_ "VFrameFormat" BO_ 2147496707 1;
+BA_ "GenSigStartValue" SG_ 2147496707 EVSEProximityPinState_3 15;
+BA_ "GenSigStartValue" SG_ 2147496707 EVSEControlPilotState_3 15;
+BA_ "GenSigStartValue" SG_ 2147496707 EVSEControlPilotDutyCycle_3 0;
+BA_ "GenMsgCycleTime" BO_ 2147488514 100;
+BA_ "VFrameFormat" BO_ 2147488514 1;
+BA_ "GenSigStartValue" SG_ 2147488514 EVSEProcessingCC_1 3;
+BA_ "GenSigStartValue" SG_ 2147488514 EVSEProcessingCPD_1 3;
+BA_ "GenSigStartValue" SG_ 2147488514 EVSEProcessingCA_1 3;
+BA_ "GenSigStartValue" SG_ 2147488514 EVSEPowerLimitAchieved_1 3;
+BA_ "GenSigStartValue" SG_ 2147488514 EVSECurrentLimitAchieved_1 3;
+BA_ "GenSigStartValue" SG_ 2147488514 EVSEStatusCode_1 15;
+BA_ "GenSigStartValue" SG_ 2147488514 EVSEVoltageLimitAchieved_1 3;
+BA_ "GenSigStartValue" SG_ 2147488514 EVSEFreeService_1 0;
+BA_ "GenSigStartValue" SG_ 2147488514 EVSEIsolationStatus_1 7;
+BA_ "GenSigStartValue" SG_ 2147488514 EVSEPresentVoltage_1 0;
+BA_ "GenSigStartValue" SG_ 2147488514 EVSEPresentCurrent_1 32500;
+BA_ "GenMsgCycleTime" BO_ 2147492610 100;
+BA_ "VFrameFormat" BO_ 2147492610 1;
+BA_ "GenSigStartValue" SG_ 2147492610 EVSEProcessingCC_2 3;
+BA_ "GenSigStartValue" SG_ 2147492610 EVSEProcessingCPD_2 3;
+BA_ "GenSigStartValue" SG_ 2147492610 EVSEProcessingCA_2 3;
+BA_ "GenSigStartValue" SG_ 2147492610 EVSEPowerLimitAchieved_2 3;
+BA_ "GenSigStartValue" SG_ 2147492610 EVSECurrentLimitAchieved_2 3;
+BA_ "GenSigStartValue" SG_ 2147492610 EVSEStatusCode_2 15;
+BA_ "GenSigStartValue" SG_ 2147492610 EVSEVoltageLimitAchieved_2 3;
+BA_ "GenSigStartValue" SG_ 2147492610 EVSEFreeService_2 0;
+BA_ "GenSigStartValue" SG_ 2147492610 EVSEIsolationStatus_2 7;
+BA_ "GenSigStartValue" SG_ 2147492610 EVSEPresentVoltage_2 0;
+BA_ "GenSigStartValue" SG_ 2147492610 EVSEPresentCurrent_2 32500;
+BA_ "GenMsgCycleTime" BO_ 2147496706 100;
+BA_ "VFrameFormat" BO_ 2147496706 1;
+BA_ "GenSigStartValue" SG_ 2147496706 EVSEProcessingCC_3 3;
+BA_ "GenSigStartValue" SG_ 2147496706 EVSEProcessingCPD_3 3;
+BA_ "GenSigStartValue" SG_ 2147496706 EVSEProcessingCA_3 3;
+BA_ "GenSigStartValue" SG_ 2147496706 EVSEPowerLimitAchieved_3 3;
+BA_ "GenSigStartValue" SG_ 2147496706 EVSECurrentLimitAchieved_3 3;
+BA_ "GenSigStartValue" SG_ 2147496706 EVSEStatusCode_3 15;
+BA_ "GenSigStartValue" SG_ 2147496706 EVSEVoltageLimitAchieved_3 3;
+BA_ "GenSigStartValue" SG_ 2147496706 EVSEFreeService_3 0;
+BA_ "GenSigStartValue" SG_ 2147496706 EVSEIsolationStatus_3 7;
+BA_ "GenSigStartValue" SG_ 2147496706 EVSEPresentVoltage_3 0;
+BA_ "GenSigStartValue" SG_ 2147496706 EVSEPresentCurrent_3 32500;
+BA_ "GenMsgCycleTime" BO_ 2147488513 100;
+BA_ "VFrameFormat" BO_ 2147488513 1;
+BA_ "GenSigStartValue" SG_ 2147488513 EVSECurrentRegulationTolerance_1 0;
+BA_ "GenSigStartValue" SG_ 2147488513 EVSEPeakCurrentRipple_1 0;
+BA_ "GenSigStartValue" SG_ 2147488513 EVSEMinVoltage_1 0;
+BA_ "GenSigStartValue" SG_ 2147488513 EVSEMinCurrent_1 32500;
+BA_ "GenMsgCycleTime" BO_ 2147492609 100;
+BA_ "VFrameFormat" BO_ 2147492609 1;
+BA_ "GenSigStartValue" SG_ 2147492609 EVSECurrentRegulationTolerance_2 0;
+BA_ "GenSigStartValue" SG_ 2147492609 EVSEPeakCurrentRipple_2 0;
+BA_ "GenSigStartValue" SG_ 2147492609 EVSEMinVoltage_2 0;
+BA_ "GenSigStartValue" SG_ 2147492609 EVSEMinCurrent_2 32500;
+BA_ "GenMsgCycleTime" BO_ 2147496705 100;
+BA_ "VFrameFormat" BO_ 2147496705 1;
+BA_ "GenSigStartValue" SG_ 2147496705 EVSECurrentRegulationTolerance_3 0;
+BA_ "GenSigStartValue" SG_ 2147496705 EVSEPeakCurrentRipple_3 0;
+BA_ "GenSigStartValue" SG_ 2147496705 EVSEMinVoltage_3 0;
+BA_ "GenSigStartValue" SG_ 2147496705 EVSEMinCurrent_3 32500;
+BA_ "GenMsgCycleTime" BO_ 2147488512 100;
+BA_ "VFrameFormat" BO_ 2147488512 1;
+BA_ "GenSigStartValue" SG_ 2147488512 EVSEEnergyToBeDelivered_1 0;
+BA_ "GenSigStartValue" SG_ 2147488512 EVSEMaxPower_1 0;
+BA_ "GenSigStartValue" SG_ 2147488512 EVSEMaxVoltage_1 0;
+BA_ "GenSigStartValue" SG_ 2147488512 EVSEMaxCurrent_1 0;
+BA_ "GenMsgCycleTime" BO_ 2147492608 100;
+BA_ "VFrameFormat" BO_ 2147492608 1;
+BA_ "GenSigStartValue" SG_ 2147492608 EVSEEnergyToBeDelivered_2 0;
+BA_ "GenSigStartValue" SG_ 2147492608 EVSEMaxPower_2 0;
+BA_ "GenSigStartValue" SG_ 2147492608 EVSEMaxVoltage_2 0;
+BA_ "GenSigStartValue" SG_ 2147492608 EVSEMaxCurrent_2 0;
+BA_ "GenMsgCycleTime" BO_ 2147496704 100;
+BA_ "VFrameFormat" BO_ 2147496704 1;
+BA_ "GenSigStartValue" SG_ 2147496704 EVSEEnergyToBeDelivered_3 0;
+BA_ "GenSigStartValue" SG_ 2147496704 EVSEMaxPower_3 0;
+BA_ "GenSigStartValue" SG_ 2147496704 EVSEMaxVoltage_3 0;
+BA_ "GenSigStartValue" SG_ 2147496704 EVSEMaxCurrent_3 0;
+BA_ "GenMsgCycleTime" BO_ 2147488258 100;
+BA_ "VFrameFormat" BO_ 2147488258 1;
+BA_ "GenSigStartValue" SG_ 2147488258 EVTimeToFullSoC_1 0;
+BA_ "GenSigStartValue" SG_ 2147488258 EVReady_1 3;
+BA_ "GenSigStartValue" SG_ 2147488258 EVTimeToBulkSoC_1 0;
+BA_ "GenSigStartValue" SG_ 2147488258 EVRESSConditioning_1 3;
+BA_ "GenSigStartValue" SG_ 2147488258 EVCabinConditioning_1 3;
+BA_ "GenSigStartValue" SG_ 2147488258 EVErrorCode_1 15;
+BA_ "GenSigStartValue" SG_ 2147488258 EVBulkChargingComplete_1 3;
+BA_ "GenSigStartValue" SG_ 2147488258 EVChargingComplete_1 3;
+BA_ "GenSigStartValue" SG_ 2147488258 EVSoC_1 0;
+BA_ "GenMsgCycleTime" BO_ 2147492354 100;
+BA_ "VFrameFormat" BO_ 2147492354 1;
+BA_ "GenSigStartValue" SG_ 2147492354 EVTimeToFullSoC_2 0;
+BA_ "GenSigStartValue" SG_ 2147492354 EVReady_2 3;
+BA_ "GenSigStartValue" SG_ 2147492354 EVTimeToBulkSoC_2 0;
+BA_ "GenSigStartValue" SG_ 2147492354 EVRESSConditioning_2 3;
+BA_ "GenSigStartValue" SG_ 2147492354 EVCabinConditioning_2 3;
+BA_ "GenSigStartValue" SG_ 2147492354 EVErrorCode_2 15;
+BA_ "GenSigStartValue" SG_ 2147492354 EVBulkChargingComplete_2 3;
+BA_ "GenSigStartValue" SG_ 2147492354 EVChargingComplete_2 3;
+BA_ "GenSigStartValue" SG_ 2147492354 EVSoC_2 0;
+BA_ "GenMsgCycleTime" BO_ 2147496450 100;
+BA_ "VFrameFormat" BO_ 2147496450 1;
+BA_ "GenSigStartValue" SG_ 2147496450 EVTimeToFullSoC_3 0;
+BA_ "GenSigStartValue" SG_ 2147496450 EVReady_3 3;
+BA_ "GenSigStartValue" SG_ 2147496450 EVTimeToBulkSoC_3 0;
+BA_ "GenSigStartValue" SG_ 2147496450 EVRESSConditioning_3 3;
+BA_ "GenSigStartValue" SG_ 2147496450 EVCabinConditioning_3 3;
+BA_ "GenSigStartValue" SG_ 2147496450 EVErrorCode_3 15;
+BA_ "GenSigStartValue" SG_ 2147496450 EVBulkChargingComplete_3 3;
+BA_ "GenSigStartValue" SG_ 2147496450 EVChargingComplete_3 3;
+BA_ "GenSigStartValue" SG_ 2147496450 EVSoC_3 0;
+BA_ "GenMsgCycleTime" BO_ 2147488257 100;
+BA_ "VFrameFormat" BO_ 2147488257 1;
+BA_ "GenSigStartValue" SG_ 2147488257 EVPreChargeVoltage_1 0;
+BA_ "GenSigStartValue" SG_ 2147488257 EVTargetVoltage_1 0;
+BA_ "GenSigStartValue" SG_ 2147488257 EVTargetCurrent_1 32500;
+BA_ "GenMsgCycleTime" BO_ 2147492353 100;
+BA_ "VFrameFormat" BO_ 2147492353 1;
+BA_ "GenSigStartValue" SG_ 2147492353 EVPreChargeVoltage_2 0;
+BA_ "GenSigStartValue" SG_ 2147492353 EVTargetVoltage_2 0;
+BA_ "GenSigStartValue" SG_ 2147492353 EVTargetCurrent_2 32500;
+BA_ "GenMsgCycleTime" BO_ 2147496449 100;
+BA_ "VFrameFormat" BO_ 2147496449 1;
+BA_ "GenSigStartValue" SG_ 2147496449 EVPreChargeVoltage_3 0;
+BA_ "GenSigStartValue" SG_ 2147496449 EVTargetVoltage_3 0;
+BA_ "GenSigStartValue" SG_ 2147496449 EVTargetCurrent_3 32500;
+BA_ "GenMsgCycleTime" BO_ 2147488256 100;
+BA_ "VFrameFormat" BO_ 2147488256 1;
+BA_ "GenSigStartValue" SG_ 2147488256 EVBulkSoC_1 0;
+BA_ "GenSigStartValue" SG_ 2147488256 EVFullSoC_1 0;
+BA_ "GenSigStartValue" SG_ 2147488256 EVMaxVoltage_1 0;
+BA_ "GenSigStartValue" SG_ 2147488256 EVMaxPower_1 0;
+BA_ "GenSigStartValue" SG_ 2147488256 EVMaxCurrent_1 0;
+BA_ "GenMsgCycleTime" BO_ 2147492352 100;
+BA_ "VFrameFormat" BO_ 2147492352 1;
+BA_ "GenSigStartValue" SG_ 2147492352 EVBulkSoC_2 0;
+BA_ "GenSigStartValue" SG_ 2147492352 EVFullSoC_2 0;
+BA_ "GenSigStartValue" SG_ 2147492352 EVMaxVoltage_2 0;
+BA_ "GenSigStartValue" SG_ 2147492352 EVMaxPower_2 0;
+BA_ "GenSigStartValue" SG_ 2147492352 EVMaxCurrent_2 0;
+BA_ "GenMsgCycleTime" BO_ 2147496448 100;
+BA_ "VFrameFormat" BO_ 2147496448 1;
+BA_ "GenSigStartValue" SG_ 2147496448 EVBulkSoC_3 0;
+BA_ "GenSigStartValue" SG_ 2147496448 EVFullSoC_3 0;
+BA_ "GenSigStartValue" SG_ 2147496448 EVMaxVoltage_3 0;
+BA_ "GenSigStartValue" SG_ 2147496448 EVMaxPower_3 0;
+BA_ "GenSigStartValue" SG_ 2147496448 EVMaxCurrent_3 0;
+BA_ "GenMsgCycleTime" BO_ 2147488001 10000;
+BA_ "VFrameFormat" BO_ 2147488001 1;
+BA_ "GenSigStartValue" SG_ 2147488001 SoftwareVersionHash_1 0;
+BA_ "GenSigStartValue" SG_ 2147488001 SoftwareVersionConfig_1 0;
+BA_ "GenSigStartValue" SG_ 2147488001 SoftwareVersionPatch_1 0;
+BA_ "GenSigStartValue" SG_ 2147488001 SoftwareVersionMinor_1 0;
+BA_ "GenSigStartValue" SG_ 2147488001 SoftwareVersionMajor_1 0;
+BA_ "GenMsgCycleTime" BO_ 2147492097 10000;
+BA_ "VFrameFormat" BO_ 2147492097 1;
+BA_ "GenSigStartValue" SG_ 2147492097 SoftwareVersionHash_2 0;
+BA_ "GenSigStartValue" SG_ 2147492097 SoftwareVersionConfig_2 0;
+BA_ "GenSigStartValue" SG_ 2147492097 SoftwareVersionPatch_2 0;
+BA_ "GenSigStartValue" SG_ 2147492097 SoftwareVersionMinor_2 0;
+BA_ "GenSigStartValue" SG_ 2147492097 SoftwareVersionMajor_2 0;
+BA_ "GenMsgCycleTime" BO_ 2147496193 10000;
+BA_ "VFrameFormat" BO_ 2147496193 1;
+BA_ "GenSigStartValue" SG_ 2147496193 SoftwareVersionHash_3 0;
+BA_ "GenSigStartValue" SG_ 2147496193 SoftwareVersionConfig_3 0;
+BA_ "GenSigStartValue" SG_ 2147496193 SoftwareVersionPatch_3 0;
+BA_ "GenSigStartValue" SG_ 2147496193 SoftwareVersionMinor_3 0;
+BA_ "GenSigStartValue" SG_ 2147496193 SoftwareVersionMajor_3 0;
+VAL_ 2147483909 V2GStatusISO 63 "SNA" 33 "V2G_ISO_ERROR_CLOSE_FINISHED" 32 "V2G_ISO_ERROR_CLOSE" 31 "V2G_ISO_SEND_ERROR_RESPONSE" 30 "V2G_ISO_CHARGING_FINISHED" 29 "V2G_ISO_SSTOP_RES" 28 "V2G_ISO_WAIT_SSTOP_REQ" 27 "V2G_ISO_WD_RES" 26 "V2G_ISO_WAIT_WD_REQ" 25 "V2G_ISO_WAIT_WD_OR_SSTOP_REQ" 24 "V2G_ISO_PD_POST_RES" 23 "V2G_ISO_WAIT_PD_POST_REQ" 22 "V2G_ISO_WAIT_PD_POST_OR_CD_REQ" 21 "V2G_ISO_CD_RES" 20 "V2G_ISO_WAIT_CD_REQ" 19 "V2G_ISO_PD_PRE_RES" 18 "V2G_ISO_WAIT_PD_PRE_REQ" 17 "V2G_ISO_WAIT_PD_PRE_OR_PC_REQ" 16 "V2G_ISO_PC_RES" 15 "V2G_ISO_WAIT_PC_REQ" 14 "V2G_ISO_STATE_CC_RES" 13 "V2G_ISO_WAIT_CC_REQ" 12 "V2G_ISO_CPD_RES" 11 "V2G_ISO_WAIT_CPD_REQ" 10 "V2G_ISO_AUTH_RES" 9 "V2G_ISO_WAIT_AUTH_REQ" 8 "V2G_ISO_PS_RES" 7 "V2G_ISO_WAIT_PS_REQ" 6 "V2G_ISO_SD_RES" 5 "V2G_ISO_WAIT_SD_REQ" 4 "V2G_ISO_SSETUP_RES" 3 "V2G_ISO_WAIT_SSETUP_REQ" 2 "V2G_ISO_SAP_RES" 1 "V2G_ISO_WAIT_SAP_REQ" 0 "V2G_ISO_INVALID" ;
+VAL_ 2147483909 ControlPilotVoltage 16383 "SNA" ;
+VAL_ 2147483909 SLACStatus 7 "SLAC_PROC_SLAC_LINK_STATUS_DONE" 6 "SLAC_PROC_SLAC_MATCH_CNF_WAIT" 15 "SNA" 5 "SLAC_PROC_SLAC_MATCH_CNF_SEND" 4 "SLAC_PROC_ATTEN_CHAR_IND_WAIT" 3 "SLAC_PROC_ATTEN_CHAR_IND_SEND" 2 "SLAC_PROC_SLAC_PARAM_CNF_WAIT" 1 "SLAC_PROC_SLAC_PARAM_CNF_SEND" ;
+VAL_ 2147483909 ProximityPilotVoltage 4095 "SNA" ;
+VAL_ 2147483909 V2GStatusDIN 63 "SNA" 33 "V2G_DIN_ERROR_CLOSE_FINISHED" 32 "V2G_DIN_ERROR_CLOSE" 31 "V2G_DIN_SEND_ERROR_RESPONSE" 30 "V2G_DIN_CHARGING_FINISHED" 29 "V2G_DIN_SSTOP_RES" 28 "V2G_DIN_WAIT_SSTOP_REQ" 27 "V2G_DIN_WD_RES" 26 "V2G_DIN_WAIT_WD_REQ" 25 "V2G_DIN_WAIT_WD_OR_SSTOP_REQ" 24 "V2G_DIN_PD_POST_RES" 23 "V2G_DIN_STATE_WAIT_PD_POST_REQ" 22 "V2G_DIN_WAIT_PD_POST_OR_CD_REQ" 21 "V2G_DIN_STATE_CD_RES" 20 "V2G_DIN_STATE_WAIT_CD_REQ" 19 "V2G_DIN_STATE_PD_PRE_RES" 18 "V2G_DIN_WAIT_PD_PRE_REQ" 17 "V2G_DIN_WAIT_PDPRE_OR_PC_REQ" 16 "V2G_DIN_PC_RES" 15 "V2G_DIN_WAIT_PC_REQ" 14 "V2G_DIN_CC_RES" 13 "V2G_DIN_WAIT_CC_REQ" 12 "V2G_DIN_CPD_RES" 11 "V2G_DIN_WAIT_CPD_REQ" 10 "V2G_DIN_AUTH_RES" 9 "V2G_DIN_WAIT_AUTH_REQ" 8 "V2G_DIN_PS_RES" 7 "V2G_DIN_WAIT_PS_REQ" 6 "V2G_DIN_SD_RES" 5 "V2G_DIN_WAIT_SD_REQ" 4 "V2G_DIN_SSETUP_RES" 3 "V2G_DIN_WAIT_SSETUP_REQ" 2 "V2G_DIN_SAP_RES" 1 "V2G_DIN_WAIT_SAP_REQ" 0 "V2G_DIN_INVALID" ;
+VAL_ 2147483909 HLCStatus 15 "SNA" 9 "HLC_STATE_ERROR_FINISHED" 8 "HLC_STATE_ERROR" 7 "HLC_STATE_V2G_PROTOCOL_HANDLER" 6 "HLC_STATE_SAP_WAIT" 5 "HLC_STATE_SAP_START" 4 "HLC_STATE_SDP_WAIT" 3 "HLC_STATE_SDP_START" 2 "HLC_STATE_SLAC_WAIT" 1 "HLC_STATE_SLAC_START" 0 "HLC_STATE_INVALID" ;
+VAL_ 2147483909 PilotStatesStatus 15 "SNA" 9 "CP_PP_STATE_RE_INIT" 8 "CP_PP_STATE_MAINTENANCE" 7 "CP_PP_STATE_EVSE_EMERGENCY" 6 "CP_PP_STATE_WAIT_UNPLUG" 5 "CP_PP_STATE_HLC" 4 "CP_PP_STATE_PLUGGED_5PER" 3 "CP_PP_STATE_PLUGGED" 2 "CP_PP_STATE_UNPLUGGED" 1 "CP_PP_STATE_INIT" 0 "CP_PP_STATE_INVALID" ;
+VAL_ 2147484423 EVSECurrentLimit 1023 "SNA" 2 "HLC" 1 "100_Percent_DutyCycle" 0 "0_Percent_DutyCycle" ;
+VAL_ 2147483908 MeasuredAttenuation 255 "SNA" ;
+VAL_ 2147483908 QcaSwEnum 15 "Unknown" 1 "QCA7005-v3.0.0.18-00-20200826" 0 "QCA7005-v1.2.5.3207-00-20180927" ;
+VAL_ 2147483908 QcaSlacConfig 3 "SNA" 2 "ENABLE_EVSE" 1 "ENABLE_PEV" 0 "DISABLE_SLAC" ;
+VAL_ 2147483908 SLACLinkStatus 3 "SNA" 1 "Up" 0 "Down" ;
+VAL_ 2147483907 GPIO5Status 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147483907 GPIO4Status 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147483907 GPIO3Status 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147483907 GPIO2Status 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147484422 ConfigGPIO5 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147484422 ConfigGPIO4 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147484422 ConfigGPIO3 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147484422 ConfigGPIO2 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147484420 EVSEID -591746099 "SNA" ;
+VAL_ 2147484163 EVEnergyRequest 65535 "SNA" ;
+VAL_ 2147484163 EVEnergyCapacity 65535 "SNA" ;
+VAL_ 2148073472 BootloaderVersion 255 "Old bootloader" ;
+VAL_ 2147483906 Interface3 1 "Customer" 0 "Internal" ;
+VAL_ 2147483906 Severity3 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147483906 Interface2 1 "Customer" 0 "Internal" ;
+VAL_ 2147483906 Severity2 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147483906 Interface1 1 "Customer" 0 "Internal" ;
+VAL_ 2147483906 Severity1 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147483906 Interface0 1 "Customer" 0 "Internal" ;
+VAL_ 2147483906 Severity0 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147483904 DiodePresence 3 "SNA" 1 "No_Diode_Detected" 0 "Diode_Detected" ;
+VAL_ 2147483904 TCPStatus 3 "SNA" 2 "TLS_Connected" 1 "TCP_Connected" 0 "Not_Connected" ;
+VAL_ 2147483904 AliveCounter 15 "SNA" ;
+VAL_ 2147483904 ControlPilotState 14 "Invalid" 15 "SNA" 5 "F" 4 "E" 3 "D" 2 "C" 1 "B" 0 "A" ;
+VAL_ 2147483904 ActualChargeProtocol 15 "SNA" 1 "DIN70121" 2 "ISO15118" 3 "Not_Supported" 0 "Not_Defined" ;
+VAL_ 2147483904 ProximityPinState 7 "Type1_Connected_Button_Pressed" 6 "Type1_Connected" 5 "Type2_Connected" 15 "SNA" 14 "Invalid" 4 "Type2_Connected63A" 3 "Type2_Connected32A" 2 "Type2_Connected20A" 1 "Type2_Connected13A" 0 "Not_Connected" ;
+VAL_ 2147483904 StateMachineState 15 "SNA" 0 "Default" 1 "Init" 2 "Authentication" 3 "Parameter" 4 "Isolation" 5 "PreCharge" 6 "Charge" 7 "Welding" 8 "StopCharge" 9 "SessionStop" 10 "ShutOff" 11 "Paused" 12 "Error" ;
+VAL_ 2147483904 ControlPilotDutyCycle 126 "Invalid" 127 "SNA" ;
+VAL_ 2147484419 EVSEProximityPinState 7 "Type1_Connected_Button_Pressed" 6 "Type1_Connected" 5 "Type2_Connected" 15 "SNA" 14 "Invalid" 4 "Type2_Connected63A" 3 "Type2_Connected32A" 2 "Type2_Connected20A" 1 "Type2_Connected13A" 0 "Not_Connected" ;
+VAL_ 2147484419 EVSEControlPilotState 15 "SNA" 14 "Invalid" 5 "F" 4 "E" 3 "D" 2 "C" 1 "B" 0 "A" ;
+VAL_ 2147484419 EVSEControlPilotDutyCycle 127 "SNA" 126 "Invalid" ;
+VAL_ 2147484418 EVSEProcessingCC 3 "SNA" 2 "WaitingForCustomerInteraction" 1 "Ongoing" 0 "Finished" ;
+VAL_ 2147484418 EVSEProcessingCPD 3 "SNA" 2 "WaitingForCustomerInteraction" 1 "Ongoing" 0 "Finished" ;
+VAL_ 2147484418 EVSEProcessingCA 3 "SNA" 2 "WaitingForCustomerInteraction" 1 "Ongoing" 0 "Finished" ;
+VAL_ 2147484418 EVSEPowerLimitAchieved 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147484418 EVSECurrentLimitAchieved 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147484418 EVSEStatusCode 15 "SNA" 14 "Invalid" 12 "EVSE_CustomerNotReady" 11 "Reserved_C" 10 "Reserved_B" 9 "Reserved_A" 8 "Reserved_9" 7 "Reserved_8" 6 "EVSE_Malfunction" 5 "EVSE_EmergencyShutdown" 4 "EVSE_IsolationMonitoringActive" 3 "EVSE_UtilityInterruptEvent" 2 "EVSE_Shutdown" 1 "EVSE_Ready" 0 "EVSE_NotReady" ;
+VAL_ 2147484418 EVSEVoltageLimitAchieved 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147484418 EVSEIsolationStatus 7 "SNA" 4 "No_IMD" 3 "Fault" 2 "Warning" 1 "Valid" 0 "Invalid" ;
+VAL_ 2147484418 EVSEPresentVoltage 65535 "SNA" ;
+VAL_ 2147484418 EVSEPresentCurrent 65535 "SNA" ;
+VAL_ 2147484417 EVSECurrentRegulationTolerance 255 "SNA" ;
+VAL_ 2147484417 EVSEPeakCurrentRipple 255 "SNA" ;
+VAL_ 2147484417 EVSEMinVoltage 65535 "SNA" ;
+VAL_ 2147484417 EVSEMinCurrent 65535 "SNA" ;
+VAL_ 2147484416 EVSEEnergyToBeDelivered 65535 "SNA" ;
+VAL_ 2147484416 EVSEMaxPower 65535 "SNA" ;
+VAL_ 2147484416 EVSEMaxVoltage 65535 "SNA" ;
+VAL_ 2147484416 EVSEMaxCurrent 65535 "SNA" ;
+VAL_ 2147484162 EVTimeToFullSoC 262143 "SNA" ;
+VAL_ 2147484162 EVReady 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147484162 EVTimeToBulkSoC 262143 "SNA" ;
+VAL_ 2147484162 EVRESSConditioning 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147484162 EVCabinConditioning 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147484162 EVErrorCode 15 "SNA" 11 "NoData" 10 "FAILED_SystemIncompatibility" 9 "Reserved_C" 8 "Reserved_B" 7 "Reserved_A" 6 "FAILED_ChargingVoltageOutOfRange" 5 "FAILED_ChargingCurrentdiff" 4 "FAILED_EVRESSMalfunction" 3 "FAILED_ChargerConnectorLockFault" 2 "FAILED_EVShiftPosition" 1 "FAILED_RESSTemperatureInhibit" 0 "NO_ERROR" ;
+VAL_ 2147484162 EVBulkChargingComplete 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147484162 EVChargingComplete 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147484162 EVSoC 255 "SNA" ;
+VAL_ 2147484161 EVPreChargeVoltage 65535 "SNA" ;
+VAL_ 2147484161 EVTargetVoltage 65535 "SNA" ;
+VAL_ 2147484161 EVTargetCurrent 65535 "SNA" ;
+VAL_ 2147484160 EVBulkSoC 255 "SNA" ;
+VAL_ 2147484160 EVFullSoC 255 "SNA" ;
+VAL_ 2147484160 EVMaxVoltage 65535 "SNA" ;
+VAL_ 2147484160 EVMaxPower 65535 "SNA" ;
+VAL_ 2147484160 EVMaxCurrent 65535 "SNA" ;
+VAL_ 2147488005 V2GStatusISO_1 63 "SNA" 33 "V2G_ISO_ERROR_CLOSE_FINISHED" 32 "V2G_ISO_ERROR_CLOSE" 31 "V2G_ISO_SEND_ERROR_RESPONSE" 30 "V2G_ISO_CHARGING_FINISHED" 29 "V2G_ISO_SSTOP_RES" 28 "V2G_ISO_WAIT_SSTOP_REQ" 27 "V2G_ISO_WD_RES" 26 "V2G_ISO_WAIT_WD_REQ" 25 "V2G_ISO_WAIT_WD_OR_SSTOP_REQ" 24 "V2G_ISO_PD_POST_RES" 23 "V2G_ISO_WAIT_PD_POST_REQ" 22 "V2G_ISO_WAIT_PD_POST_OR_CD_REQ" 21 "V2G_ISO_CD_RES" 20 "V2G_ISO_WAIT_CD_REQ" 19 "V2G_ISO_PD_PRE_RES" 18 "V2G_ISO_WAIT_PD_PRE_REQ" 17 "V2G_ISO_WAIT_PD_PRE_OR_PC_REQ" 16 "V2G_ISO_PC_RES" 15 "V2G_ISO_WAIT_PC_REQ" 14 "V2G_ISO_STATE_CC_RES" 13 "V2G_ISO_WAIT_CC_REQ" 12 "V2G_ISO_CPD_RES" 11 "V2G_ISO_WAIT_CPD_REQ" 10 "V2G_ISO_AUTH_RES" 9 "V2G_ISO_WAIT_AUTH_REQ" 8 "V2G_ISO_PS_RES" 7 "V2G_ISO_WAIT_PS_REQ" 6 "V2G_ISO_SD_RES" 5 "V2G_ISO_WAIT_SD_REQ" 4 "V2G_ISO_SSETUP_RES" 3 "V2G_ISO_WAIT_SSETUP_REQ" 2 "V2G_ISO_SAP_RES" 1 "V2G_ISO_WAIT_SAP_REQ" 0 "V2G_ISO_INVALID" ;
+VAL_ 2147488005 ControlPilotVoltage_1 16383 "SNA" ;
+VAL_ 2147488005 SLACStatus_1 7 "SLAC_PROC_SLAC_LINK_STATUS_DONE" 6 "SLAC_PROC_SLAC_MATCH_CNF_WAIT" 15 "SNA" 5 "SLAC_PROC_SLAC_MATCH_CNF_SEND" 4 "SLAC_PROC_ATTEN_CHAR_IND_WAIT" 3 "SLAC_PROC_ATTEN_CHAR_IND_SEND" 2 "SLAC_PROC_SLAC_PARAM_CNF_WAIT" 1 "SLAC_PROC_SLAC_PARAM_CNF_SEND" ;
+VAL_ 2147488005 ProximityPilotVoltage_1 4095 "SNA" ;
+VAL_ 2147488005 V2GStatusDIN_1 63 "SNA" 33 "V2G_DIN_ERROR_CLOSE_FINISHED" 32 "V2G_DIN_ERROR_CLOSE" 31 "V2G_DIN_SEND_ERROR_RESPONSE" 30 "V2G_DIN_CHARGING_FINISHED" 29 "V2G_DIN_SSTOP_RES" 28 "V2G_DIN_WAIT_SSTOP_REQ" 27 "V2G_DIN_WD_RES" 26 "V2G_DIN_WAIT_WD_REQ" 25 "V2G_DIN_WAIT_WD_OR_SSTOP_REQ" 24 "V2G_DIN_PD_POST_RES" 23 "V2G_DIN_STATE_WAIT_PD_POST_REQ" 22 "V2G_DIN_WAIT_PD_POST_OR_CD_REQ" 21 "V2G_DIN_STATE_CD_RES" 20 "V2G_DIN_STATE_WAIT_CD_REQ" 19 "V2G_DIN_STATE_PD_PRE_RES" 18 "V2G_DIN_WAIT_PD_PRE_REQ" 17 "V2G_DIN_WAIT_PDPRE_OR_PC_REQ" 16 "V2G_DIN_PC_RES" 15 "V2G_DIN_WAIT_PC_REQ" 14 "V2G_DIN_CC_RES" 13 "V2G_DIN_WAIT_CC_REQ" 12 "V2G_DIN_CPD_RES" 11 "V2G_DIN_WAIT_CPD_REQ" 10 "V2G_DIN_AUTH_RES" 9 "V2G_DIN_WAIT_AUTH_REQ" 8 "V2G_DIN_PS_RES" 7 "V2G_DIN_WAIT_PS_REQ" 6 "V2G_DIN_SD_RES" 5 "V2G_DIN_WAIT_SD_REQ" 4 "V2G_DIN_SSETUP_RES" 3 "V2G_DIN_WAIT_SSETUP_REQ" 2 "V2G_DIN_SAP_RES" 1 "V2G_DIN_WAIT_SAP_REQ" 0 "V2G_DIN_INVALID" ;
+VAL_ 2147488005 HLCStatus_1 15 "SNA" 9 "HLC_STATE_ERROR_FINISHED" 8 "HLC_STATE_ERROR" 7 "HLC_STATE_V2G_PROTOCOL_HANDLER" 6 "HLC_STATE_SAP_WAIT" 5 "HLC_STATE_SAP_START" 4 "HLC_STATE_SDP_WAIT" 3 "HLC_STATE_SDP_START" 2 "HLC_STATE_SLAC_WAIT" 1 "HLC_STATE_SLAC_START" 0 "HLC_STATE_INVALID" ;
+VAL_ 2147488005 PilotStatesStatus_1 15 "SNA" 9 "CP_PP_STATE_RE_INIT" 8 "CP_PP_STATE_MAINTENANCE" 7 "CP_PP_STATE_EVSE_EMERGENCY" 6 "CP_PP_STATE_WAIT_UNPLUG" 5 "CP_PP_STATE_HLC" 4 "CP_PP_STATE_PLUGGED_5PER" 3 "CP_PP_STATE_PLUGGED" 2 "CP_PP_STATE_UNPLUGGED" 1 "CP_PP_STATE_INIT" 0 "CP_PP_STATE_INVALID" ;
+VAL_ 2147492101 V2GStatusISO_2 63 "SNA" 33 "V2G_ISO_ERROR_CLOSE_FINISHED" 32 "V2G_ISO_ERROR_CLOSE" 31 "V2G_ISO_SEND_ERROR_RESPONSE" 30 "V2G_ISO_CHARGING_FINISHED" 29 "V2G_ISO_SSTOP_RES" 28 "V2G_ISO_WAIT_SSTOP_REQ" 27 "V2G_ISO_WD_RES" 26 "V2G_ISO_WAIT_WD_REQ" 25 "V2G_ISO_WAIT_WD_OR_SSTOP_REQ" 24 "V2G_ISO_PD_POST_RES" 23 "V2G_ISO_WAIT_PD_POST_REQ" 22 "V2G_ISO_WAIT_PD_POST_OR_CD_REQ" 21 "V2G_ISO_CD_RES" 20 "V2G_ISO_WAIT_CD_REQ" 19 "V2G_ISO_PD_PRE_RES" 18 "V2G_ISO_WAIT_PD_PRE_REQ" 17 "V2G_ISO_WAIT_PD_PRE_OR_PC_REQ" 16 "V2G_ISO_PC_RES" 15 "V2G_ISO_WAIT_PC_REQ" 14 "V2G_ISO_STATE_CC_RES" 13 "V2G_ISO_WAIT_CC_REQ" 12 "V2G_ISO_CPD_RES" 11 "V2G_ISO_WAIT_CPD_REQ" 10 "V2G_ISO_AUTH_RES" 9 "V2G_ISO_WAIT_AUTH_REQ" 8 "V2G_ISO_PS_RES" 7 "V2G_ISO_WAIT_PS_REQ" 6 "V2G_ISO_SD_RES" 5 "V2G_ISO_WAIT_SD_REQ" 4 "V2G_ISO_SSETUP_RES" 3 "V2G_ISO_WAIT_SSETUP_REQ" 2 "V2G_ISO_SAP_RES" 1 "V2G_ISO_WAIT_SAP_REQ" 0 "V2G_ISO_INVALID" ;
+VAL_ 2147492101 ControlPilotVoltage_2 16383 "SNA" ;
+VAL_ 2147492101 SLACStatus_2 7 "SLAC_PROC_SLAC_LINK_STATUS_DONE" 6 "SLAC_PROC_SLAC_MATCH_CNF_WAIT" 15 "SNA" 5 "SLAC_PROC_SLAC_MATCH_CNF_SEND" 4 "SLAC_PROC_ATTEN_CHAR_IND_WAIT" 3 "SLAC_PROC_ATTEN_CHAR_IND_SEND" 2 "SLAC_PROC_SLAC_PARAM_CNF_WAIT" 1 "SLAC_PROC_SLAC_PARAM_CNF_SEND" ;
+VAL_ 2147492101 ProximityPilotVoltage_2 4095 "SNA" ;
+VAL_ 2147492101 V2GStatusDIN_2 63 "SNA" 33 "V2G_DIN_ERROR_CLOSE_FINISHED" 32 "V2G_DIN_ERROR_CLOSE" 31 "V2G_DIN_SEND_ERROR_RESPONSE" 30 "V2G_DIN_CHARGING_FINISHED" 29 "V2G_DIN_SSTOP_RES" 28 "V2G_DIN_WAIT_SSTOP_REQ" 27 "V2G_DIN_WD_RES" 26 "V2G_DIN_WAIT_WD_REQ" 25 "V2G_DIN_WAIT_WD_OR_SSTOP_REQ" 24 "V2G_DIN_PD_POST_RES" 23 "V2G_DIN_STATE_WAIT_PD_POST_REQ" 22 "V2G_DIN_WAIT_PD_POST_OR_CD_REQ" 21 "V2G_DIN_STATE_CD_RES" 20 "V2G_DIN_STATE_WAIT_CD_REQ" 19 "V2G_DIN_STATE_PD_PRE_RES" 18 "V2G_DIN_WAIT_PD_PRE_REQ" 17 "V2G_DIN_WAIT_PDPRE_OR_PC_REQ" 16 "V2G_DIN_PC_RES" 15 "V2G_DIN_WAIT_PC_REQ" 14 "V2G_DIN_CC_RES" 13 "V2G_DIN_WAIT_CC_REQ" 12 "V2G_DIN_CPD_RES" 11 "V2G_DIN_WAIT_CPD_REQ" 10 "V2G_DIN_AUTH_RES" 9 "V2G_DIN_WAIT_AUTH_REQ" 8 "V2G_DIN_PS_RES" 7 "V2G_DIN_WAIT_PS_REQ" 6 "V2G_DIN_SD_RES" 5 "V2G_DIN_WAIT_SD_REQ" 4 "V2G_DIN_SSETUP_RES" 3 "V2G_DIN_WAIT_SSETUP_REQ" 2 "V2G_DIN_SAP_RES" 1 "V2G_DIN_WAIT_SAP_REQ" 0 "V2G_DIN_INVALID" ;
+VAL_ 2147492101 HLCStatus_2 15 "SNA" 9 "HLC_STATE_ERROR_FINISHED" 8 "HLC_STATE_ERROR" 7 "HLC_STATE_V2G_PROTOCOL_HANDLER" 6 "HLC_STATE_SAP_WAIT" 5 "HLC_STATE_SAP_START" 4 "HLC_STATE_SDP_WAIT" 3 "HLC_STATE_SDP_START" 2 "HLC_STATE_SLAC_WAIT" 1 "HLC_STATE_SLAC_START" 0 "HLC_STATE_INVALID" ;
+VAL_ 2147492101 PilotStatesStatus_2 15 "SNA" 9 "CP_PP_STATE_RE_INIT" 8 "CP_PP_STATE_MAINTENANCE" 7 "CP_PP_STATE_EVSE_EMERGENCY" 6 "CP_PP_STATE_WAIT_UNPLUG" 5 "CP_PP_STATE_HLC" 4 "CP_PP_STATE_PLUGGED_5PER" 3 "CP_PP_STATE_PLUGGED" 2 "CP_PP_STATE_UNPLUGGED" 1 "CP_PP_STATE_INIT" 0 "CP_PP_STATE_INVALID" ;
+VAL_ 2147496197 V2GStatusISO_3 63 "SNA" 33 "V2G_ISO_ERROR_CLOSE_FINISHED" 32 "V2G_ISO_ERROR_CLOSE" 31 "V2G_ISO_SEND_ERROR_RESPONSE" 30 "V2G_ISO_CHARGING_FINISHED" 29 "V2G_ISO_SSTOP_RES" 28 "V2G_ISO_WAIT_SSTOP_REQ" 27 "V2G_ISO_WD_RES" 26 "V2G_ISO_WAIT_WD_REQ" 25 "V2G_ISO_WAIT_WD_OR_SSTOP_REQ" 24 "V2G_ISO_PD_POST_RES" 23 "V2G_ISO_WAIT_PD_POST_REQ" 22 "V2G_ISO_WAIT_PD_POST_OR_CD_REQ" 21 "V2G_ISO_CD_RES" 20 "V2G_ISO_WAIT_CD_REQ" 19 "V2G_ISO_PD_PRE_RES" 18 "V2G_ISO_WAIT_PD_PRE_REQ" 17 "V2G_ISO_WAIT_PD_PRE_OR_PC_REQ" 16 "V2G_ISO_PC_RES" 15 "V2G_ISO_WAIT_PC_REQ" 14 "V2G_ISO_STATE_CC_RES" 13 "V2G_ISO_WAIT_CC_REQ" 12 "V2G_ISO_CPD_RES" 11 "V2G_ISO_WAIT_CPD_REQ" 10 "V2G_ISO_AUTH_RES" 9 "V2G_ISO_WAIT_AUTH_REQ" 8 "V2G_ISO_PS_RES" 7 "V2G_ISO_WAIT_PS_REQ" 6 "V2G_ISO_SD_RES" 5 "V2G_ISO_WAIT_SD_REQ" 4 "V2G_ISO_SSETUP_RES" 3 "V2G_ISO_WAIT_SSETUP_REQ" 2 "V2G_ISO_SAP_RES" 1 "V2G_ISO_WAIT_SAP_REQ" 0 "V2G_ISO_INVALID" ;
+VAL_ 2147496197 ControlPilotVoltage_3 16383 "SNA" ;
+VAL_ 2147496197 SLACStatus_3 7 "SLAC_PROC_SLAC_LINK_STATUS_DONE" 6 "SLAC_PROC_SLAC_MATCH_CNF_WAIT" 15 "SNA" 5 "SLAC_PROC_SLAC_MATCH_CNF_SEND" 4 "SLAC_PROC_ATTEN_CHAR_IND_WAIT" 3 "SLAC_PROC_ATTEN_CHAR_IND_SEND" 2 "SLAC_PROC_SLAC_PARAM_CNF_WAIT" 1 "SLAC_PROC_SLAC_PARAM_CNF_SEND" ;
+VAL_ 2147496197 ProximityPilotVoltage_3 4095 "SNA" ;
+VAL_ 2147496197 V2GStatusDIN_3 63 "SNA" 33 "V2G_DIN_ERROR_CLOSE_FINISHED" 32 "V2G_DIN_ERROR_CLOSE" 31 "V2G_DIN_SEND_ERROR_RESPONSE" 30 "V2G_DIN_CHARGING_FINISHED" 29 "V2G_DIN_SSTOP_RES" 28 "V2G_DIN_WAIT_SSTOP_REQ" 27 "V2G_DIN_WD_RES" 26 "V2G_DIN_WAIT_WD_REQ" 25 "V2G_DIN_WAIT_WD_OR_SSTOP_REQ" 24 "V2G_DIN_PD_POST_RES" 23 "V2G_DIN_STATE_WAIT_PD_POST_REQ" 22 "V2G_DIN_WAIT_PD_POST_OR_CD_REQ" 21 "V2G_DIN_STATE_CD_RES" 20 "V2G_DIN_STATE_WAIT_CD_REQ" 19 "V2G_DIN_STATE_PD_PRE_RES" 18 "V2G_DIN_WAIT_PD_PRE_REQ" 17 "V2G_DIN_WAIT_PDPRE_OR_PC_REQ" 16 "V2G_DIN_PC_RES" 15 "V2G_DIN_WAIT_PC_REQ" 14 "V2G_DIN_CC_RES" 13 "V2G_DIN_WAIT_CC_REQ" 12 "V2G_DIN_CPD_RES" 11 "V2G_DIN_WAIT_CPD_REQ" 10 "V2G_DIN_AUTH_RES" 9 "V2G_DIN_WAIT_AUTH_REQ" 8 "V2G_DIN_PS_RES" 7 "V2G_DIN_WAIT_PS_REQ" 6 "V2G_DIN_SD_RES" 5 "V2G_DIN_WAIT_SD_REQ" 4 "V2G_DIN_SSETUP_RES" 3 "V2G_DIN_WAIT_SSETUP_REQ" 2 "V2G_DIN_SAP_RES" 1 "V2G_DIN_WAIT_SAP_REQ" 0 "V2G_DIN_INVALID" ;
+VAL_ 2147496197 HLCStatus_3 15 "SNA" 9 "HLC_STATE_ERROR_FINISHED" 8 "HLC_STATE_ERROR" 7 "HLC_STATE_V2G_PROTOCOL_HANDLER" 6 "HLC_STATE_SAP_WAIT" 5 "HLC_STATE_SAP_START" 4 "HLC_STATE_SDP_WAIT" 3 "HLC_STATE_SDP_START" 2 "HLC_STATE_SLAC_WAIT" 1 "HLC_STATE_SLAC_START" 0 "HLC_STATE_INVALID" ;
+VAL_ 2147496197 PilotStatesStatus_3 15 "SNA" 9 "CP_PP_STATE_RE_INIT" 8 "CP_PP_STATE_MAINTENANCE" 7 "CP_PP_STATE_EVSE_EMERGENCY" 6 "CP_PP_STATE_WAIT_UNPLUG" 5 "CP_PP_STATE_HLC" 4 "CP_PP_STATE_PLUGGED_5PER" 3 "CP_PP_STATE_PLUGGED" 2 "CP_PP_STATE_UNPLUGGED" 1 "CP_PP_STATE_INIT" 0 "CP_PP_STATE_INVALID" ;
+VAL_ 2147488519 EVSECurrentLimit_1 1023 "SNA" 2 "HLC" 1 "100_Percent_DutyCycle" 0 "0_Percent_DutyCycle" ;
+VAL_ 2147492615 EVSECurrentLimit_2 1023 "SNA" 2 "HLC" 1 "100_Percent_DutyCycle" 0 "0_Percent_DutyCycle" ;
+VAL_ 2147496711 EVSECurrentLimit_3 1023 "SNA" 2 "HLC" 1 "100_Percent_DutyCycle" 0 "0_Percent_DutyCycle" ;
+VAL_ 2147488004 MeasuredAttenuation_1 255 "SNA" ;
+VAL_ 2147488004 QcaSwEnum_1 15 "Unknown" 1 "QCA7005-v3.0.0.18-00-20200826" 0 "QCA7005-v1.2.5.3207-00-20180927" ;
+VAL_ 2147488004 QcaSlacConfig_1 3 "SNA" 2 "ENABLE_EVSE" 1 "ENABLE_PEV" 0 "DISABLE_SLAC" ;
+VAL_ 2147488004 SLACLinkStatus_1 3 "SNA" 1 "Up" 0 "Down" ;
+VAL_ 2147492100 MeasuredAttenuation_2 255 "SNA" ;
+VAL_ 2147492100 QcaSwEnum_2 15 "Unknown" 1 "QCA7005-v3.0.0.18-00-20200826" 0 "QCA7005-v1.2.5.3207-00-20180927" ;
+VAL_ 2147492100 QcaSlacConfig_2 3 "SNA" 2 "ENABLE_EVSE" 1 "ENABLE_PEV" 0 "DISABLE_SLAC" ;
+VAL_ 2147492100 SLACLinkStatus_2 3 "SNA" 1 "Up" 0 "Down" ;
+VAL_ 2147496196 MeasuredAttenuation_3 255 "SNA" ;
+VAL_ 2147496196 QcaSwEnum_3 15 "Unknown" 1 "QCA7005-v3.0.0.18-00-20200826" 0 "QCA7005-v1.2.5.3207-00-20180927" ;
+VAL_ 2147496196 QcaSlacConfig_3 3 "SNA" 2 "ENABLE_EVSE" 1 "ENABLE_PEV" 0 "DISABLE_SLAC" ;
+VAL_ 2147496196 SLACLinkStatus_3 3 "SNA" 1 "Up" 0 "Down" ;
+VAL_ 2147488003 GPIO5Status_1 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147488003 GPIO4Status_1 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147488003 GPIO3Status_1 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147488003 GPIO2Status_1 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147492099 GPIO5Status_2 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147492099 GPIO4Status_2 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147492099 GPIO3Status_2 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147492099 GPIO2Status_2 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147496195 GPIO5Status_3 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147496195 GPIO4Status_3 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147496195 GPIO3Status_3 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147496195 GPIO2Status_3 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147488518 ConfigGPIO5_1 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147488518 ConfigGPIO4_1 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147488518 ConfigGPIO3_1 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147488518 ConfigGPIO2_1 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147492614 ConfigGPIO5_2 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147492614 ConfigGPIO4_2 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147492614 ConfigGPIO3_2 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147492614 ConfigGPIO2_2 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147496710 ConfigGPIO5_3 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147496710 ConfigGPIO4_3 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147496710 ConfigGPIO3_3 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147496710 ConfigGPIO2_3 2 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147488516 EVSEID_1 -591746099 "SNA" ;
+VAL_ 2147492612 EVSEID_2 -591746099 "SNA" ;
+VAL_ 2147496708 EVSEID_3 -591746099 "SNA" ;
+VAL_ 2147488259 EVEnergyRequest_1 65535 "SNA" ;
+VAL_ 2147488259 EVEnergyCapacity_1 65535 "SNA" ;
+VAL_ 2147492355 EVEnergyRequest_2 65535 "SNA" ;
+VAL_ 2147492355 EVEnergyCapacity_2 65535 "SNA" ;
+VAL_ 2147496451 EVEnergyRequest_3 65535 "SNA" ;
+VAL_ 2147496451 EVEnergyCapacity_3 65535 "SNA" ;
+VAL_ 2148077568 BootloaderVersion_1 255 "Old bootloader" ;
+VAL_ 2148081664 BootloaderVersion_2 255 "Old bootloader" ;
+VAL_ 2148085760 BootloaderVersion_3 255 "Old bootloader" ;
+VAL_ 2147488002 Interface3_1 1 "Customer" 0 "Internal" ;
+VAL_ 2147488002 Severity3_1 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147488002 Interface2_1 1 "Customer" 0 "Internal" ;
+VAL_ 2147488002 Severity2_1 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147488002 Interface1_1 1 "Customer" 0 "Internal" ;
+VAL_ 2147488002 Severity1_1 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147488002 Interface0_1 1 "Customer" 0 "Internal" ;
+VAL_ 2147488002 Severity0_1 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147492098 Interface3_2 1 "Customer" 0 "Internal" ;
+VAL_ 2147492098 Severity3_2 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147492098 Interface2_2 1 "Customer" 0 "Internal" ;
+VAL_ 2147492098 Severity2_2 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147492098 Interface1_2 1 "Customer" 0 "Internal" ;
+VAL_ 2147492098 Severity1_2 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147492098 Interface0_2 1 "Customer" 0 "Internal" ;
+VAL_ 2147492098 Severity0_2 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147496194 Interface3_3 1 "Customer" 0 "Internal" ;
+VAL_ 2147496194 Severity3_3 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147496194 Interface2_3 1 "Customer" 0 "Internal" ;
+VAL_ 2147496194 Severity2_3 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147496194 Interface1_3 1 "Customer" 0 "Internal" ;
+VAL_ 2147496194 Severity1_3 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147496194 Interface0_3 1 "Customer" 0 "Internal" ;
+VAL_ 2147496194 Severity0_3 2 "Critical" 1 "Major" 0 "Minor" ;
+VAL_ 2147488000 DiodePresence_1 3 "SNA" 1 "No_Diode_Detected" 0 "Diode_Detected" ;
+VAL_ 2147488000 TCPStatus_1 3 "SNA" 2 "TLS_Connected" 1 "TCP_Connected" 0 "Not_Connected" ;
+VAL_ 2147488000 AliveCounter_1 15 "SNA" ;
+VAL_ 2147488000 ControlPilotState_1 14 "Invalid" 15 "SNA" 5 "F" 4 "E" 3 "D" 2 "C" 1 "B" 0 "A" ;
+VAL_ 2147488000 ActualChargeProtocol_1 15 "SNA" 1 "DIN70121" 2 "ISO15118" 3 "Not_Supported" 0 "Not_Defined" ;
+VAL_ 2147488000 ProximityPinState_1 7 "Type1_Connected_Button_Pressed" 6 "Type1_Connected" 5 "Type2_Connected" 15 "SNA" 14 "Invalid" 4 "Type2_Connected63A" 3 "Type2_Connected32A" 2 "Type2_Connected20A" 1 "Type2_Connected13A" 0 "Not_Connected" ;
+VAL_ 2147488000 StateMachineState_1 15 "SNA" 0 "Default" 1 "Init" 2 "Authentication" 3 "Parameter" 4 "Isolation" 5 "PreCharge" 6 "Charge" 7 "Welding" 8 "StopCharge" 9 "SessionStop" 10 "ShutOff" 11 "Paused" 12 "Error" ;
+VAL_ 2147488000 ControlPilotDutyCycle_1 126 "Invalid" 127 "SNA" ;
+VAL_ 2147492096 DiodePresence_2 3 "SNA" 1 "No_Diode_Detected" 0 "Diode_Detected" ;
+VAL_ 2147492096 TCPStatus_2 3 "SNA" 2 "TLS_Connected" 1 "TCP_Connected" 0 "Not_Connected" ;
+VAL_ 2147492096 AliveCounter_2 15 "SNA" ;
+VAL_ 2147492096 ControlPilotState_2 14 "Invalid" 15 "SNA" 5 "F" 4 "E" 3 "D" 2 "C" 1 "B" 0 "A" ;
+VAL_ 2147492096 ActualChargeProtocol_2 15 "SNA" 1 "DIN70121" 2 "ISO15118" 3 "Not_Supported" 0 "Not_Defined" ;
+VAL_ 2147492096 ProximityPinState_2 7 "Type1_Connected_Button_Pressed" 6 "Type1_Connected" 5 "Type2_Connected" 15 "SNA" 14 "Invalid" 4 "Type2_Connected63A" 3 "Type2_Connected32A" 2 "Type2_Connected20A" 1 "Type2_Connected13A" 0 "Not_Connected" ;
+VAL_ 2147492096 StateMachineState_2 15 "SNA" 0 "Default" 1 "Init" 2 "Authentication" 3 "Parameter" 4 "Isolation" 5 "PreCharge" 6 "Charge" 7 "Welding" 8 "StopCharge" 9 "SessionStop" 10 "ShutOff" 11 "Paused" 12 "Error" ;
+VAL_ 2147492096 ControlPilotDutyCycle_2 126 "Invalid" 127 "SNA" ;
+VAL_ 2147496192 DiodePresence_3 3 "SNA" 1 "No_Diode_Detected" 0 "Diode_Detected" ;
+VAL_ 2147496192 TCPStatus_3 3 "SNA" 2 "TLS_Connected" 1 "TCP_Connected" 0 "Not_Connected" ;
+VAL_ 2147496192 AliveCounter_3 15 "SNA" ;
+VAL_ 2147496192 ControlPilotState_3 14 "Invalid" 15 "SNA" 5 "F" 4 "E" 3 "D" 2 "C" 1 "B" 0 "A" ;
+VAL_ 2147496192 ActualChargeProtocol_3 15 "SNA" 1 "DIN70121" 2 "ISO15118" 3 "Not_Supported" 0 "Not_Defined" ;
+VAL_ 2147496192 ProximityPinState_3 7 "Type1_Connected_Button_Pressed" 6 "Type1_Connected" 5 "Type2_Connected" 15 "SNA" 14 "Invalid" 4 "Type2_Connected63A" 3 "Type2_Connected32A" 2 "Type2_Connected20A" 1 "Type2_Connected13A" 0 "Not_Connected" ;
+VAL_ 2147496192 StateMachineState_3 15 "SNA" 0 "Default" 1 "Init" 2 "Authentication" 3 "Parameter" 4 "Isolation" 5 "PreCharge" 6 "Charge" 7 "Welding" 8 "StopCharge" 9 "SessionStop" 10 "ShutOff" 11 "Paused" 12 "Error" ;
+VAL_ 2147496192 ControlPilotDutyCycle_3 126 "Invalid" 127 "SNA" ;
+VAL_ 2147488515 EVSEProximityPinState_1 7 "Type1_Connected_Button_Pressed" 6 "Type1_Connected" 5 "Type2_Connected" 15 "SNA" 14 "Invalid" 4 "Type2_Connected63A" 3 "Type2_Connected32A" 2 "Type2_Connected20A" 1 "Type2_Connected13A" 0 "Not_Connected" ;
+VAL_ 2147488515 EVSEControlPilotState_1 15 "SNA" 14 "Invalid" 5 "F" 4 "E" 3 "D" 2 "C" 1 "B" 0 "A" ;
+VAL_ 2147488515 EVSEControlPilotDutyCycle_1 127 "SNA" 126 "Invalid" ;
+VAL_ 2147492611 EVSEProximityPinState_2 7 "Type1_Connected_Button_Pressed" 6 "Type1_Connected" 5 "Type2_Connected" 15 "SNA" 14 "Invalid" 4 "Type2_Connected63A" 3 "Type2_Connected32A" 2 "Type2_Connected20A" 1 "Type2_Connected13A" 0 "Not_Connected" ;
+VAL_ 2147492611 EVSEControlPilotState_2 15 "SNA" 14 "Invalid" 5 "F" 4 "E" 3 "D" 2 "C" 1 "B" 0 "A" ;
+VAL_ 2147492611 EVSEControlPilotDutyCycle_2 127 "SNA" 126 "Invalid" ;
+VAL_ 2147496707 EVSEProximityPinState_3 7 "Type1_Connected_Button_Pressed" 6 "Type1_Connected" 5 "Type2_Connected" 15 "SNA" 14 "Invalid" 4 "Type2_Connected63A" 3 "Type2_Connected32A" 2 "Type2_Connected20A" 1 "Type2_Connected13A" 0 "Not_Connected" ;
+VAL_ 2147496707 EVSEControlPilotState_3 15 "SNA" 14 "Invalid" 5 "F" 4 "E" 3 "D" 2 "C" 1 "B" 0 "A" ;
+VAL_ 2147496707 EVSEControlPilotDutyCycle_3 127 "SNA" 126 "Invalid" ;
+VAL_ 2147488514 EVSEProcessingCC_1 3 "SNA" 2 "WaitingForCustomerInteraction" 1 "Ongoing" 0 "Finished" ;
+VAL_ 2147488514 EVSEProcessingCPD_1 3 "SNA" 2 "WaitingForCustomerInteraction" 1 "Ongoing" 0 "Finished" ;
+VAL_ 2147488514 EVSEProcessingCA_1 3 "SNA" 2 "WaitingForCustomerInteraction" 1 "Ongoing" 0 "Finished" ;
+VAL_ 2147488514 EVSEPowerLimitAchieved_1 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488514 EVSECurrentLimitAchieved_1 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488514 EVSEStatusCode_1 15 "SNA" 14 "Invalid" 12 "EVSE_CustomerNotReady" 11 "Reserved_C" 10 "Reserved_B" 9 "Reserved_A" 8 "Reserved_9" 7 "Reserved_8" 6 "EVSE_Malfunction" 5 "EVSE_EmergencyShutdown" 4 "EVSE_IsolationMonitoringActive" 3 "EVSE_UtilityInterruptEvent" 2 "EVSE_Shutdown" 1 "EVSE_Ready" 0 "EVSE_NotReady" ;
+VAL_ 2147488514 EVSEVoltageLimitAchieved_1 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488514 EVSEIsolationStatus_1 7 "SNA" 4 "No_IMD" 3 "Fault" 2 "Warning" 1 "Valid" 0 "Invalid" ;
+VAL_ 2147488514 EVSEPresentVoltage_1 65535 "SNA" ;
+VAL_ 2147488514 EVSEPresentCurrent_1 65535 "SNA" ;
+VAL_ 2147492610 EVSEProcessingCC_2 3 "SNA" 2 "WaitingForCustomerInteraction" 1 "Ongoing" 0 "Finished" ;
+VAL_ 2147492610 EVSEProcessingCPD_2 3 "SNA" 2 "WaitingForCustomerInteraction" 1 "Ongoing" 0 "Finished" ;
+VAL_ 2147492610 EVSEProcessingCA_2 3 "SNA" 2 "WaitingForCustomerInteraction" 1 "Ongoing" 0 "Finished" ;
+VAL_ 2147492610 EVSEPowerLimitAchieved_2 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147492610 EVSECurrentLimitAchieved_2 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147492610 EVSEStatusCode_2 15 "SNA" 14 "Invalid" 12 "EVSE_CustomerNotReady" 11 "Reserved_C" 10 "Reserved_B" 9 "Reserved_A" 8 "Reserved_9" 7 "Reserved_8" 6 "EVSE_Malfunction" 5 "EVSE_EmergencyShutdown" 4 "EVSE_IsolationMonitoringActive" 3 "EVSE_UtilityInterruptEvent" 2 "EVSE_Shutdown" 1 "EVSE_Ready" 0 "EVSE_NotReady" ;
+VAL_ 2147492610 EVSEVoltageLimitAchieved_2 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147492610 EVSEIsolationStatus_2 7 "SNA" 4 "No_IMD" 3 "Fault" 2 "Warning" 1 "Valid" 0 "Invalid" ;
+VAL_ 2147492610 EVSEPresentVoltage_2 65535 "SNA" ;
+VAL_ 2147492610 EVSEPresentCurrent_2 65535 "SNA" ;
+VAL_ 2147496706 EVSEProcessingCC_3 3 "SNA" 2 "WaitingForCustomerInteraction" 1 "Ongoing" 0 "Finished" ;
+VAL_ 2147496706 EVSEProcessingCPD_3 3 "SNA" 2 "WaitingForCustomerInteraction" 1 "Ongoing" 0 "Finished" ;
+VAL_ 2147496706 EVSEProcessingCA_3 3 "SNA" 2 "WaitingForCustomerInteraction" 1 "Ongoing" 0 "Finished" ;
+VAL_ 2147496706 EVSEPowerLimitAchieved_3 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147496706 EVSECurrentLimitAchieved_3 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147496706 EVSEStatusCode_3 15 "SNA" 14 "Invalid" 12 "EVSE_CustomerNotReady" 11 "Reserved_C" 10 "Reserved_B" 9 "Reserved_A" 8 "Reserved_9" 7 "Reserved_8" 6 "EVSE_Malfunction" 5 "EVSE_EmergencyShutdown" 4 "EVSE_IsolationMonitoringActive" 3 "EVSE_UtilityInterruptEvent" 2 "EVSE_Shutdown" 1 "EVSE_Ready" 0 "EVSE_NotReady" ;
+VAL_ 2147496706 EVSEVoltageLimitAchieved_3 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147496706 EVSEIsolationStatus_3 7 "SNA" 4 "No_IMD" 3 "Fault" 2 "Warning" 1 "Valid" 0 "Invalid" ;
+VAL_ 2147496706 EVSEPresentVoltage_3 65535 "SNA" ;
+VAL_ 2147496706 EVSEPresentCurrent_3 65535 "SNA" ;
+VAL_ 2147488513 EVSECurrentRegulationTolerance_1 255 "SNA" ;
+VAL_ 2147488513 EVSEPeakCurrentRipple_1 255 "SNA" ;
+VAL_ 2147488513 EVSEMinVoltage_1 65535 "SNA" ;
+VAL_ 2147488513 EVSEMinCurrent_1 65535 "SNA" ;
+VAL_ 2147492609 EVSECurrentRegulationTolerance_2 255 "SNA" ;
+VAL_ 2147492609 EVSEPeakCurrentRipple_2 255 "SNA" ;
+VAL_ 2147492609 EVSEMinVoltage_2 65535 "SNA" ;
+VAL_ 2147492609 EVSEMinCurrent_2 65535 "SNA" ;
+VAL_ 2147496705 EVSECurrentRegulationTolerance_3 255 "SNA" ;
+VAL_ 2147496705 EVSEPeakCurrentRipple_3 255 "SNA" ;
+VAL_ 2147496705 EVSEMinVoltage_3 65535 "SNA" ;
+VAL_ 2147496705 EVSEMinCurrent_3 65535 "SNA" ;
+VAL_ 2147488512 EVSEEnergyToBeDelivered_1 65535 "SNA" ;
+VAL_ 2147488512 EVSEMaxPower_1 65535 "SNA" ;
+VAL_ 2147488512 EVSEMaxVoltage_1 65535 "SNA" ;
+VAL_ 2147488512 EVSEMaxCurrent_1 65535 "SNA" ;
+VAL_ 2147492608 EVSEEnergyToBeDelivered_2 65535 "SNA" ;
+VAL_ 2147492608 EVSEMaxPower_2 65535 "SNA" ;
+VAL_ 2147492608 EVSEMaxVoltage_2 65535 "SNA" ;
+VAL_ 2147492608 EVSEMaxCurrent_2 65535 "SNA" ;
+VAL_ 2147496704 EVSEEnergyToBeDelivered_3 65535 "SNA" ;
+VAL_ 2147496704 EVSEMaxPower_3 65535 "SNA" ;
+VAL_ 2147496704 EVSEMaxVoltage_3 65535 "SNA" ;
+VAL_ 2147496704 EVSEMaxCurrent_3 65535 "SNA" ;
+VAL_ 2147488258 EVTimeToFullSoC_1 262143 "SNA" ;
+VAL_ 2147488258 EVReady_1 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488258 EVTimeToBulkSoC_1 262143 "SNA" ;
+VAL_ 2147488258 EVRESSConditioning_1 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488258 EVCabinConditioning_1 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488258 EVErrorCode_1 15 "SNA" 11 "NoData" 10 "FAILED_SystemIncompatibility" 9 "Reserved_C" 8 "Reserved_B" 7 "Reserved_A" 6 "FAILED_ChargingVoltageOutOfRange" 5 "FAILED_ChargingCurrentdiff" 4 "FAILED_EVRESSMalfunction" 3 "FAILED_ChargerConnectorLockFault" 2 "FAILED_EVShiftPosition" 1 "FAILED_RESSTemperatureInhibit" 0 "NO_ERROR" ;
+VAL_ 2147488258 EVBulkChargingComplete_1 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488258 EVChargingComplete_1 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488258 EVSoC_1 255 "SNA" ;
+VAL_ 2147492354 EVTimeToFullSoC_2 262143 "SNA" ;
+VAL_ 2147492354 EVReady_2 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147492354 EVTimeToBulkSoC_2 262143 "SNA" ;
+VAL_ 2147492354 EVRESSConditioning_2 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147492354 EVCabinConditioning_2 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147492354 EVErrorCode_2 15 "SNA" 11 "NoData" 10 "FAILED_SystemIncompatibility" 9 "Reserved_C" 8 "Reserved_B" 7 "Reserved_A" 6 "FAILED_ChargingVoltageOutOfRange" 5 "FAILED_ChargingCurrentdiff" 4 "FAILED_EVRESSMalfunction" 3 "FAILED_ChargerConnectorLockFault" 2 "FAILED_EVShiftPosition" 1 "FAILED_RESSTemperatureInhibit" 0 "NO_ERROR" ;
+VAL_ 2147492354 EVBulkChargingComplete_2 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147492354 EVChargingComplete_2 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147492354 EVSoC_2 255 "SNA" ;
+VAL_ 2147496450 EVTimeToFullSoC_3 262143 "SNA" ;
+VAL_ 2147496450 EVReady_3 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147496450 EVTimeToBulkSoC_3 262143 "SNA" ;
+VAL_ 2147496450 EVRESSConditioning_3 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147496450 EVCabinConditioning_3 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147496450 EVErrorCode_3 15 "SNA" 11 "NoData" 10 "FAILED_SystemIncompatibility" 9 "Reserved_C" 8 "Reserved_B" 7 "Reserved_A" 6 "FAILED_ChargingVoltageOutOfRange" 5 "FAILED_ChargingCurrentdiff" 4 "FAILED_EVRESSMalfunction" 3 "FAILED_ChargerConnectorLockFault" 2 "FAILED_EVShiftPosition" 1 "FAILED_RESSTemperatureInhibit" 0 "NO_ERROR" ;
+VAL_ 2147496450 EVBulkChargingComplete_3 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147496450 EVChargingComplete_3 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147496450 EVSoC_3 255 "SNA" ;
+VAL_ 2147488257 EVPreChargeVoltage_1 65535 "SNA" ;
+VAL_ 2147488257 EVTargetVoltage_1 65535 "SNA" ;
+VAL_ 2147488257 EVTargetCurrent_1 65535 "SNA" ;
+VAL_ 2147492353 EVPreChargeVoltage_2 65535 "SNA" ;
+VAL_ 2147492353 EVTargetVoltage_2 65535 "SNA" ;
+VAL_ 2147492353 EVTargetCurrent_2 65535 "SNA" ;
+VAL_ 2147496449 EVPreChargeVoltage_3 65535 "SNA" ;
+VAL_ 2147496449 EVTargetVoltage_3 65535 "SNA" ;
+VAL_ 2147496449 EVTargetCurrent_3 65535 "SNA" ;
+VAL_ 2147488256 EVBulkSoC_1 255 "SNA" ;
+VAL_ 2147488256 EVFullSoC_1 255 "SNA" ;
+VAL_ 2147488256 EVMaxVoltage_1 65535 "SNA" ;
+VAL_ 2147488256 EVMaxPower_1 65535 "SNA" ;
+VAL_ 2147488256 EVMaxCurrent_1 65535 "SNA" ;
+VAL_ 2147492352 EVBulkSoC_2 255 "SNA" ;
+VAL_ 2147492352 EVFullSoC_2 255 "SNA" ;
+VAL_ 2147492352 EVMaxVoltage_2 65535 "SNA" ;
+VAL_ 2147492352 EVMaxPower_2 65535 "SNA" ;
+VAL_ 2147492352 EVMaxCurrent_2 65535 "SNA" ;
+VAL_ 2147496448 EVBulkSoC_3 255 "SNA" ;
+VAL_ 2147496448 EVFullSoC_3 255 "SNA" ;
+VAL_ 2147496448 EVMaxVoltage_3 65535 "SNA" ;
+VAL_ 2147496448 EVMaxPower_3 65535 "SNA" ;
+VAL_ 2147496448 EVMaxCurrent_3 65535 "SNA" ;
+
+
+

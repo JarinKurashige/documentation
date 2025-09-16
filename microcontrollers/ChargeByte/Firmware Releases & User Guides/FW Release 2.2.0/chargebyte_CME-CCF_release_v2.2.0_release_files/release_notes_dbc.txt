@@ -1,0 +1,181 @@
+Product Name: Charge Module E DBC
+
+Version 1.18.0
+  Date 06.05.2025
+
+  Summary
+	Added ChargingSession(0x401) message with SessionID signal to forward the SessionID value to SECC, which the CME responds to the EVCC.
+
+Version 1.17.0
+  Date 19.03.2025
+
+  Summary
+	Added EVCCID(0x208) message to forward the EVCCID value recieved from the vehicle to SECC.
+	Added EVSelectedPaymentOption signal to EVStatusDisplay (0x202x) message to forward the payment option selected by EV to SECC.
+
+Version 1.16.0
+  Date 13.02.2025
+
+  Summary
+	Updated the value description of CAN Signal PilotStatesStatus to send Status of AC LL fallback state.
+
+Version 1.15.0
+  Date 24.01.2025
+
+  Summary
+	Added ACFallBackStatus signal to message ChargeInfo to indicate if the feature is enabled or disabled.
+	Added signal EVSESupportedETM signal to EVSEStatus to send out the energy transfer mode supported by EVSE.
+	Added signal EVRequestedETM signal to EVStatusDisplay to send out the energy transfer mode requested by EV.
+
+Version 1.14.0
+  Date 11.12.2024
+
+  Summary
+	Added EMAID0(0x206) and EMAID1(0x207) message to forwards the EMAID value recieved from the vehicle to SECC.
+	Added signal CerValidationResult to send the validation results of the contract certificate chain send by the vehicle.
+	Added signal EMAIDValidationResult to send the validation results of the EMAID value send by the vehicle.
+	Added signal SigValidationResult to send the validation results of signature value recieved from the vehicle.
+
+Version 1.13.0
+  Date 07.11.2024
+
+  Summary
+	Added EV AC Charge Control message to transmit vehicle's AC charge parameters.
+	Added signals to the EVSE AC Charge Control message to send out EVSE AC charge parameters (Nominal Voltage & Max Current).
+	Renamed EVSEDCStatus to EVSEStatus.
+	Improved comments for EVSEStatusCode signal.
+	Removed EVSEID message (EVSEID will be set via uds service tool)
+
+Version 1.12.0
+  Date 22.02.2024
+
+  Summary
+	Created RTT Log message and signal to send RTT log info via CAN.
+
+Version 1.11.0
+  Date 08.01.2024
+
+  Summary
+	Debug info signals updated (internal to chargebyte).
+
+Version 1.10.0
+  Date 18.10.2023
+
+  Bugfix
+	Some spelling corrected.
+
+Version 1.9.0
+  Date 26.09.2023
+
+  Summary
+	Updated Proximity pin state signal value table to support Type1 plug.
+
+Version 1.8.0
+  Date 20.04.2023
+
+  Summary
+	Customer GPIO6 is removed and not anymore configurable neither by application nor by CMX-tool.
+
+Version 1.7.1
+  Date 11.04.2023
+
+  Summary
+	Customer GPIO only can be configure as GPIO input or output. Removed the ADC input configuration.
+
+Version 1.7.0
+  Date 07.02.2023
+
+  Summary
+	Added EVSE_CustomerNotReady(0xC) value for EVSEStatusCode signal.
+
+Version 1.6.1
+  Date 24.12.2022
+
+  Summary
+	Added value table for bootloader version signal for old bootloader less than version 11.
+
+Version 1.6.0
+  Date 03.11.2022
+
+  Summary
+	Removed 'Checking' choice in EVSEIsolationStatus signal
+	Improved comment in EVSEIsolationStatus for choice 'No_IMD'
+
+Version 1.5.1
+  Date 21.09.2022
+
+  Summary:
+	Removed EVSE current limit(AC) signal factor. It need to handle in directly code.
+
+Version 1.5.0
+  Date 07.09.2022
+
+  Summary:
+	Updated SLACInfo message with QCA7K SW Version and QCA SLAC configuration
+	Updated EVSE current limit(AC) signal factor 0.1
+
+Version 1.4.0
+  Date 25.08.2022
+
+  Summary:
+	Added AC stack message-EVSEACChargeControl
+
+Version 1.3.0
+  Date 11.05.2022
+
+  Summary:
+	Updated SNA for EVErrorCode signal
+
+Version 1.2.0
+  Date 17.02.2022
+
+  Summary:
+	SLACInfo message updated to event-driven
+
+Version: 1.1.0
+  Date 07.02.22
+  Summary:
+       Added Messages:
+         HardwareStatus
+         HardwareConfig
+       Corrected Spelling of Signal 'Catagory' -> 'Category'
+       Corrected Spelling mistakes in Comments
+
+Version: 1.0.0
+  Date: 08.11.21
+  Summary:
+       Removed signal: 
+         EVSECurrentLimit (not needed for DC charging)
+         EVSESessionID (no use case)
+         EVSEPMaxScheduleStart
+         EVSEPMaxScheduleDuration
+         EVSESASScheduleTupleID
+         EVSEPMaxSchedulePower
+         EVSEPMaxScheduleID
+         EVCompatible
+       Removed Messages
+         EVChargeControl
+         EVSESessionID
+         EVSEScheduleTime
+         EVSESchedule
+       Added comments to signals and messages
+       Changed CAN ID of EVSEID & EVSEDateTime
+
+Version: 0.0.2
+  Date: TBA
+
+  Summary: 
+	General msg Ids start from 0x100
+	Sending msg Ids(EV) start from 0x200
+	Receiving msg Ids(EVSE) start from 0x300
+	Bootloader msg Id not updated at this moment(Need to update later)
+	Signal Maximum number criteria: enum type signal is "SNA" and rest of the signals are "SNA - 1"
+	Updated file name and protocol
+
+Version: 0.0.1
+  Date: 10.08.2021
+
+  Summary: 
+	Initial release.
+  
+

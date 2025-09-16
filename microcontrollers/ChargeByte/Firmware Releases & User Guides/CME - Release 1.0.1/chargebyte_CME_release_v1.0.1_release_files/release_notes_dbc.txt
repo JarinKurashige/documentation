@@ -1,0 +1,110 @@
+Product Name: Charge Module E DBC
+Version 1.8.0
+  Date 20.04.2023
+
+  Summary
+	Customer GPIO6 is removed and not anymore configurable neither by application nor by CMX-tool.
+
+Version 1.7.1
+  Date 11.04.2023
+
+  Summary
+	Customer GPIO only can be configure as GPIO input or output. Removed the ADC input configuration.
+
+Version 1.7.0
+  Date 07.02.2023
+
+  Summary
+	Added EVSE_CustomerNotReady(0xC) value for EVSEStatusCode signal.
+
+Version 1.6.1
+  Date 24.12.2022
+
+  Summary
+	Added value table for bootloader version signal for old bootloader less than version 11.
+
+Version 1.6.0
+  Date 03.11.2022
+
+  Summary
+	Removed 'Checking' choice in EVSEIsolationStatus signal
+	Improved comment in EVSEIsolationStatus for choice 'No_IMD'
+
+Version 1.5.1
+  Date 21.09.2022
+
+  Summary:
+	Removed EVSE current limit(AC) signal factor. It need to handle in directly code.
+
+Version 1.5.0
+  Date 07.09.2022
+
+  Summary:
+	Updated SLACInfo message with QCA7K SW Version and QCA SLAC configuration
+	Updated EVSE current limit(AC) signal factor 0.1
+
+Version 1.4.0
+  Date 25.08.2022
+
+  Summary:
+	Added AC stack message-EVSEACChargeControl
+
+Version 1.3.0
+  Date 11.05.2022
+
+  Summary:
+	Updated SNA for EVErrorCode signal
+
+Version 1.2.0
+  Date 17.02.2022
+
+  Summary:
+	SLACInfo message updated to event-driven
+
+Version: 1.1.0
+  Date 07.02.22
+  Summary:
+       Added Messages:
+         HardwareStatus
+         HardwareConfig
+       Corrected Spelling of Signal 'Catagory' -> 'Category'
+       Corrected Spelling mistakes in Comments
+
+Version: 1.0.0
+  Date: 08.11.21
+  Summary:
+       Removed signal: 
+         EVSECurrentLimit (not needed for DC charging)
+         EVSESessionID (no use case)
+         EVSEPMaxScheduleStart
+         EVSEPMaxScheduleDuration
+         EVSESASScheduleTupleID
+         EVSEPMaxSchedulePower
+         EVSEPMaxScheduleID
+         EVCompatible
+       Removed Messages
+         EVChargeControl
+         EVSESessionID
+         EVSEScheduleTime
+         EVSESchedule
+       Added comments to signals and messages
+       Changed CAN ID of EVSEID & EVSEDateTime
+
+Version: 0.0.2
+  Date: TBA
+
+  Summary: 
+	General msg Ids start from 0x100
+	Sending msg Ids(EV) start from 0x200
+	Receiving msg Ids(EVSE) start from 0x300
+	Bootloader msg Id not updated at this moment(Need to update later)
+	Signal Maximum number criteria: enum type signal is "SNA" and rest of the signals are "SNA - 1"
+	Updated file name and protocol
+
+Version: 0.0.1
+  Date: 10.08.2021
+
+  Summary: 
+	Initial release.
+  
+

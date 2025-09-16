@@ -1,0 +1,23 @@
+record.png
+https://www.flaticon.com/free-icon/record_3998038
+<a href="https://www.flaticon.com/free-icons/information" title="information icons">Information icons created by Anggara - Flaticon</a>
+
+information.png
+https://www.flaticon.com/free-icon/information_9195785
+<a href="https://www.flaticon.com/free-icons/rec" title="rec icons">Rec icons created by Freepik - Flaticon</a>
+
+hour-glass.png
+https://www.flaticon.com/free-icon/hour-glass_1414564
+<a href="https://www.flaticon.com/free-icons/hour-glass" title="hour glass icons">Hour glass icons created by Freepik - Flaticon</a>
+
+cancel.png
+https://www.flaticon.com/free-icon/cancel_753345
+<a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Vectors Market - Flaticon</a>
+
+warning.png
+https://www.flaticon.com/free-icon/warning_595067
+<a href="https://www.flaticon.com/free-icons/error" title="error icons">Error icons created by Freepik - Flaticon</a>
+
+accept.png
+https://www.flaticon.com/free-icon/accept_4315445?term=ok&page=1&position=6&origin=search&related_id=4315445
+<a href="https://www.flaticon.com/free-icons/tick" title="tick icons">Tick icons created by kliwir art - Flaticon</a>

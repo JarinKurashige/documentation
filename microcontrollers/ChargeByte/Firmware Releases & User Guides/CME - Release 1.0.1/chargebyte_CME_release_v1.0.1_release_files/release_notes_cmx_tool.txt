@@ -1,0 +1,120 @@
+Product Name: Charge Module X UDS tool
+
+Version 0.13.3
+  Date: 15.05.2023
+  bugfix:
+	* Selecting all filters in (PCAP Configuration) tab is not possible.
+	* Improved error message for CME ID configuration failure when the CAN frame type is set to Standard ID. 
+	  Users are now guided to change the frame type to Extended ID in the HW Configuration tab before setting the desired CME ID.
+
+Version 0.13.2
+  Date: 26.04.2023
+  bugfix:
+	* Customer GPIO6 is removed from tool configuration and not anymore cofigurable by CMx tool. 
+
+Version 0.13.1
+  Date: 12.04.2023
+  bugfix:
+	* Customer GPIOs only can be configured as only GPIOs input or output.GPIO7 removed from customer GPIOs and also ADC configuration.
+
+Version 0.13.0
+  Date: 29.03.2023
+  Features:
+	* New button implemented to update to latest bootloader version. This is necessary if customer wants to update CME firmware V1.0.0 or later. 
+	
+Version 0.12.0
+  Date: 20.03.2023
+  Features:
+	* CMX tool is now supporting firmwrae updates via CAN and UART. PCAN-USB can be used for CAN updates, UART-USB tool can be used for UART updates.
+	
+Version 0.11.3
+  Date: 15.03.2023
+  Features:
+	* XML file is now created for the description of the implemented UDS services on CME.
+
+Version 0.11.2
+  Date: 28.02.2023
+  Features:
+	* Read Baptism Tab was improved
+	* This used to read the baptism data like QAC MAC Address, Host Mac Address, Production Timestamp and Chargebyte Serial Number stored in EEPROM.
+	
+Version 0.11.1
+  Date: 22.02.2023
+  bugfix:
+	* CMX tool is now working over UART even when no CAN-USB adapter is connected
+	* GPIO7 could be configured only as ADC
+	
+Version 0.11.0
+  Date: 31.01.2023
+  Features:
+	* New Tab (Read Diagnostics ) is added.
+	* Read Watchdog log provides information regarding the watchdog trigger count, current watchdog cause and the previous four causes history.
+	* Added the module ID selection for communicating with multiple modules on the same CAN interface for CME module.
+
+Version 0.10.0
+  Date: 22.11.2022
+  Features:
+	* Customer can configure GPIO 4 as Boot LED
+
+Version 0.9.0
+  Date: 14.11.2022
+  Features:
+	* UART communication is supported
+	* Customer can communicate with the CME module via UART interface
+	
+Version 0.8.0
+  Date: 17.10.2022
+  Features:
+	* New Tab (General Configuration) is added.
+	* Configuring the Charging mode to DC or AC is implemented in the (General Configuration) tab. Readout is possible as well.
+
+Version 0.7.0
+  Date: 20.09.2022
+  Features:
+	* Implemented readout of QCA chip and SLAC configurations using QCA function tab ( previously PIB functions tab )
+
+Version 0.6.0
+  Date: 08.08.2022
+  Features:
+	* Added CME ID in HW configuration frame
+
+Version 0.5.0
+  Date: 10.6.2022
+  Features:
+	* Implemented Readout of HW and GPIO Configuration
+ 
+Version 0.4.0
+  Date: 13.05.2022
+  Features:
+	* Item list of combo boxes changed to read-only
+	* In addition to PCAN tool, CMX tool supports Vector CAN tool as well
+	* Added EVSE ID in HW Configuration frame for CME
+	* Added SLAC_ATTEN_RX_CORRECTION parameter in HW Configuration frame (CME only)
+	* Customer can adjust the voltage threshold values for the CP states (CME only)
+	* Reading existing voltage threshold values (CME only)
+	* CP calibration feature added thus CME module can be calibrated to the actual CP voltage output (CME only)
+	* Filters implemented to filter-out packets from PCAP dump. Filters could be set/read 
+	* statistical data about PCAP filtration process will be printed after the PCAP file has been successfully read 
+
+
+Version 0.3.1
+  Date: 15.02.2022
+  Summary: Combined UDS tool for CME and CMS
+
+  Features:
+	* Updated all tabs with pack alignment
+
+
+Version: 0.1.0
+  Date: 11. Oct 2021
+  Summary: First release of UDS tool
+
+  Features:
+	* Reading MAC address of host processor by Read Baptism data icon
+	* Read PCAP can read a pcap file from CMS module, it will have the last packets between CMS and EVSE after charging error occurred (only up to 2Kb)
+	* Read diagnostics can read if watchdog reset happened or voltage dropped below specifications
+	* Hardware configuration of CAN Frametype, CAN Baudrate
+	* SLAC threshold could be configured (20, 30, 40..60)
+	* Customer GPIOs can be configured either GPIO or ADC channels
+	* Read/ Write PIB file from/into QCA chip
+	

@@ -1,0 +1,53 @@
+/**
+\mainpage CsAddTable - Adds a checksum info table to an S-record file.
+\details
+\tableofcontents
+\section into Introduction
+
+CsAddTable is a command line tool for calculating and embedded a checksum info table
+in an S-record file with firmware data. This tool is part of the "Improved Checksum" 
+Add-on module of the OpenBLT Bootloader:
+  https://www.feaser.com/en/addons.php#checksum
+
+It is written in the C programming language (C99) and is cross-platform. It has been 
+successfully tested on a Windows PC, Linux PC and even embedded Linux systems such as a
+Raspberry Pi and a Beagle Board.
+
+CsAddTable is built on top of the OpenBLT Host Library (LibOpenBLT), which embeds not 
+only functionality to communicate with the OpenBLT bootloader on the microcontroller 
+target, but also functionality for firmware file parsing and checksum calculation and
+verification.
+
+Refer to the user manual of the "Improved Checksum" Add-on module for addtional
+information regarding the usage of the CsAddTable program, including a description of the
+available command line parameters and step-by-step instructions on how to build the 
+CsAddTable program from sources. The user manual is called UM_ChecksumModule.pdf and can
+be found in the ./Doc directory of your OpenBLT bootloader delivery.
+
+\verbatim
+----------------------------------------------------------------------------------------
+                          C O P Y R I G H T
+----------------------------------------------------------------------------------------
+               Copyright (c) 2017 Feaser. All rights reserved.
+
+----------------------------------------------------------------------------------------
+                            L I C E N S E
+----------------------------------------------------------------------------------------
+ This file is part of OpenBLT. It is released under a commercial license. Refer to
+ the license.pdf file for the exact licensing terms. It should be located in
+ '.\Doc\license.pdf'. Contact Feaser if you did not receive the license.pdf file.
+ 
+ In a nutshell, you are allowed to modify and use this software in your closed source
+ proprietary application, provided that the following conditions are met:
+ 1. The software is not released or distributed in source (human-readable) form.
+ 2. These licensing terms and the copyright notice above are not changed.
+ 
+ This software has been carefully tested, but is not guaranteed for any particular
+ purpose. Feaser does not offer any warranties and does not guarantee the accuracy,
+ adequacy, or completeness of the software and is not responsible for any errors or
+ omissions or the results obtained from use of the software.
+----------------------------------------------------------------------------------------
+\endverbatim
+
+*/
+ 
