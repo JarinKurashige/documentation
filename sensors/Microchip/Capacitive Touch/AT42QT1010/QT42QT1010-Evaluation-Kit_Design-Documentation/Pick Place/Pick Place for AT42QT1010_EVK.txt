@@ -1,0 +1,28 @@
+Altium Designer Pick and Place Locations
+E:\offical\Hardware\devkits\Reference_Designs\AT42QT1010_Evaluation Kit\05Hardware\Ver4\Project Outputs for AT42QT1010_EVK\Pick Place\Pick Place for AT42QT1010_EVK.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       23/07/18
+Time:       10:39
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+Designator Comment                                                                                            Layer       Footprint Center-X(mm) Center-Y(mm) Rotation Description                                      
+D1         LED_12                                                                                             TopLayer    AP4-00013 15.8750      2.4384       180      "LED, Green, Wave length=575nm, SMD 0805, ±70°"  
+J2         "HEADER 1x3"                                                                                       TopLayer    AP8-01075 18.2626      14.0208      180      "1x3 pin header, 2.54mm pitch, Pin-in-Paste THM" 
+LABEL1     PCBA_LABEL                                                                                         BottomLayer AP8-00317 -45.7200     -84.1400     270      "PCBA identification label PP Top White Gloss"   
+R1         "Farnell no:                                                                                       2116604"    TopLayer  AP2-00001    15.9348      4.7752   180                                              
+U1         AT42QT1010                                                                                         TopLayer    AP6-00056 15.9766      9.3218       90       "1ch QTouch Sensor IC"                           
+J1         "2,000 pieces per reel
+
+NOTE! It is recommended to use low-cost version A08-2839 for new designs." TopLayer    AP8-00852 4.0625       10.0000      270      "Micro USB AB Connector, Standard SMT + DIP"     
+E4         "RUBBER FEET"                                                                                      BottomLayer AP8-00192 -45.7200     -84.1400     180      "2.8mm adhesive feet,diam 8.0mm"                 
+E2         "RUBBER FEET"                                                                                      BottomLayer AP8-00192 -45.7200     -84.1400     180      "2.8mm adhesive feet,diam 8.0mm"                 
+E1         "RUBBER FEET"                                                                                      BottomLayer AP8-00192 -45.7200     -84.1400     180      "2.8mm adhesive feet,diam 8.0mm"                 
+E3         "RUBBER FEET"                                                                                      BottomLayer AP8-00192 -45.7200     -84.1400     180      "2.8mm adhesive feet,diam 8.0mm"                 
+C1         CAP-NONPOL                                                                                         TopLayer    AP1-00002 12.8777      9.5503       90       "Ceramic capacitor, SMD 0603, X7R, 50V, Â±10 %"  
+C2         CAP-NONPOL                                                                                         TopLayer    AP1-00002 18.8975      9.4995       270      "Ceramic capacitor, SMD 0603, X7R, 50V, 10 %"    
+R2         R2                                                                                                 TopLayer    AP2-00001 22.7837      8.6613       0        "Thick film resistor, SMD 0603, 1/10W, 1%"       

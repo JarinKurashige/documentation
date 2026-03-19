@@ -1,0 +1,18 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: AT42QT1010_EVK.PcbDoc   7/23/2018  10:39:14 AM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : AT42QT1010_EVK-RoundHoles.TXT
+ASCII SlotHoles File : AT42QT1010_EVK-SlotHoles.TXT
+EIA File   : AT42QT1010_EVK.DRL
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      26mil (0.65mm)                                            Slot              2         PTH        0.00inch (0.00mm)
+T2      33mil (0.826mm)                                           Slot              2         PTH        0.00inch (0.00mm)
+T3      40mil (1.021mm)                                           Round             3         PTH        0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              7
+
+Total Processing Time (hh:mm:ss) : 00:00:00

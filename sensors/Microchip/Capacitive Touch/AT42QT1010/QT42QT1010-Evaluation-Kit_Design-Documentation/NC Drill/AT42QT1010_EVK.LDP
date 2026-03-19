@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: E:\offical\Hardware\devkits\Reference_Designs\AT42QT1010_Evaluation Kit\05Hardware\Ver4\AT42QT1010_EVK.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=at42qt1010_evk-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=at42qt1010_evk-slotholes.txt|DrillLayers=gtl,gbl
